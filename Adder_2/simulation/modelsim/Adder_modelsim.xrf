@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/markb/Source/Repos/FPGA_Sandbox/Adder_2/Adder.sv
+source_file = 1, C:/Users/markb/Source/Repos/FPGA_Sandbox/Adder_2/db/Adder.cbx.xml
+design_name = Adder
+instance = comp, \c0_out~output , c0_out~output, Adder, 1
+instance = comp, \carry_out~output , carry_out~output, Adder, 1
+instance = comp, \a0_in~input , a0_in~input, Adder, 1
+instance = comp, \b0_in~input , b0_in~input, Adder, 1
+instance = comp, \c0_out~0 , c0_out~0, Adder, 1
+instance = comp, \carry_out~0 , carry_out~0, Adder, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Adder, 1

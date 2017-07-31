@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "c0_out",
+					"strict" : false
+				},
+				{
+					"name" : "carry_out",
+					"strict" : false
+				},
+				{
+					"name" : "b0_in",
+					"strict" : false
+				},
+				{
+					"name" : "a0_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

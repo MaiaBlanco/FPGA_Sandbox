@@ -1,0 +1,9 @@
+|Adder
+b0_in => c0_out.IN0
+b0_in => carry_out.IN0
+a0_in => c0_out.IN1
+a0_in => carry_out.IN1
+c0_out <= c0_out.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
