@@ -12,11 +12,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "b0_in",
+					"name" : "b0_in_n",
 					"strict" : false
 				},
 				{
-					"name" : "a0_in",
+					"name" : "a0_in_n",
 					"strict" : false
 				}
 			]
