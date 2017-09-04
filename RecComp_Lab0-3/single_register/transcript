@@ -1,0 +1,25 @@
+# vsim testbench 
+# Start time: 18:38:13 on Sep 04,2017
+# Loading work.testbench
+# Loading work.register
+add wave -position end  sim:/testbench/read_addr
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/reset
+add wave -position end  sim:/testbench/write_enable
+add wave -position end  sim:/testbench/write_data
+add wave -position end  sim:/testbench/write_addr
+add wave -position end  sim:/testbench/out_data
+run -all
+# read_out =          x
+# read_out =          0
+# read_out =         11
+# read_out =        240
+# read_out =          0
+# read_out =        240
+# read_out =          0
+# ** Note: $finish    : testbench.v(49)
+#    Time: 685 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at testbench.v line 49
+# End time: 18:40:52 on Sep 04,2017, Elapsed time: 0:02:39
+# Errors: 0, Warnings: 0
