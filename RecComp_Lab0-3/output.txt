@@ -1,0 +1,15 @@
+Initializing random matrix values.
+Starting 10 matmul runs.
+Performed MATMUL operation with 4096 x 4096 matrices in 1192954767.396494 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 2378094876.045191 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 3564470586.903913 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 4750128029.527017 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 5936303330.868390 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 7123069590.691904 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 8309294247.924457 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 9494924949.698610 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 10678199720.066727 seconds.
+Performed MATMUL operation with 4096 x 4096 matrices in 11862784941.790768 seconds.
+Average time: 6529022504.091347 seconds.
+Std deviation: 11599169875474472960.000000 seconds.
+
