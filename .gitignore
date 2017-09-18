@@ -32,3 +32,16 @@ obj/
 *.swp
 *.a
 nios_workspace/
+secureip/
+*.qsf
+*.qpg
+*.qdb
+*.qtl
+work/
+*.srcs/
+*.wlf
+*.sdk/
+*.runs/
+*.cache/
+*.cmf
+*.cmd

@@ -1,0 +1,4 @@
+secureip,vhdl=pass,verilog=pass
+xpm,vhdl=pass,verilog=pass
+unisim,vhdl=pass,verilog=pass
+simprim,vhdl=pass,verilog=pass

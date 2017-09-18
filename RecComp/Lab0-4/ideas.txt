@@ -1,0 +1,5 @@
+Ways to make matmul faster:
+switch to floats rather than double?
+Memory-map the arrays?
+Perform the matrix multiplication in blocks (parallel)
+Apply openmp?

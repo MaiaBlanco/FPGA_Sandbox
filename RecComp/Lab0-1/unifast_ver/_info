@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/markb/AppData/Roaming/Xilinx/Vivado
+vDSP48E1
+Z0 !s110 1504457687
+!i10b 1
+!s100 z]@P2BbVmZVQhMbLOkZW`2
+I`7;elkAEEo4IJSdoDJ8gd0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp_Lab0
+Z3 w1497407497
+8C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\DSP48E1.v
+FC:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\DSP48E1.v
+L0 24
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1504457687.000000
+Z6 !s107 C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\PLLE2_ADV.v|C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\MMCME2_ADV.v|C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\GTXE2_CHANNEL.v|C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\DSP48E1.v|
+Z7 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-source|-novopt|-64|-work|unifast_ver|-f|C:\Users\markb\Source\Repos\FPGA_Sandbox\RecComp_Lab0/unifast_ver/.cxl.verilog.unifast.unifast_ver.nt64.cmf|
+!i113 1
+Z8 o-source -work unifast_ver
+Z9 tShow_source 1 Hazard 1 CvgOpt 0
+n@d@s@p48@e1
+vGTXE2_CHANNEL
+R0
+!i10b 1
+!s100 O3fgQM5;>DozYL5zPobPY2
+IE_4co>WOK[dF60nzT^7Ke0
+R1
+R2
+R3
+8C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\GTXE2_CHANNEL.v
+FC:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\GTXE2_CHANNEL.v
+L0 32
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+n@g@t@x@e2_@c@h@a@n@n@e@l
+vMMCME2_ADV
+R0
+!i10b 1
+!s100 jZkG>c7FFcfKH;8G7jc<K2
+ISUHMO_`7A880dmCm`H`TD3
+R1
+R2
+R3
+8C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\MMCME2_ADV.v
+FC:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\MMCME2_ADV.v
+L0 26
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+n@m@m@c@m@e2_@a@d@v
+vPLLE2_ADV
+R0
+!i10b 1
+!s100 IG=IU7Q^8eJnT;QlSJgOh0
+IRQOh[ZN4AWh;:DJod29k]3
+R1
+R2
+R3
+8C:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\PLLE2_ADV.v
+FC:\Xilinx\Vivado\2017.2\data\verilog\src\unifast\PLLE2_ADV.v
+L0 23
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+n@p@l@l@e2_@a@d@v
