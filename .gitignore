@@ -38,10 +38,10 @@ secureip/
 *.qdb
 *.qtl
 work/
-*.srcs/
+#*.srcs/
 *.wlf
-*.sdk/
+#*.sdk/
 *.runs/
-*.cache/
+#*.cache/
 *.cmf
 *.cmd
