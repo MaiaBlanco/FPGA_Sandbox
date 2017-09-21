@@ -1,0 +1,6 @@
+vhdl xil_defaultlib "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_axi_gpio_0_0/sim/zqynq_lab_1_design_axi_gpio_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_axi_gpio_1_0/sim/zqynq_lab_1_design_axi_gpio_1_0.vhd" 
+vhdl xil_defaultlib "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_axi_timer_0_0/sim/zqynq_lab_1_design_axi_timer_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_axi_bram_ctrl_0_0/sim/zqynq_lab_1_design_axi_bram_ctrl_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_rst_ps7_0_100M_0/sim/zqynq_lab_1_design_rst_ps7_0_100M_0.vhd" 
+nosort
