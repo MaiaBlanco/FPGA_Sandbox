@@ -68,10 +68,11 @@
 
 #define INTC		XScuGic
 #define INTC_HANDLER	XScuGic_InterruptHandler
-#define TMR_RESET_VALUE	 0xF0000000
+#define TMR_RESET_VALUE	 0xFF000000
 #define TIMER_CNTR_0	 0
 #define XPAR_TMRCTR_0_CLOCK_FREQ_HZ XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ
 #define BTN_INT 			XGPIO_IR_CH1_MASK
+#define TIMER_COUNT_LIM 10
 
 // Global variables:
 XTmrCtr timer_instance;
@@ -115,30 +116,30 @@ void BTN_Intr_Handler(void *InstancePtr)
 
 void TMR_Intr_Handler(void *data)
 {
-	printf("Timer triggered.\n\r");
 	if (XTmrCtr_IsExpired(&timer_instance, 0))
 	{
-		// if the timer has expired ten times, stop and increment the counter
+		// if the timer has expired TIMER_COUNT_LIM times, stop and increment the counter
 		// Then reset the timer and start it again
 		// Also blink the 7th LED.
-		if (tmr_count >= 10)
+		if (tmr_count >= TIMER_COUNT_LIM)
 		{
+			printf("Timer count > %d\n\r", TIMER_COUNT_LIM);
 			XTmrCtr_Stop(&timer_instance, 0);
 			tmr_count = 0;
-			led_data = XGpio_DiscreteRead(&LEDInst, 1);
-			if (led_data == 0)
+			led_mask = XGpio_DiscreteRead(&LEDInst, 1);
+//			if (led_data == 0)
+//			{
+//				led_data = 0xAA;
+//			}
+			if (led_mask >= 0x80u)
 			{
-				led_data = 0xAA;
+				led_mask &= 0x7Fu;
 			}
-//			if (led_mask >= 0x80u)
-//			{
-//				led_mask &= 0x7Fu;
-//			}
-//			else
-//			{
-//				led_mask |= 0x80u;
-//			}
-			XGpio_DiscreteWrite(&BTNInst, 1, ~led_data);
+			else
+			{
+				led_mask |= 0x80u;
+			}
+			XGpio_DiscreteWrite(&LEDInst, 1, (u32)led_mask);
 			// Reset the timer counter
 			XTmrCtr_Reset(&timer_instance, 0);
 			XTmrCtr_Start(&timer_instance, 0);
