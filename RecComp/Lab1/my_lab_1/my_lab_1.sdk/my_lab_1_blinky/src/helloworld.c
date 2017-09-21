@@ -53,31 +53,100 @@
 #include "xil_exception.h"
 #include "xil_printf.h"
 #include "xscugic.h"
+#include "xgpio.h"
 
 
 // Defines:
-// Defined in xparameters. repeated here so I know it exists.
-//#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
+#define BTNS_DEVICE_ID	XPAR_AXI_GPIO_1_DEVICE_ID
+#define LEDS_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+
+//#define TMRCTR_INTERRUPT_ID	XPAR_PS7_SCUGIC_0_DEVICE_ID	// Is this necessary?
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+
 #define INTC		XScuGic
 #define INTC_HANDLER	XScuGic_InterruptHandler
 #define TMR_RESET_VALUE	 0xF0000000
-
+#define TIMER_CNTR_0	 0
+#define XPAR_TMRCTR_0_CLOCK_FREQ_HZ XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ
+#define BTN_INT 			XGPIO_IR_CH1_MASK
 
 // Global variables:
 XTmrCtr timer_instance;
 XScuGic interrupt_ctl_instance;
+XGpio LEDInst, BTNInst;
+static int led_data;
+static u8 led_mask;
+static int btn_value;
+static int tmr_count;
 volatile int timer_expired;
 
+
 // Function Prototypes:
-int Timer_0_SetupInterrupts(INTC* IntcInstancePtr,
-				XTmrCtr* InstancePtr,
-				u16 DeviceId,
-				u16 IntrId,
-				u8 TmrCtrNumber);
+static void BTN_Intr_Handler(void *baseaddr_p);
+static void TMR_Intr_Handler(void *baseaddr_p);
+static int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+static int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
 
-void Timer_0_Counter_Handler(void *CallBackRef, u8 TmrCtrNumber);
+// Interrupt Handler Definitions:
+// Used for timer_counter and for push_buttons (gpio_1)
+void BTN_Intr_Handler(void *InstancePtr)
+{
+	// Disable button interrupts:
+	XGpio_InterruptDisable(&BTNInst, BTN_INT);
+	// Ignore additional button presses
+	// i.e. the interrupt handler is already handling a button interrupt
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) != BTN_INT)
+	{
+		return;
+	}
+	// Check which button was pressed:
+	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+	// Note: the above does exactly what the commented line does below, but has some checks as well.
+//	btn_value = Xil_In32(BTNInst.BaseAddress + XGPIO_DATA_OFFSET + XGPIO_CHAN_OFFSET);
+	printf("Button %x was pressed!\n\r", btn_value);
+	XGpio_InterruptClear(&BTNInst, BTN_INT);
+	// Re-enable GPIO Interrupts
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+}
 
-void Timer_0_Interrupt_Disable(XScuGic* IntcInstancePtr, u16 IntrId);
+
+void TMR_Intr_Handler(void *data)
+{
+	printf("Timer triggered.\n\r");
+	if (XTmrCtr_IsExpired(&timer_instance, 0))
+	{
+		// if the timer has expired ten times, stop and increment the counter
+		// Then reset the timer and start it again
+		// Also blink the 7th LED.
+		if (tmr_count >= 10)
+		{
+			XTmrCtr_Stop(&timer_instance, 0);
+			tmr_count = 0;
+			led_data = XGpio_DiscreteRead(&LEDInst, 1);
+			if (led_data == 0)
+			{
+				led_data = 0xAA;
+			}
+//			if (led_mask >= 0x80u)
+//			{
+//				led_mask &= 0x7Fu;
+//			}
+//			else
+//			{
+//				led_mask |= 0x80u;
+//			}
+			XGpio_DiscreteWrite(&BTNInst, 1, ~led_data);
+			// Reset the timer counter
+			XTmrCtr_Reset(&timer_instance, 0);
+			XTmrCtr_Start(&timer_instance, 0);
+		}
+		else tmr_count ++;
+	}
+}
+
 
 // Main function
 int main()
@@ -85,23 +154,39 @@ int main()
     init_platform();
 
     int Status;
+    // Initialize the LEDs:
+    Status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+    // Init the pushbuttons:
+    Status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+    // Set direction of LEDs to be outputs:
+    XGpio_SetDataDirection(&LEDInst, 1, 0x00);
+    // Set buttons to be inputs:
+    XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+
     // Initialize the timer:
-    Status = XTmrCtr_Initialize(&timer_instance, 0);
-    Status = XTmrCtr_SelfTest(&timer_instance, 0);
-    Status = Timer_0_SetupInterrupts(
-    		&interrupt_ctl_instance,
-    		&timer_instance,
-			TMRCTR_DEVICE_ID,
-			TMRCTR_INTERRUPT_ID,
-			TIMER_CNTR_0);
+    Status = XTmrCtr_Initialize(&timer_instance, TMRCTR_DEVICE_ID);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+    // Note that self-test is destructive (resets all settings from whatever they
+    // currently are) so plan to set it back up after calling this:
+    //Status = XTmrCtr_SelfTest(&timer_instance, TMRCTR_DEVICE_ID);
+    //if (Status != XST_SUCCESS) return XST_FAILURE;
+    // Set the interrupt handler for the timer:
+    XTmrCtr_SetHandler(&timer_instance, TMR_Intr_Handler, &timer_instance);
+    XTmrCtr_SetResetValue(&timer_instance, 0, TMR_RESET_VALUE);
+    XTmrCtr_SetOptions(&timer_instance, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
-    if (Status != XST_SUCCESS)
-    {
-    	printf("STATUS FAILED!\n\r");
-    	return XST_FAILURE;
-    }
+    // Initialize the interrupt controller:
+    Status = IntcInitFunction(INTC_DEVICE_ID, &timer_instance, &BTNInst);
+    if(Status != XST_SUCCESS) return XST_FAILURE;
 
+    // Finish by starting the timer:
+    XTmrCtr_Start(&timer_instance, 0);
     print("Hello World\n\r");
+
+    while(1);
+
 
     cleanup_platform();
     return 0;
@@ -109,25 +194,59 @@ int main()
 
 // Function definitions:
 
-// Timer 0 interrupt function:
-void Timer_0_Counter_Handler(void *CallBackRef, u8 TmrCtrNumber)
+// Initial setup functions:
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
 {
+	// Enable interrupt
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+	XGpio_InterruptGlobalEnable(&BTNInst);
 
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			 	 	 	 	 	 XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+	return XST_SUCCESS;
 }
 
-// Timer Interrupts Disable function:
-void Timer_0_Interrupt_Disable(XScuGic* IntcInstancePtr, u16 IntrId)
+// Setup the interrupt controller:
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr)
 {
+	XScuGic_Config *IntcConfig;
+	int status;
 
-}
+	// Interrupt controller initialisation
+	IntcConfig = XScuGic_LookupConfig(DeviceId);
+	status = XScuGic_CfgInitialize(&interrupt_ctl_instance, IntcConfig, IntcConfig->CpuBaseAddress);
+	if(status != XST_SUCCESS) return XST_FAILURE;
 
-// Setup the timer with the interrupt system:
-int Timer_0_SetupInterrupts(INTC* IntcInstancePtr,
-				XTmrCtr* InstancePtr,
-				u16 DeviceId,
-				u16 IntrId,
-				u8 TmrCtrNumber)
-{
+	// Call to interrupt setup
+	status = InterruptSystemSetup(&interrupt_ctl_instance);
+	if(status != XST_SUCCESS) return XST_FAILURE;
 
-}
+	// Connect GPIO interrupt to handler
+	status = XScuGic_Connect(&interrupt_ctl_instance,
+					  	  	 INTC_GPIO_INTERRUPT_ID,
+					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
+					  	  	 (void *)GpioInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+
+	// Connect timer interrupt to handler
+	status = XScuGic_Connect(&interrupt_ctl_instance,
+							 INTC_TMR_INTERRUPT_ID,
+							 (Xil_ExceptionHandler)TMR_Intr_Handler,
+							 (void *)TmrInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Enable GPIO interrupts interrupt
+	XGpio_InterruptEnable(GpioInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(GpioInstancePtr);
+
+	// Enable GPIO and timer interrupts in the controller
+	XScuGic_Enable(&interrupt_ctl_instance, INTC_GPIO_INTERRUPT_ID);
+
+	XScuGic_Enable(&interrupt_ctl_instance, INTC_TMR_INTERRUPT_ID);
+
+
+	return XST_SUCCESS;
 }
