@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Wed Sep 20 21:26:54 2017
+//Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+//Date        : Fri Sep 22 19:26:06 2017
 //Host        : EffulgentTome running 64-bit major release  (build 9200)
 //Command     : generate_target zqynq_lab_1_design.bd
 //Design      : zqynq_lab_1_design
@@ -1562,63 +1562,65 @@ module s00_couplers_imp_THMPCA
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "zqynq_lab_1_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zqynq_lab_1_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=2,da_bram_cntlr_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "zqynq_lab_1_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "zqynq_lab_1_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zqynq_lab_1_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=1,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "zqynq_lab_1_design.hwdef" *) 
 module zqynq_lab_1_design
-   (DDR_addr,
-    DDR_ba,
-    DDR_cas_n,
-    DDR_ck_n,
-    DDR_ck_p,
-    DDR_cke,
-    DDR_cs_n,
-    DDR_dm,
-    DDR_dq,
-    DDR_dqs_n,
-    DDR_dqs_p,
-    DDR_odt,
-    DDR_ras_n,
-    DDR_reset_n,
-    DDR_we_n,
-    FIXED_IO_ddr_vrn,
-    FIXED_IO_ddr_vrp,
-    FIXED_IO_mio,
-    FIXED_IO_ps_clk,
-    FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb,
+   (DDR_0_addr,
+    DDR_0_ba,
+    DDR_0_cas_n,
+    DDR_0_ck_n,
+    DDR_0_ck_p,
+    DDR_0_cke,
+    DDR_0_cs_n,
+    DDR_0_dm,
+    DDR_0_dq,
+    DDR_0_dqs_n,
+    DDR_0_dqs_p,
+    DDR_0_odt,
+    DDR_0_ras_n,
+    DDR_0_reset_n,
+    DDR_0_we_n,
+    FIXED_IO_0_ddr_vrn,
+    FIXED_IO_0_ddr_vrp,
+    FIXED_IO_0_mio,
+    FIXED_IO_0_ps_clk,
+    FIXED_IO_0_ps_porb,
+    FIXED_IO_0_ps_srstb,
     btns_5bits_tri_i,
-    leds_8bits_tri_o);
-  inout [14:0]DDR_addr;
-  inout [2:0]DDR_ba;
-  inout DDR_cas_n;
-  inout DDR_ck_n;
-  inout DDR_ck_p;
-  inout DDR_cke;
-  inout DDR_cs_n;
-  inout [3:0]DDR_dm;
-  inout [31:0]DDR_dq;
-  inout [3:0]DDR_dqs_n;
-  inout [3:0]DDR_dqs_p;
-  inout DDR_odt;
-  inout DDR_ras_n;
-  inout DDR_reset_n;
-  inout DDR_we_n;
-  inout FIXED_IO_ddr_vrn;
-  inout FIXED_IO_ddr_vrp;
-  inout [53:0]FIXED_IO_mio;
-  inout FIXED_IO_ps_clk;
-  inout FIXED_IO_ps_porb;
-  inout FIXED_IO_ps_srstb;
+    leds_8bits_tri_o,
+    reset_rtl);
+  inout [14:0]DDR_0_addr;
+  inout [2:0]DDR_0_ba;
+  inout DDR_0_cas_n;
+  inout DDR_0_ck_n;
+  inout DDR_0_ck_p;
+  inout DDR_0_cke;
+  inout DDR_0_cs_n;
+  inout [3:0]DDR_0_dm;
+  inout [31:0]DDR_0_dq;
+  inout [3:0]DDR_0_dqs_n;
+  inout [3:0]DDR_0_dqs_p;
+  inout DDR_0_odt;
+  inout DDR_0_ras_n;
+  inout DDR_0_reset_n;
+  inout DDR_0_we_n;
+  inout FIXED_IO_0_ddr_vrn;
+  inout FIXED_IO_0_ddr_vrp;
+  inout [53:0]FIXED_IO_0_mio;
+  inout FIXED_IO_0_ps_clk;
+  inout FIXED_IO_0_ps_porb;
+  inout FIXED_IO_0_ps_srstb;
   input [4:0]btns_5bits_tri_i;
   output [7:0]leds_8bits_tri_o;
+  input reset_rtl;
 
-  wire [15:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
+  wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
   wire axi_bram_ctrl_0_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
-  wire [15:0]axi_bram_ctrl_0_BRAM_PORTB_ADDR;
+  wire [12:0]axi_bram_ctrl_0_BRAM_PORTB_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTB_CLK;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTB_DIN;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTB_DOUT;
@@ -1645,7 +1647,6 @@ module zqynq_lab_1_design
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
   wire processing_system7_0_FCLK_CLK0;
-  wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
   wire [53:0]processing_system7_0_FIXED_IO_MIO;
@@ -1776,12 +1777,14 @@ module zqynq_lab_1_design
   wire ps7_0_axi_periph_M03_AXI_WREADY;
   wire [3:0]ps7_0_axi_periph_M03_AXI_WSTRB;
   wire [0:0]ps7_0_axi_periph_M03_AXI_WVALID;
+  wire reset_rtl_1;
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [1:0]xlconcat_0_dout;
 
   assign axi_gpio_1_GPIO_TRI_I = btns_5bits_tri_i[4:0];
   assign leds_8bits_tri_o[7:0] = axi_gpio_0_GPIO_TRI_O;
+  assign reset_rtl_1 = reset_rtl;
   (* BMM_INFO_ADDRESS_SPACE = "byte  0x40000000 32 > zqynq_lab_1_design axi_bram_ctrl_0_bram" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   zqynq_lab_1_design_axi_bram_ctrl_0_0 axi_bram_ctrl_0
@@ -1800,7 +1803,7 @@ module zqynq_lab_1_design
         .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .bram_wrdata_b(axi_bram_ctrl_0_BRAM_PORTB_DIN),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(ps7_0_axi_periph_M03_AXI_ARADDR[15:0]),
+        .s_axi_araddr(ps7_0_axi_periph_M03_AXI_ARADDR[12:0]),
         .s_axi_arburst(ps7_0_axi_periph_M03_AXI_ARBURST),
         .s_axi_arcache(ps7_0_axi_periph_M03_AXI_ARCACHE),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -1811,7 +1814,7 @@ module zqynq_lab_1_design
         .s_axi_arready(ps7_0_axi_periph_M03_AXI_ARREADY),
         .s_axi_arsize(ps7_0_axi_periph_M03_AXI_ARSIZE),
         .s_axi_arvalid(ps7_0_axi_periph_M03_AXI_ARVALID),
-        .s_axi_awaddr(ps7_0_axi_periph_M03_AXI_AWADDR[15:0]),
+        .s_axi_awaddr(ps7_0_axi_periph_M03_AXI_AWADDR[12:0]),
         .s_axi_awburst(ps7_0_axi_periph_M03_AXI_AWBURST),
         .s_axi_awcache(ps7_0_axi_periph_M03_AXI_AWCACHE),
         .s_axi_awid(ps7_0_axi_periph_M03_AXI_AWID),
@@ -1837,8 +1840,8 @@ module zqynq_lab_1_design
         .s_axi_wstrb(ps7_0_axi_periph_M03_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M03_AXI_WVALID));
   zqynq_lab_1_design_axi_bram_ctrl_0_bram_0 axi_bram_ctrl_0_bram
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
-        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTB_ADDR}),
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
+        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTB_ADDR}),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
         .clkb(axi_bram_ctrl_0_BRAM_PORTB_CLK),
         .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
@@ -1920,28 +1923,27 @@ module zqynq_lab_1_design
         .s_axi_wvalid(ps7_0_axi_periph_M02_AXI_WVALID));
   (* BMM_INFO_PROCESSOR = "arm > zqynq_lab_1_design axi_bram_ctrl_0" *) 
   (* KEEP_HIERARCHY = "yes" *) 
-  zqynq_lab_1_design_processing_system7_0_0 processing_system7_0
-       (.DDR_Addr(DDR_addr[14:0]),
-        .DDR_BankAddr(DDR_ba[2:0]),
-        .DDR_CAS_n(DDR_cas_n),
-        .DDR_CKE(DDR_cke),
-        .DDR_CS_n(DDR_cs_n),
-        .DDR_Clk(DDR_ck_p),
-        .DDR_Clk_n(DDR_ck_n),
-        .DDR_DM(DDR_dm[3:0]),
-        .DDR_DQ(DDR_dq[31:0]),
-        .DDR_DQS(DDR_dqs_p[3:0]),
-        .DDR_DQS_n(DDR_dqs_n[3:0]),
-        .DDR_DRSTB(DDR_reset_n),
-        .DDR_ODT(DDR_odt),
-        .DDR_RAS_n(DDR_ras_n),
-        .DDR_VRN(FIXED_IO_ddr_vrn),
-        .DDR_VRP(FIXED_IO_ddr_vrp),
-        .DDR_WEB(DDR_we_n),
+  zqynq_lab_1_design_processing_system7_0_1 processing_system7_0
+       (.DDR_Addr(DDR_0_addr[14:0]),
+        .DDR_BankAddr(DDR_0_ba[2:0]),
+        .DDR_CAS_n(DDR_0_cas_n),
+        .DDR_CKE(DDR_0_cke),
+        .DDR_CS_n(DDR_0_cs_n),
+        .DDR_Clk(DDR_0_ck_p),
+        .DDR_Clk_n(DDR_0_ck_n),
+        .DDR_DM(DDR_0_dm[3:0]),
+        .DDR_DQ(DDR_0_dq[31:0]),
+        .DDR_DQS(DDR_0_dqs_p[3:0]),
+        .DDR_DQS_n(DDR_0_dqs_n[3:0]),
+        .DDR_DRSTB(DDR_0_reset_n),
+        .DDR_ODT(DDR_0_odt),
+        .DDR_RAS_n(DDR_0_ras_n),
+        .DDR_VRN(FIXED_IO_0_ddr_vrn),
+        .DDR_VRP(FIXED_IO_0_ddr_vrp),
+        .DDR_WEB(DDR_0_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
-        .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
         .IRQ_F2P(xlconcat_0_dout),
-        .MIO(FIXED_IO_mio[53:0]),
+        .MIO(FIXED_IO_0_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
         .M_AXI_GP0_ARBURST(processing_system7_0_M_AXI_GP0_ARBURST),
@@ -1981,9 +1983,9 @@ module zqynq_lab_1_design
         .M_AXI_GP0_WREADY(processing_system7_0_M_AXI_GP0_WREADY),
         .M_AXI_GP0_WSTRB(processing_system7_0_M_AXI_GP0_WSTRB),
         .M_AXI_GP0_WVALID(processing_system7_0_M_AXI_GP0_WVALID),
-        .PS_CLK(FIXED_IO_ps_clk),
-        .PS_PORB(FIXED_IO_ps_porb),
-        .PS_SRSTB(FIXED_IO_ps_srstb),
+        .PS_CLK(FIXED_IO_0_ps_clk),
+        .PS_PORB(FIXED_IO_0_ps_porb),
+        .PS_SRSTB(FIXED_IO_0_ps_srstb),
         .USB0_VBUS_PWRFAULT(1'b0));
   zqynq_lab_1_design_ps7_0_axi_periph_0 ps7_0_axi_periph
        (.ACLK(processing_system7_0_FCLK_CLK0),
@@ -2125,7 +2127,7 @@ module zqynq_lab_1_design
   zqynq_lab_1_design_rst_ps7_0_100M_0 rst_ps7_0_100M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
-        .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
+        .ext_reset_in(reset_rtl_1),
         .interconnect_aresetn(rst_ps7_0_100M_interconnect_aresetn),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),

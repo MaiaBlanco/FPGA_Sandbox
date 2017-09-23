@@ -1,88 +1,45 @@
-/******************************************************************************
-*
-* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* Use of the Software is limited solely to applications:
-* (a) running on a Xilinx device, or
-* (b) that interact with a Xilinx device through a bus or interconnect.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
-* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-* SOFTWARE.
-*
-* Except as contained in this notice, the name of the Xilinx shall not be used
-* in advertising or otherwise to promote the sale, use or other dealings in
-* this Software without prior written authorization from Xilinx.
-*
-******************************************************************************/
-
-/*
- * helloworld.c: simple test application
- *
- * This application configures UART 16550 to baud rate 9600.
- * PS7 UART (Zynq) is not initialized by this application, since
- * bootrom/bsp configures it to baud rate 115200
- *
- * ------------------------------------------------
- * | UART TYPE   BAUD RATE                        |
- * ------------------------------------------------
- *   uartns550   9600
- *   uartlite    Configurable only in HW design
- *   ps7_uart    115200 (configured by bootrom/bsp)
- */
-
 #include <stdio.h>
 #include "xparameters.h"
 #include "platform.h"
 #include "xil_printf.h"
 #include "xtmrctr.h"
 #include "xil_exception.h"
-#include "xil_printf.h"
 #include "xscugic.h"
 #include "xgpio.h"
+#include "xtime_l.h"
 
 
 // Defines:
 #define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
 #define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
-#define BTNS_DEVICE_ID	XPAR_AXI_GPIO_1_DEVICE_ID
-#define LEDS_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+#define LEDS_DEVICE_ID 		XPAR_AXI_GPIO_0_DEVICE_ID
 
-//#define TMRCTR_INTERRUPT_ID	XPAR_PS7_SCUGIC_0_DEVICE_ID	// Is this necessary?
-#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
-#define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+#define INTC_GPIO_INTERRUPT_ID 	XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define INTC_TMR_INTERRUPT_ID 	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 
-#define INTC		XScuGic
-#define INTC_HANDLER	XScuGic_InterruptHandler
-#define TMR_RESET_VALUE	 0xFF000000
-#define TIMER_CNTR_0	 0
+#define INTC				XScuGic
+#define INTC_HANDLER		XScuGic_InterruptHandler
+#define TMR_RESET_VALUE	 	0xFF000000//0BDBF
+#define TIMER_CNTR_0	 	0
 #define XPAR_TMRCTR_0_CLOCK_FREQ_HZ XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ
 #define BTN_INT 			XGPIO_IR_CH1_MASK
-#define TIMER_COUNT_LIM 10
+#define TIMER_COUNT_LIM 	100
+#define TEST_NUMBER_MASK 	0xF
+// Define so that if I increase the BRAM size later I don't need to
+// change loop bounds for the BRAM tests:
+#define BRAM_SIZE_IN_WORDS ((XPAR_BRAM_0_HIGHADDR-XPAR_BRAM_0_BASEADDR) >> 2)
 
 // Global variables:
 XTmrCtr timer_instance;
 XScuGic interrupt_ctl_instance;
 XGpio LEDInst, BTNInst;
 static int led_data;
-static u8 led_mask;
 static int btn_value;
 static int tmr_count;
 volatile int timer_expired;
+static int test_number;
+static int timer_count_lim_adj;
 
 
 // Function Prototypes:
@@ -118,28 +75,25 @@ void TMR_Intr_Handler(void *data)
 {
 	if (XTmrCtr_IsExpired(&timer_instance, 0))
 	{
+		//printf("Timertick\n\r");
 		// if the timer has expired TIMER_COUNT_LIM times, stop and increment the counter
 		// Then reset the timer and start it again
 		// Also blink the 7th LED.
-		if (tmr_count >= TIMER_COUNT_LIM)
+		if (tmr_count >= TIMER_COUNT_LIM + timer_count_lim_adj)
 		{
-			printf("Timer count > %d\n\r", TIMER_COUNT_LIM);
+			//printf("Timer count > %d\n\r", TIMER_COUNT_LIM);
 			XTmrCtr_Stop(&timer_instance, 0);
 			tmr_count = 0;
-			led_mask = XGpio_DiscreteRead(&LEDInst, 1);
-//			if (led_data == 0)
-//			{
-//				led_data = 0xAA;
-//			}
-			if (led_mask >= 0x80u)
+			led_data = XGpio_DiscreteRead(&LEDInst, 1);
+			if (led_data >= 0x80u)
 			{
-				led_mask &= 0x7Fu;
+				led_data &= 0x7Fu;
 			}
 			else
 			{
-				led_mask |= 0x80u;
+				led_data |= 0x80u;
 			}
-			XGpio_DiscreteWrite(&LEDInst, 1, (u32)led_mask);
+			XGpio_DiscreteWrite(&LEDInst, 1, (u32)led_data);
 			// Reset the timer counter
 			XTmrCtr_Reset(&timer_instance, 0);
 			XTmrCtr_Start(&timer_instance, 0);
@@ -152,9 +106,20 @@ void TMR_Intr_Handler(void *data)
 // Main function
 int main()
 {
-    init_platform();
+	init_platform();
 
+	double time_elapsed;
+	XTime t_start, t_end;
+	int i, k;
+	unsigned int data;
     int Status;
+
+    test_number = 0;
+	timer_count_lim_adj = 0;
+
+    print("Beginning test d: Init timer, GPIO, and buttons with interrupts.\n\r");//,
+    		//test_number);
+
     // Initialize the LEDs:
     Status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
     if (Status != XST_SUCCESS) return XST_FAILURE;
@@ -166,6 +131,9 @@ int main()
     // Set buttons to be inputs:
     XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
 
+    print("Buttons and LED GPIO initialized!\n\r");
+
+    print("Initializing the timer...\n\r");
     // Initialize the timer:
     Status = XTmrCtr_Initialize(&timer_instance, TMRCTR_DEVICE_ID);
     if (Status != XST_SUCCESS) return XST_FAILURE;
@@ -178,18 +146,128 @@ int main()
     XTmrCtr_SetResetValue(&timer_instance, 0, TMR_RESET_VALUE);
     XTmrCtr_SetOptions(&timer_instance, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
+    print("Initializing interrupt controller...\n\r");
+
     // Initialize the interrupt controller:
     Status = IntcInitFunction(INTC_DEVICE_ID, &timer_instance, &BTNInst);
     if(Status != XST_SUCCESS) return XST_FAILURE;
 
+    print("Starting timer.\n\r");
+
     // Finish by starting the timer:
     XTmrCtr_Start(&timer_instance, 0);
-    print("Hello World\n\r");
+    print("Everything running!\n\rHello World!\n\r");
+
 
     while(1);
+/*
+
+    // Test 1: Initialize all BRAM locations by writing increasing 32-bit counts
+    // starting from 0 in location 0.
+    // Given a BRAM of size 64KB and a word size of 4B (32 bits),
+    // this is 16384 writes starting at offset 0.
+    // Note that the defined bound will automatically update for changed BRAM size.
+    for (i = 0; i < BRAM_SIZE_IN_WORDS; i++)
+    {
+    	Xil_Out32(XPAR_BRAM_0_BASEADDR + (i << 2), i);
+    }
+
+    // Test 2: Now read back the values from BRAM and verify that they are correct:
+    //// (for fun, counting from the high address down to low address
+    for (i = 0; i < BRAM_SIZE_IN_WORDS; i++)
+    {
+    	data = Xil_In32(i);
+    	if ( data != i )
+    	{
+    		printf("ERROR: value read was %u instead of %u.\n\r",
+    				data, i);
+    	}
+    }
+
+    // Test 3: Continue the 32 bit counts, overwriting the old values and
+    // continuing the count from earlier.
+    k = 16384;	// Starting from last value
+    for (i = 0; i < 16384; i++)
+    {
+    	Xil_Out32(XPAR_BRAM_0_BASEADDR + (i << 2), i+k);
+    }
+
+    // Test 4: Read the values back again and check that they are correct.
+    for (i = 0; i < BRAM_SIZE_IN_WORDS; i++)
+    {
+    	data = Xil_In32(i);
+    	if ( data != i+k )
+    	{
+    		printf("ERROR: value read was %u instead of %u.\n\r",
+    				data, i+k);
+    	}
+    }
+
+    // Test 5a: Testing the steady-state BW in B/s when reading the same BRAM location repeatedly.
+    // TODO: augment by making a RNG in the FPGA and using that to determine the read address
+    k = BRAM_SIZE_IN_WORDS / 2;
+    XTime_GetTime(&t_start);
+    for (i = 0; i < 0xFFFF; i ++)
+    {
+    	data = Xil_In32(XPAR_BRAM_0_BASEADDR + (k << 2));
+    }
+    XTime_GetTime(&t_end);
+    time_elapsed = (double) ((t_end-t_start) / COUNTS_PER_SECOND);
+    printf("Performed %u memory reads at address %u in %f seconds.\n\r",
+    		0xFFFF, XPAR_BRAM_0_BASEADDR + (k << 2), time_elapsed);
+    printf("Data read rate: %f B/s\n\r", (0xFFFF << 2) / time_elapsed);
+
+    // Test 5b: Testing the steady-state BW in B/s when writing the same BRAM location repeatedly.
+    data = 0x6367u;
+    XTime_GetTime(&t_start);
+    for (i = 0; i < 0xFFFF; i ++)
+    {
+    	Xil_Out32(XPAR_BRAM_0_BASEADDR + (k << 2), data);
+    }
+    XTime_GetTime(&t_end);
+    time_elapsed = (double) ((t_end-t_start) / COUNTS_PER_SECOND);
+    printf("Performed %u memory writes of %u at address %u in %f seconds.\n\r",
+    		0xFFFF, data, XPAR_BRAM_0_BASEADDR + (k << 2), time_elapsed);
+    printf("Data write rate: %f B/s\n\r", (0xFFFF << 2) / time_elapsed);
+
+    // Test 6a: Test the steady-state BW in B/s when reading sequential BRAM locations repeatedly.
+    XTime_GetTime(&t_start);
+    for (i = BRAM_SIZE_IN_WORDS-1; i >= 0; i --)
+    {
+    	data = Xil_In32(XPAR_BRAM_0_BASEADDR + (i << 2));
+    }
+    XTime_GetTime(&t_end);
+    time_elapsed = (double) ((t_end-t_start) / COUNTS_PER_SECOND);
+    printf("Performed %u memory reads at decreasing sequential addresses in %f seconds.\n\r",
+    		BRAM_SIZE_IN_WORDS, time_elapsed);
+    printf("Data read rate: %f B/s\n\r", (BRAM_SIZE_IN_WORDS << 2) / time_elapsed);
+
+    // Test 6b: Test the steady-state BW in B/s when writing the sequential BRAM locations repeatedly.
+    XTime_GetTime(&t_start);
+    for (i = BRAM_SIZE_IN_WORDS-1; i >= 0; i --)
+    {
+    	Xil_Out32(XPAR_BRAM_0_BASEADDR + (i << 2), i);
+    }
+    XTime_GetTime(&t_end);
+    time_elapsed = (double) ((t_end-t_start) / COUNTS_PER_SECOND);
+    printf("Performed %u memory writes at decreasing sequential addresses in %f seconds.\n\r",
+    		BRAM_SIZE_IN_WORDS, time_elapsed);
+    printf("Data read rate: %f B/s\n\r", (BRAM_SIZE_IN_WORDS << 2) / time_elapsed);
+
+    // Test 7: Determine if BRAMS reads and writes are cached by the ARM core.
+    // Idea for this: we know that the cache is 64KB
+    // Therefore, we can "warm it up" by reading sequentially within one 64KB block.
+    // Then we can read, and record the time for accesses.
+    // After that, going to need to expand the BRAM size to go beyond cache size...
+    // with a bigger BRAM, now write outside of the initial 64KB block, and then measure
+    // read times for accesses to the old 64KB block.
 
 
+    printf("All tests completed. Have a nice day!\n\r");
+    timer_count_lim_adj = 90;
     cleanup_platform();
+
+    */
     return 0;
 }
 

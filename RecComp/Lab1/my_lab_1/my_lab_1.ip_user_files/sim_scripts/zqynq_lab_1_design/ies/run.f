@@ -5,27 +5,6 @@
 -makelib ies/xpm \
   "C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
--makelib ies/axi_infrastructure_v1_1_0 \
-  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
--endlib
--makelib ies/xil_common_vip_v1_0_0 -sv \
-  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/2ad9/hdl/xil_common_vip_v1_0_vl_rfs.sv" \
--endlib
--makelib ies/smartconnect_v1_0 -sv \
-  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/39ca/hdl/sc_util_v1_0_vl_rfs.sv" \
--endlib
--makelib ies/axi_protocol_checker_v1_1_14 -sv \
-  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/a1b2/hdl/axi_protocol_checker_v1_1_vl_rfs.sv" \
--endlib
--makelib ies/axi_vip_v1_0_2 -sv \
-  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/6eb1/hdl/axi_vip_v1_0_vl_rfs.sv" \
--endlib
--makelib ies/axi_vip_v1_0_1 -sv \
-  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/1d61/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
--endlib
--makelib ies/xil_defaultlib \
-  "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_processing_system7_0_0/sim/zqynq_lab_1_design_processing_system7_0_0.v" \
--endlib
 -makelib ies/axi_lite_ipif_v3_0_4 \
   "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 -endlib
@@ -72,6 +51,9 @@
 -makelib ies/generic_baseblocks_v2_1_0 \
   "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
+-makelib ies/axi_infrastructure_v1_1_0 \
+  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
+-endlib
 -makelib ies/axi_register_slice_v2_1_13 \
   "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
@@ -99,6 +81,24 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_xlconcat_0_0/sim/zqynq_lab_1_design_xlconcat_0_0.v" \
+-endlib
+-makelib ies/xil_common_vip_v1_0_0 -sv \
+  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/2ad9/hdl/xil_common_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/39ca/hdl/sc_util_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/axi_protocol_checker_v1_1_14 -sv \
+  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/a1b2/hdl/axi_protocol_checker_v1_1_vl_rfs.sv" \
+-endlib
+-makelib ies/axi_vip_v1_0_2 -sv \
+  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/6eb1/hdl/axi_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/axi_vip_v1_0_1 -sv \
+  "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/1d61/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_processing_system7_0_1/sim/zqynq_lab_1_design_processing_system7_0_1.v" \
 -endlib
 -makelib ies/axi_protocol_converter_v2_1_13 \
   "../../../../my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

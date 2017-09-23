@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Wed Sep 20 21:11:19 2017
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Fri Sep 22 17:41:20 2017
 -- Host        : EffulgentTome running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab1/my_lab_1/my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_axi_bram_ctrl_0_bram_0/zqynq_lab_1_design_axi_bram_ctrl_0_bram_0_stub.vhdl
+--               C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab1/my_lab_1/my_lab_1.srcs/sources_1/bd/zqynq_lab_1_design/ip/zqynq_lab_1_design_axi_bram_ctrl_0_bram_0/zqynq_lab_1_design_axi_bram_ctrl_0_bram_0_stub.vhdl
 -- Design      : zqynq_lab_1_design_axi_bram_ctrl_0_bram_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
@@ -38,6 +38,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "clka,rsta,ena,wea[3:0],addra[31:0],dina[31:0],douta[31:0],clkb,rstb,enb,web[3:0],addrb[31:0],dinb[31:0],doutb[31:0]";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "blk_mem_gen_v8_3_6,Vivado 2017.2";
+attribute x_core_info of stub : architecture is "blk_mem_gen_v8_3_6,Vivado 2017.2.1";
 begin
 end;

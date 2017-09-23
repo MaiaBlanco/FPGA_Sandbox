@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Wed Sep 20 21:12:07 2017
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Fri Sep 22 14:40:47 2017
 -- Host        : EffulgentTome running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top zqynq_lab_1_design_auto_pc_0 -prefix
---               zqynq_lab_1_design_auto_pc_0_ zqynq_lab_1_design_auto_pc_2_sim_netlist.vhdl
--- Design      : zqynq_lab_1_design_auto_pc_2
+--               zqynq_lab_1_design_auto_pc_0_ zqynq_lab_1_design_auto_pc_1_sim_netlist.vhdl
+-- Design      : zqynq_lab_1_design_auto_pc_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg484-1
@@ -16031,11 +16031,11 @@ entity zqynq_lab_1_design_auto_pc_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of zqynq_lab_1_design_auto_pc_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of zqynq_lab_1_design_auto_pc_0 : entity is "zqynq_lab_1_design_auto_pc_2,axi_protocol_converter_v2_1_13_axi_protocol_converter,{}";
+  attribute CHECK_LICENSE_TYPE of zqynq_lab_1_design_auto_pc_0 : entity is "zqynq_lab_1_design_auto_pc_1,axi_protocol_converter_v2_1_13_axi_protocol_converter,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zqynq_lab_1_design_auto_pc_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of zqynq_lab_1_design_auto_pc_0 : entity is "axi_protocol_converter_v2_1_13_axi_protocol_converter,Vivado 2017.2";
+  attribute X_CORE_INFO of zqynq_lab_1_design_auto_pc_0 : entity is "axi_protocol_converter_v2_1_13_axi_protocol_converter,Vivado 2017.2.1";
 end zqynq_lab_1_design_auto_pc_0;
 
 architecture STRUCTURE of zqynq_lab_1_design_auto_pc_0 is

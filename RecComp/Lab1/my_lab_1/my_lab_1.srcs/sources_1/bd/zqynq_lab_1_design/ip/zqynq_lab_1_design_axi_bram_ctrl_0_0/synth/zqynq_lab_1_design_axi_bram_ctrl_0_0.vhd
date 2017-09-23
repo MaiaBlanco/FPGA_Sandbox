@@ -61,7 +61,7 @@ ENTITY zqynq_lab_1_design_axi_bram_ctrl_0_0 IS
     s_axi_aclk : IN STD_LOGIC;
     s_axi_aresetn : IN STD_LOGIC;
     s_axi_awid : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    s_axi_awaddr : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    s_axi_awaddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
     s_axi_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -80,7 +80,7 @@ ENTITY zqynq_lab_1_design_axi_bram_ctrl_0_0 IS
     s_axi_bvalid : OUT STD_LOGIC;
     s_axi_bready : IN STD_LOGIC;
     s_axi_arid : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    s_axi_araddr : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    s_axi_araddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
     s_axi_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -99,14 +99,14 @@ ENTITY zqynq_lab_1_design_axi_bram_ctrl_0_0 IS
     bram_clk_a : OUT STD_LOGIC;
     bram_en_a : OUT STD_LOGIC;
     bram_we_a : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    bram_addr_a : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    bram_addr_a : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
     bram_wrdata_a : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     bram_rddata_a : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     bram_rst_b : OUT STD_LOGIC;
     bram_clk_b : OUT STD_LOGIC;
     bram_en_b : OUT STD_LOGIC;
     bram_we_b : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    bram_addr_b : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    bram_addr_b : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
     bram_wrdata_b : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     bram_rddata_b : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
@@ -141,7 +141,7 @@ ARCHITECTURE zqynq_lab_1_design_axi_bram_ctrl_0_0_arch OF zqynq_lab_1_design_axi
       ecc_interrupt : OUT STD_LOGIC;
       ecc_ue : OUT STD_LOGIC;
       s_axi_awid : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      s_axi_awaddr : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      s_axi_awaddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
       s_axi_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -160,7 +160,7 @@ ARCHITECTURE zqynq_lab_1_design_axi_bram_ctrl_0_0_arch OF zqynq_lab_1_design_axi
       s_axi_bvalid : OUT STD_LOGIC;
       s_axi_bready : IN STD_LOGIC;
       s_axi_arid : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      s_axi_araddr : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      s_axi_araddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
       s_axi_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -195,25 +195,25 @@ ARCHITECTURE zqynq_lab_1_design_axi_bram_ctrl_0_0_arch OF zqynq_lab_1_design_axi
       bram_clk_a : OUT STD_LOGIC;
       bram_en_a : OUT STD_LOGIC;
       bram_we_a : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      bram_addr_a : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      bram_addr_a : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
       bram_wrdata_a : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_rddata_a : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_rst_b : OUT STD_LOGIC;
       bram_clk_b : OUT STD_LOGIC;
       bram_en_b : OUT STD_LOGIC;
       bram_we_b : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      bram_addr_b : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      bram_addr_b : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
       bram_wrdata_b : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_rddata_b : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT axi_bram_ctrl;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zqynq_lab_1_design_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "axi_bram_ctrl,Vivado 2017.2";
+  ATTRIBUTE X_CORE_INFO OF zqynq_lab_1_design_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "axi_bram_ctrl,Vivado 2017.2.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zqynq_lab_1_design_axi_bram_ctrl_0_0_arch : ARCHITECTURE IS "zqynq_lab_1_design_axi_bram_ctrl_0_0,axi_bram_ctrl,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zqynq_lab_1_design_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "zqynq_lab_1_design_axi_bram_ctrl_0_0,axi_bram_ctrl,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_bram_ctrl,x_ipVersion=4.0,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BRAM_INST_MODE=EXTERNAL,C_MEMORY_DEPTH=16384,C_BRAM_ADDR_WIDTH=14,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ID_WIDTH=12,C_S_AXI_PROTOCOL=AXI4,C_S_AXI_SUPPORTS_NARROW_BURST=0,C_SINGLE_PORT_BRAM=0,C_FAMILY=zynq,C_SELECT_XPM=0,C_S_AXI_CTRL_ADDR_WIDTH=32,C_S_AXI_CTRL_DATA_WI" & 
-"DTH=32,C_ECC=0,C_ECC_TYPE=0,C_FAULT_INJECT=0,C_ECC_ONOFF_RESET_VALUE=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zqynq_lab_1_design_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "zqynq_lab_1_design_axi_bram_ctrl_0_0,axi_bram_ctrl,{x_ipProduct=Vivado 2017.2.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_bram_ctrl,x_ipVersion=4.0,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BRAM_INST_MODE=EXTERNAL,C_MEMORY_DEPTH=2048,C_BRAM_ADDR_WIDTH=11,C_S_AXI_ADDR_WIDTH=13,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ID_WIDTH=12,C_S_AXI_PROTOCOL=AXI4,C_S_AXI_SUPPORTS_NARROW_BURST=0,C_SINGLE_PORT_BRAM=0,C_FAMILY=zynq,C_SELECT_XPM=0,C_S_AXI_CTRL_ADDR_WIDTH=32,C_S_AXI_CTRL_DATA_W" & 
+"IDTH=32,C_ECC=0,C_ECC_TYPE=0,C_FAULT_INJECT=0,C_ECC_ONOFF_RESET_VALUE=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLKIF CLK";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 RSTIF RST";
@@ -270,9 +270,9 @@ BEGIN
   U0 : axi_bram_ctrl
     GENERIC MAP (
       C_BRAM_INST_MODE => "EXTERNAL",
-      C_MEMORY_DEPTH => 16384,
-      C_BRAM_ADDR_WIDTH => 14,
-      C_S_AXI_ADDR_WIDTH => 16,
+      C_MEMORY_DEPTH => 2048,
+      C_BRAM_ADDR_WIDTH => 11,
+      C_S_AXI_ADDR_WIDTH => 13,
       C_S_AXI_DATA_WIDTH => 32,
       C_S_AXI_ID_WIDTH => 12,
       C_S_AXI_PROTOCOL => "AXI4",
