@@ -1,9 +1,10 @@
 #include <stdio.h>
-#include "xparameters.h"
+//#include "xparameters.h"
 #include "platform.h"
 #include "xil_printf.h"
+/*
 #include "xtmrctr.h"
-#include "xil_exception.h"
+//#include "xil_exception.h"
 #include "xscugic.h"
 #include "xgpio.h"
 #include "xtime_l.h"
@@ -81,8 +82,8 @@ void TMR_Intr_Handler(void *data)
 		// Also blink the 7th LED.
 		if (tmr_count >= TIMER_COUNT_LIM + timer_count_lim_adj)
 		{
-			//printf("Timer count > %d\n\r", TIMER_COUNT_LIM);
 			XTmrCtr_Stop(&timer_instance, 0);
+			printf("Timer count > %d\n\r", TIMER_COUNT_LIM);
 			tmr_count = 0;
 			led_data = XGpio_DiscreteRead(&LEDInst, 1);
 			if (led_data >= 0x80u)
@@ -102,64 +103,64 @@ void TMR_Intr_Handler(void *data)
 	}
 }
 
-
+*/
 // Main function
 int main()
 {
 	init_platform();
-
-	double time_elapsed;
-	XTime t_start, t_end;
-	int i, k;
-	unsigned int data;
-    int Status;
-
-    test_number = 0;
-	timer_count_lim_adj = 0;
+//
+//	double time_elapsed;
+//	XTime t_start, t_end;
+//	int i, k;
+//	unsigned int data;
+//    int Status;
+//
+//    test_number = 0;
+//	timer_count_lim_adj = 0;
 
     print("Beginning test d: Init timer, GPIO, and buttons with interrupts.\n\r");//,
     		//test_number);
 
-    // Initialize the LEDs:
-    Status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
-    if (Status != XST_SUCCESS) return XST_FAILURE;
-    // Init the pushbuttons:
-    Status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
-    if (Status != XST_SUCCESS) return XST_FAILURE;
-    // Set direction of LEDs to be outputs:
-    XGpio_SetDataDirection(&LEDInst, 1, 0x00);
-    // Set buttons to be inputs:
-    XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+//    // Initialize the LEDs:
+//    Status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
+//    if (Status != XST_SUCCESS) return XST_FAILURE;
+//    // Init the pushbuttons:
+//    Status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+//    if (Status != XST_SUCCESS) return XST_FAILURE;
+//    // Set direction of LEDs to be outputs:
+//    XGpio_SetDataDirection(&LEDInst, 1, 0x00);
+//    // Set buttons to be inputs:
+//    XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+//
+//    print("Buttons and LED GPIO initialized!\n\r");
+//
+//    print("Initializing the timer...\n\r");
+//    // Initialize the timer:
+//    Status = XTmrCtr_Initialize(&timer_instance, TMRCTR_DEVICE_ID);
+//    if (Status != XST_SUCCESS) return XST_FAILURE;
+//    // Note that self-test is destructive (resets all settings from whatever they
+//    // currently are) so plan to set it back up after calling this:
+//    //Status = XTmrCtr_SelfTest(&timer_instance, TMRCTR_DEVICE_ID);
+//    //if (Status != XST_SUCCESS) return XST_FAILURE;
+//    // Set the interrupt handler for the timer:
+//    XTmrCtr_SetHandler(&timer_instance, TMR_Intr_Handler, &timer_instance);
+//    XTmrCtr_SetResetValue(&timer_instance, 0, TMR_RESET_VALUE);
+//    XTmrCtr_SetOptions(&timer_instance, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+//
+//    print("Initializing interrupt controller...\n\r");
+//
+//    // Initialize the interrupt controller:
+//    Status = IntcInitFunction(INTC_DEVICE_ID, &timer_instance, &BTNInst);
+//    if(Status != XST_SUCCESS) return XST_FAILURE;
+//
+//    print("Starting timer.\n\r");
+//
+//    // Finish by starting the timer:
+//    XTmrCtr_Start(&timer_instance, 0);
+//    print("Everything running!\n\rHello World!\n\r");
 
-    print("Buttons and LED GPIO initialized!\n\r");
 
-    print("Initializing the timer...\n\r");
-    // Initialize the timer:
-    Status = XTmrCtr_Initialize(&timer_instance, TMRCTR_DEVICE_ID);
-    if (Status != XST_SUCCESS) return XST_FAILURE;
-    // Note that self-test is destructive (resets all settings from whatever they
-    // currently are) so plan to set it back up after calling this:
-    //Status = XTmrCtr_SelfTest(&timer_instance, TMRCTR_DEVICE_ID);
-    //if (Status != XST_SUCCESS) return XST_FAILURE;
-    // Set the interrupt handler for the timer:
-    XTmrCtr_SetHandler(&timer_instance, TMR_Intr_Handler, &timer_instance);
-    XTmrCtr_SetResetValue(&timer_instance, 0, TMR_RESET_VALUE);
-    XTmrCtr_SetOptions(&timer_instance, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
-
-    print("Initializing interrupt controller...\n\r");
-
-    // Initialize the interrupt controller:
-    Status = IntcInitFunction(INTC_DEVICE_ID, &timer_instance, &BTNInst);
-    if(Status != XST_SUCCESS) return XST_FAILURE;
-
-    print("Starting timer.\n\r");
-
-    // Finish by starting the timer:
-    XTmrCtr_Start(&timer_instance, 0);
-    print("Everything running!\n\rHello World!\n\r");
-
-
-    while(1);
+    //while(1);
 /*
 
     // Test 1: Initialize all BRAM locations by writing increasing 32-bit counts
@@ -265,14 +266,15 @@ int main()
 
     printf("All tests completed. Have a nice day!\n\r");
     timer_count_lim_adj = 90;
-    cleanup_platform();
+
 
     */
+    cleanup_platform();
     return 0;
 }
 
 // Function definitions:
-
+/*
 // Initial setup functions:
 int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
 {
@@ -329,3 +331,4 @@ int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstanceP
 
 	return XST_SUCCESS;
 }
+*/

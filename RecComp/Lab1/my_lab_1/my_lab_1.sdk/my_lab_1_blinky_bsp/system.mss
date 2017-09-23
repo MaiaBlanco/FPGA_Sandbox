@@ -6,7 +6,6 @@ BEGIN OS
  PARAMETER OS_NAME = standalone
  PARAMETER OS_VER = 6.3
  PARAMETER PROC_INSTANCE = ps7_cortexa9_0
- PARAMETER profile_timer = axi_timer_0
  PARAMETER stdin = ps7_coresight_comp_0
  PARAMETER stdout = ps7_coresight_comp_0
 END
@@ -18,12 +17,6 @@ BEGIN PROCESSOR
  PARAMETER HW_INSTANCE = ps7_cortexa9_0
 END
 
-
-BEGIN DRIVER
- PARAMETER DRIVER_NAME = bram
- PARAMETER DRIVER_VER = 4.1
- PARAMETER HW_INSTANCE = axi_bram_ctrl_0
-END
 
 BEGIN DRIVER
  PARAMETER DRIVER_NAME = gpio
