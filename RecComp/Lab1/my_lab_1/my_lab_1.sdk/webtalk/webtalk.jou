@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Webtalk v2017.2.1 (64-bit)
-# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # 
-# Start of session at: Fri Sep 22 16:26:23 2017
-# Process ID: 15584
+# Start of session at: Sat Sep 23 13:22:29 2017
+# Process ID: 14580
 # Current directory: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab1/my_lab_1/my_lab_1.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
 # Log file: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab1/my_lab_1/my_lab_1.sdk/webtalk/webtalk.log
