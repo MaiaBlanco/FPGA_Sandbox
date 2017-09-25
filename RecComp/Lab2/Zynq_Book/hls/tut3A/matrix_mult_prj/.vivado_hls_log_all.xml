@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'load' operation ('prod_load', matrix_mult.cpp:16) on array 'prod' (2.32 ns)&#xD;&#xA;&#x9;'add' operation ('tmp_3', matrix_mult.cpp:16) (3.02 ns)&#xD;&#xA;&#x9;'store' operation (matrix_mult.cpp:16) of variable 'tmp_3', matrix_mult.cpp:16 on array 'prod' (2.32 ns)" projectName="matrix_mult_prj" solutionName="solution2" date="2017-09-24T00:41:19.177-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (7.66ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.38ns)." projectName="matrix_mult_prj" solutionName="solution2" date="2017-09-24T00:41:19.164-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between 'store' operation (matrix_mult.cpp:16) of variable 'tmp_3', matrix_mult.cpp:16 on array 'prod' and 'load' operation ('prod_load', matrix_mult.cpp:16) on array 'prod'." projectName="matrix_mult_prj" solutionName="solution2" date="2017-09-24T00:41:19.152-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop." projectName="matrix_mult_prj" solutionName="solution2" date="2017-09-24T00:41:18.993-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Col' (matrix_mult.cpp:12:40) in function 'matrix_mult' : " projectName="matrix_mult_prj" solutionName="solution2" date="2017-09-24T00:41:18.979-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

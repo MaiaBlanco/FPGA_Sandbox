@@ -1,0 +1,7 @@
+sv xil_defaultlib "AESL_automem_a.v"
+sv xil_defaultlib "AESL_automem_b.v"
+sv xil_defaultlib "AESL_automem_prod.v"
+sv xil_defaultlib "matrix_mult.autotb.v"
+sv xil_defaultlib "matrix_mult.v"
+sv xil_defaultlib "matrix_mult_mac_mbkb.v"
+
