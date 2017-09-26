@@ -51,7 +51,7 @@
         </SimFlow>
     </Simulation>
     <name>
-        <value string="solution3"/>
+        <value string="solution4"/>
     </name>
     <project>
         <value string="matrix_mult_prj"/>
@@ -61,8 +61,8 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/null/null"/>
-        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
-        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+        <library name="DefaultPlatform" value="xilinx/zynq/zynq"/>
+        <library name="DefaultPlatform" value="xilinx/zynq/zynq_fpv6"/>
     </libraryList>
     <clockList>
         <clock name="default" default="false" period="5"/>

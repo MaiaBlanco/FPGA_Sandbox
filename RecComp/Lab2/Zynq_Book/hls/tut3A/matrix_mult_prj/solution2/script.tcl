@@ -5,8 +5,8 @@
 ############################################################
 open_project matrix_mult_prj
 set_top matrix_mult
-add_files matrix_mult.h
 add_files matrix_mult.cpp
+add_files matrix_mult.h
 add_files -tb matrix_mult_test.cpp
 open_solution "solution2"
 set_part {xc7z020clg484-1}
