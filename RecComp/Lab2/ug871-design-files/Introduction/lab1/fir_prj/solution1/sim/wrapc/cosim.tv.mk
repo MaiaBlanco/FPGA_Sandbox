@@ -13,8 +13,8 @@ __SIM_DDS__ = 1
 
 TARGET := cosim.tv.exe
 
-AUTOPILOT_ROOT := C:/Xilinx/Vivado_HLS/2017.2
-AUTOPILOT_MACH := win64
+AUTOPILOT_ROOT := /afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2
+AUTOPILOT_MACH := lnx64
 
 ifdef COSIM_M32
   AUTOPILOT_MACH := lnx32
@@ -24,8 +24,9 @@ ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
+IFLAG += -fPIC
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := C:/Xilinx/Vivado_HLS/2017.2/msys/bin
+  AP_GCC_PATH := /afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin
 endif
 CCFLAG += 
 
@@ -43,12 +44,10 @@ IFLAG += -D__SIM_OPENCV__
 IFLAG += -D__SIM_FFT__
 IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
-IFLAG += -DNT
 LFLAG += -L "${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools/systemc/lib" -lsystemc -lpthread
 IFLAG += -D__RTL_SIMULATION__
 IFLAG += -D__xilinx_ip_top=
 DFLAG += -DAESL_PIPELINE
-LFLAG += -Wl,--enable-auto-import
 DFLAG += -DAUTOCC
 DFLAG += -DAESL_EXTERN_C
 
@@ -56,7 +55,7 @@ include ./Makefile.rules
 
 all : $(TARGET)
 
-AUTOCC := cmd //c apcc.bat
+AUTOCC := apcc
 
 $(ObjDir)/fir_test.c_pre.c.tb.o : fir_test.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) fir_test.c_pre.c.tb.c" $(AVE_DIR_DLOG)

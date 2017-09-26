@@ -1,8 +1,8 @@
-; ModuleID = 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/a.o.3.bc'
-target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
-target triple = "i686-pc-mingw32"
+; ModuleID = '/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/a.o.3.bc'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
 
-@shift_reg = internal unnamed_addr global [11 x i32] zeroinitializer, align 4 ; [#uses=3 type=[11 x i32]*]
+@shift_reg = internal unnamed_addr global [11 x i32] zeroinitializer, align 16 ; [#uses=3 type=[11 x i32]*]
 @fir_str = internal unnamed_addr constant [4 x i8] c"fir\00" ; [#uses=1 type=[4 x i8]*]
 @p_str = private unnamed_addr constant [17 x i8] c"Shift_Accum_Loop\00", align 1 ; [#uses=1 type=[17 x i8]*]
 
@@ -10,7 +10,7 @@ target triple = "i686-pc-mingw32"
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 ; [#uses=0]
-define void @fir(i32* %y, [11 x i32]* %c, i32 %x) nounwind {
+define void @fir(i32* %y, [11 x i32]* %c, i32 %x) nounwind uwtable {
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %y) nounwind, !map !7
   call void (...)* @_ssdm_op_SpecBitsMap([11 x i32]* %c) nounwind, !map !13
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %x) nounwind, !map !19
@@ -36,26 +36,28 @@ define void @fir(i32* %y, [11 x i32]* %c, i32 %x) nounwind {
   br i1 %tmp_1, label %3, label %4, !dbg !50      ; [debug line = 61:2]
 
 ; <label>:3                                       ; preds = %2
-  store i32 %x_read, i32* getelementptr inbounds ([11 x i32]* @shift_reg, i32 0, i32 0), align 4, !dbg !51 ; [debug line = 62:4]
+  store i32 %x_read, i32* getelementptr inbounds ([11 x i32]* @shift_reg, i64 0, i64 0), align 16, !dbg !51 ; [debug line = 62:4]
   call void @llvm.dbg.value(metadata !{i32 %x}, i64 0, metadata !53), !dbg !54 ; [debug line = 63:7] [debug variable = data]
   br label %5, !dbg !55                           ; [debug line = 64:5]
 
 ; <label>:4                                       ; preds = %2
   %tmp_2 = add i5 %i, -1, !dbg !56                ; [#uses=1 type=i5] [debug line = 65:4]
-  %tmp_2_cast = zext i5 %tmp_2 to i32, !dbg !56   ; [#uses=1 type=i32] [debug line = 65:4]
-  %shift_reg_addr = getelementptr inbounds [11 x i32]* @shift_reg, i32 0, i32 %tmp_2_cast, !dbg !56 ; [#uses=1 type=i32*] [debug line = 65:4]
+  %tmp_3 = zext i5 %tmp_2 to i64, !dbg !56        ; [#uses=1 type=i64] [debug line = 65:4]
+  %shift_reg_addr = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %tmp_3, !dbg !56 ; [#uses=1 type=i32*] [debug line = 65:4]
   %data = load i32* %shift_reg_addr, align 4, !dbg !56 ; [#uses=2 type=i32] [debug line = 65:4]
-  %shift_reg_addr_1 = getelementptr inbounds [11 x i32]* @shift_reg, i32 0, i32 %i_cast, !dbg !56 ; [#uses=1 type=i32*] [debug line = 65:4]
+  %tmp_4 = zext i32 %i_cast to i64, !dbg !56      ; [#uses=1 type=i64] [debug line = 65:4]
+  %shift_reg_addr_1 = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %tmp_4, !dbg !56 ; [#uses=1 type=i32*] [debug line = 65:4]
   store i32 %data, i32* %shift_reg_addr_1, align 4, !dbg !56 ; [debug line = 65:4]
   call void @llvm.dbg.value(metadata !{i32 %data}, i64 0, metadata !53), !dbg !58 ; [debug line = 66:4] [debug variable = data]
   br label %5
 
 ; <label>:5                                       ; preds = %4, %3
   %data1 = phi i32 [ %x_read, %3 ], [ %data, %4 ] ; [#uses=1 type=i32]
-  %c_addr = getelementptr [11 x i32]* %c, i32 0, i32 %i_cast, !dbg !59 ; [#uses=1 type=i32*] [debug line = 68:5]
+  %tmp_5 = zext i32 %i_cast to i64, !dbg !59      ; [#uses=1 type=i64] [debug line = 68:5]
+  %c_addr = getelementptr [11 x i32]* %c, i64 0, i64 %tmp_5, !dbg !59 ; [#uses=1 type=i32*] [debug line = 68:5]
   %c_load = load i32* %c_addr, align 4, !dbg !59  ; [#uses=1 type=i32] [debug line = 68:5]
-  %tmp_3 = mul nsw i32 %c_load, %data1, !dbg !59  ; [#uses=1 type=i32] [debug line = 68:5]
-  %acc_1 = add nsw i32 %tmp_3, %acc, !dbg !59     ; [#uses=1 type=i32] [debug line = 68:5]
+  %tmp_6 = mul nsw i32 %c_load, %data1, !dbg !59  ; [#uses=1 type=i32] [debug line = 68:5]
+  %acc_1 = add nsw i32 %tmp_6, %acc, !dbg !59     ; [#uses=1 type=i32] [debug line = 68:5]
   call void @llvm.dbg.value(metadata !{i32 %acc_1}, i64 0, metadata !60), !dbg !59 ; [debug line = 68:5] [debug variable = acc]
   %i_1 = add i5 %i, -1, !dbg !62                  ; [#uses=1 type=i5] [debug line = 60:39]
   call void @llvm.dbg.value(metadata !{i5 %i_1}, i64 0, metadata !63), !dbg !62 ; [debug line = 60:39] [debug variable = i]
@@ -144,13 +146,13 @@ entry:
 !24 = metadata !{i32 0, i32 0, i32 0}
 !25 = metadata !{i32 786689, metadata !26, metadata !"x", metadata !27, i32 50331699, metadata !31, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !26 = metadata !{i32 786478, i32 0, metadata !27, metadata !"fir", metadata !"fir", metadata !"", metadata !27, i32 48, metadata !28, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !35, i32 52} ; [ DW_TAG_subprogram ]
-!27 = metadata !{i32 786473, metadata !"fir.c", metadata !"C:\5CUsers\5Cmarkb\5CSource\5CRepos\5CFPGA_Sandbox\5CRecComp\5CLab2\5Cug871-design-files\5CIntroduction\5Clab1", null} ; [ DW_TAG_file_type ]
+!27 = metadata !{i32 786473, metadata !"fir.c", metadata !"/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1", null} ; [ DW_TAG_file_type ]
 !28 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !29, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !29 = metadata !{null, metadata !30, metadata !33, metadata !31}
-!30 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !31} ; [ DW_TAG_pointer_type ]
+!30 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !31} ; [ DW_TAG_pointer_type ]
 !31 = metadata !{i32 786454, null, metadata !"data_t", metadata !27, i32 51, i64 0, i64 0, i64 0, i32 0, metadata !32} ; [ DW_TAG_typedef ]
 !32 = metadata !{i32 786468, null, metadata !"int", null, i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ]
-!33 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !34} ; [ DW_TAG_pointer_type ]
+!33 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !34} ; [ DW_TAG_pointer_type ]
 !34 = metadata !{i32 786454, null, metadata !"coef_t", metadata !27, i32 50, i64 0, i64 0, i64 0, i32 0, metadata !32} ; [ DW_TAG_typedef ]
 !35 = metadata !{metadata !36}
 !36 = metadata !{i32 786468}                      ; [ DW_TAG_base_type ]

@@ -1,6 +1,20 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: `csim.exe' is up to date.
+   Compiling(apcc) ../../../../fir_test.c in debug mode
+INFO: [HLS 200-10] Running '/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'markb1' on host 'hestia.andrew.local.cmu.edu' (Linux_x86_64 version 3.10.0-693.2.2.el7.x86_64) on Tue Sep 26 16:28:05 EDT 2017
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.4 (Maipo)"
+INFO: [HLS 200-10] In directory '/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_markb1/136081506457685571453
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../fir.c in debug mode
+INFO: [HLS 200-10] Running '/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'markb1' on host 'hestia.andrew.local.cmu.edu' (Linux_x86_64 version 3.10.0-693.2.2.el7.x86_64) on Tue Sep 26 16:28:06 EDT 2017
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.4 (Maipo)"
+INFO: [HLS 200-10] In directory '/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_markb1/136801506457686719390
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
 Comparing against output data 
 *******************************************
 PASS: The output matches the golden output!

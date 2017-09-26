@@ -1,19 +1,21 @@
-   Build using "C:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Build using "/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/g++"
    Compiling apatb_fir.cpp
    Compiling (apcc) fir.c_pre.c.tb.c
-INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'markb' on host 'effulgenttome' (Windows NT_amd64 version 6.2) on Tue Sep 26 15:58:38 -0400 2017
-INFO: [HLS 200-10] In directory 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/wrapc'
+INFO: [HLS 200-10] Running '/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'markb1' on host 'hestia.andrew.local.cmu.edu' (Linux_x86_64 version 3.10.0-693.2.2.el7.x86_64) on Tue Sep 26 16:29:29 EDT 2017
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.4 (Maipo)"
+INFO: [HLS 200-10] In directory '/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_markb1/140711506457769364043
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) fir_test.c_pre.c.tb.c
-INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'markb' on host 'effulgenttome' (Windows NT_amd64 version 6.2) on Tue Sep 26 15:58:42 -0400 2017
-INFO: [HLS 200-10] In directory 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/wrapc'
+INFO: [HLS 200-10] Running '/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'markb1' on host 'hestia.andrew.local.cmu.edu' (Linux_x86_64 version 3.10.0-693.2.2.el7.x86_64) on Tue Sep 26 16:29:29 EDT 2017
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.4 (Maipo)"
+INFO: [HLS 200-10] In directory '/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_markb1/141411506457770005112
 INFO: [APCC 202-1] APCC is done.
    Generating cosim.tv.exe

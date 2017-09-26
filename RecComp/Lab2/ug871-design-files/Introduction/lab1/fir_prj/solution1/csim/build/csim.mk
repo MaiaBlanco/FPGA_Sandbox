@@ -23,17 +23,18 @@ HLS_SOURCES = ../../../../fir_test.c ../../../../fir.c
 
 TARGET := csim.exe
 
-AUTOPILOT_ROOT := C:/Xilinx/Vivado_HLS/2017.2
-AUTOPILOT_MACH := win64
+AUTOPILOT_ROOT := /afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2
+AUTOPILOT_MACH := lnx64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
+IFLAG += -fPIC
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := C:/Xilinx/Vivado_HLS/2017.2/msys/bin
+  AP_GCC_PATH := /afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
-AP_CLANG_PATH := ${AUTOPILOT_ROOT}/msys32/mingw32/bin
+AP_CLANG_PATH := ${AUTOPILOT_TOOL}/clang-3.9/bin
 AUTOPILOT_TECH := ${AUTOPILOT_ROOT}/common/technology
 
 
@@ -56,8 +57,6 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -g
-IFLAG += -DNT
-LFLAG += -Wl,--enable-auto-import 
 DFLAG += -DAUTOCC
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += 
@@ -70,7 +69,7 @@ all: $(TARGET)
 
 
 
-AUTOCC := cmd //c apcc.bat  
+AUTOCC := apcc  
 
 $(ObjDir)/fir_test.o: ../../../../fir_test.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../../fir_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)

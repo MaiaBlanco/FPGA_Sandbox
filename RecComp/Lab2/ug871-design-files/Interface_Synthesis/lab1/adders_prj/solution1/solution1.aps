@@ -1,0 +1,22 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="adders_prj"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7a75tl:ftg256:-2l"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/artix7l/artix7l" name="DefaultPlatform"/>
+        <library value="xilinx/artix7l/artix7l_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="3.25"/>
+    </clockList>
+    <config>
+        <schedule model="adders"/>
+    </config>
+</AutoPilot:solution>
+

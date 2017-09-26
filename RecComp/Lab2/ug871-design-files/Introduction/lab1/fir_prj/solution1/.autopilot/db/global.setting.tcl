@@ -43,8 +43,8 @@ set SCTraceOption "all"
 set TargetInfo "xc7k160t:fbg484:-2"
 set SourceFiles {sc {} c ../../fir.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/solution1.directive}
-set TBFiles {verilog {../../out.gold.dat ../../fir_test.c} bc {../../out.gold.dat ../../fir_test.c} sc {../../out.gold.dat ../../fir_test.c} vhdl {../../out.gold.dat ../../fir_test.c} c {} cas {../../out.gold.dat ../../fir_test.c}}
+set DirectiveFile {/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/solution1.directive}
+set TBFiles {verilog {../../fir_test.c ../../out.gold.dat} bc {../../fir_test.c ../../out.gold.dat} sc {../../fir_test.c ../../out.gold.dat} vhdl {../../fir_test.c ../../out.gold.dat} c {} cas {../../fir_test.c ../../out.gold.dat}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

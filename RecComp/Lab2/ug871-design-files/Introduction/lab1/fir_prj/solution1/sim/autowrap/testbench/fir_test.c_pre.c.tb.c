@@ -5,828 +5,1471 @@
 // 
 // ==============================================================
 
-#1 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#1 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
 #1 "<built-in>"
 #1 "<command-line>"
-#1 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
-#46 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
-#1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 1 3
-#19 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
-#1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h" 1 3
-#32 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h" 3
+#1 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#46 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#1 "/usr/include/stdio.h" 1 3 4
+#27 "/usr/include/stdio.h" 3 4
+#1 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4
+#339 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
+#1 "/usr/include/sys/cdefs.h" 1 3 4
+#392 "/usr/include/sys/cdefs.h" 3 4
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+#393 "/usr/include/sys/cdefs.h" 2 3 4
+#340 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
+#362 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4
+#1 "/usr/include/gnu/stubs.h" 1 3 4
+#10 "/usr/include/gnu/stubs.h" 3 4
+#1 "/usr/include/gnu/stubs-64.h" 1 3 4
+#11 "/usr/include/gnu/stubs.h" 2 3 4
+#363 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4
+#28 "/usr/include/stdio.h" 2 3 4
 
-#33 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h" 3
-#20 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 2 3
+
+
+
+
+#1 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#212 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+typedef long unsigned int size_t;
+#34 "/usr/include/stdio.h" 2 3 4
+
+#1 "/usr/include/bits/types.h" 1 3 4
+#27 "/usr/include/bits/types.h" 3 4
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+#28 "/usr/include/bits/types.h" 2 3 4
+
+
+typedef unsigned char __u_char;
+typedef unsigned short int __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long int __u_long;
+
+
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef signed short int __int16_t;
+typedef unsigned short int __uint16_t;
+typedef signed int __int32_t;
+typedef unsigned int __uint32_t;
+
+typedef signed long int __int64_t;
+typedef unsigned long int __uint64_t;
 
 
 
 
 
 
-#1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stddef.h" 1 3 4
-#212 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stddef.h" 3 4
-typedef unsigned int size_t;
-#324 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stddef.h" 3 4
-typedef short unsigned int wchar_t;
-#353 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stddef.h" 3 4
-typedef short unsigned int wint_t;
-#27 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 2 3
 
-#1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stdarg.h" 1 3 4
-#40 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stdarg.h" 3 4
+typedef long int __quad_t;
+typedef unsigned long int __u_quad_t;
+#130 "/usr/include/bits/types.h" 3 4
+#1 "/usr/include/bits/typesizes.h" 1 3 4
+#131 "/usr/include/bits/types.h" 2 3 4
+
+
+typedef unsigned long int __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long int __ino_t;
+typedef unsigned long int __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned long int __nlink_t;
+typedef long int __off_t;
+typedef long int __off64_t;
+typedef int __pid_t;
+typedef struct { int __val[2]; } __fsid_t;
+typedef long int __clock_t;
+typedef unsigned long int __rlim_t;
+typedef unsigned long int __rlim64_t;
+typedef unsigned int __id_t;
+typedef long int __time_t;
+typedef unsigned int __useconds_t;
+typedef long int __suseconds_t;
+
+typedef int __daddr_t;
+typedef int __key_t;
+
+
+typedef int __clockid_t;
+
+
+typedef void * __timer_t;
+
+
+typedef long int __blksize_t;
+
+
+
+
+typedef long int __blkcnt_t;
+typedef long int __blkcnt64_t;
+
+
+typedef unsigned long int __fsblkcnt_t;
+typedef unsigned long int __fsblkcnt64_t;
+
+
+typedef unsigned long int __fsfilcnt_t;
+typedef unsigned long int __fsfilcnt64_t;
+
+
+typedef long int __fsword_t;
+
+typedef long int __ssize_t;
+
+
+typedef long int __syscall_slong_t;
+
+typedef unsigned long int __syscall_ulong_t;
+
+
+
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+
+
+typedef long int __intptr_t;
+
+
+typedef unsigned int __socklen_t;
+#36 "/usr/include/stdio.h" 2 3 4
+#44 "/usr/include/stdio.h" 3 4
+struct _IO_FILE;
+
+
+
+typedef struct _IO_FILE FILE;
+
+
+
+
+
+#64 "/usr/include/stdio.h" 3 4
+typedef struct _IO_FILE __FILE;
+#74 "/usr/include/stdio.h" 3 4
+#1 "/usr/include/libio.h" 1 3 4
+#32 "/usr/include/libio.h" 3 4
+#1 "/usr/include/_G_config.h" 1 3 4
+#15 "/usr/include/_G_config.h" 3 4
+#1 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#16 "/usr/include/_G_config.h" 2 3 4
+
+
+
+
+#1 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 1 3 4
+#57 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+#1 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4
+#353 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4
+typedef unsigned int wint_t;
+#58 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+
+#1 "/usr/include/bits/wchar.h" 1 3 4
+#22 "/usr/include/bits/wchar.h" 3 4
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+#23 "/usr/include/bits/wchar.h" 2 3 4
+#60 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4
+#85 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4
+typedef struct
+{
+  int __count;
+  union
+  {
+    wint_t __wch;
+    char __wchb[4];
+  } __value;
+} __mbstate_t;
+#21 "/usr/include/_G_config.h" 2 3 4
+typedef struct
+{
+  __off_t __pos;
+  __mbstate_t __state;
+} _G_fpos_t;
+typedef struct
+{
+  __off64_t __pos;
+  __mbstate_t __state;
+} _G_fpos64_t;
+#33 "/usr/include/libio.h" 2 3 4
+#50 "/usr/include/libio.h" 3 4
+#1 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4
+#40 "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-#29 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 2 3
-#129 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
-typedef struct _iobuf
-{
- char* _ptr;
- int _cnt;
- char* _base;
- int _flag;
- int _file;
- int _charbuf;
- int _bufsiz;
- char* _tmpfname;
-} FILE;
-#154 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
-extern __attribute__ ((__dllimport__)) FILE _iob[];
-#169 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fopen (const char*, const char*);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) freopen (const char*, const char*, FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fflush (FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fclose (FILE*);
+#51 "/usr/include/libio.h" 2 3 4
+#145 "/usr/include/libio.h" 3 4
+struct _IO_jump_t; struct _IO_FILE;
+#155 "/usr/include/libio.h" 3 4
+typedef void _IO_lock_t;
 
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) remove (const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) rename (const char*, const char*);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) tmpfile (void);
- char* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) tmpnam (char*);
 
 
- char* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _tempnam (const char*, const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _rmtmp(void);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _unlink (const char*);
 
 
- char* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) tempnam (const char*, const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) rmtmp(void);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) unlink (const char*);
+struct _IO_marker {
+  struct _IO_marker *_next;
+  struct _IO_FILE *_sbuf;
 
 
 
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) setvbuf (FILE*, char*, int, size_t);
-
- void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) setbuf (FILE*, char*);
-#204 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_fprintf(FILE*, const char*, ...);
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_printf(const char*, ...);
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_sprintf(char*, const char*, ...);
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_snprintf(char*, size_t, const char*, ...);
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_vfprintf(FILE*, const char*, __gnuc_va_list);
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_vprintf(const char*, __gnuc_va_list);
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_vsprintf(char*, const char*, __gnuc_va_list);
-extern int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __mingw_vsnprintf(char*, size_t, const char*, __gnuc_va_list);
-#293 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fprintf (FILE*, const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) printf (const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) sprintf (char*, const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vfprintf (FILE*, const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vprintf (const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vsprintf (char*, const char*, __gnuc_va_list);
-#308 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __msvcrt_fprintf(FILE*, const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __msvcrt_printf(const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __msvcrt_sprintf(char*, const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __msvcrt_vfprintf(FILE*, const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __msvcrt_vprintf(const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __msvcrt_vsprintf(char*, const char*, __gnuc_va_list);
-
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _snprintf (char*, size_t, const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _vsnprintf (char*, size_t, const char*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _vscprintf (const char*, __gnuc_va_list);
-#331 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) snprintf (char *, size_t, const char *, ...);
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vsnprintf (char *, size_t, const char *, __gnuc_va_list);
-
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vscanf (const char * __restrict__, __gnuc_va_list);
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vfscanf (FILE * __restrict__, const char * __restrict__,
-       __gnuc_va_list);
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vsscanf (const char * __restrict__,
-       const char * __restrict__, __gnuc_va_list);
-
-
-
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fscanf (FILE*, const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) scanf (const char*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) sscanf (const char*, const char*, ...);
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fgetc (FILE*);
- char* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fgets (char*, int, FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fputc (int, FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fputs (const char*, FILE*);
- char* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) gets (char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) puts (const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) ungetc (int, FILE*);
-
-
-
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _filbuf (FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _flsbuf (int, FILE*);
-
-
-
-extern __inline__ int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) getc (FILE* __F)
-{
-  return (--__F->_cnt >= 0)
-    ? (int) (unsigned char) *__F->_ptr++
-    : _filbuf (__F);
-}
-
-extern __inline__ int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) putc (int __c, FILE* __F)
-{
-  return (--__F->_cnt >= 0)
-    ? (int) (unsigned char) (*__F->_ptr++ = (char)__c)
-    : _flsbuf (__c, __F);
-}
-
-extern __inline__ int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) getchar (void)
-{
-  return (--(&_iob[0])->_cnt >= 0)
-    ? (int) (unsigned char) *(&_iob[0])->_ptr++
-    : _filbuf ((&_iob[0]));
-}
-
-extern __inline__ int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) putchar(int __c)
-{
-  return (--(&_iob[1])->_cnt >= 0)
-    ? (int) (unsigned char) (*(&_iob[1])->_ptr++ = (char)__c)
-    : _flsbuf (__c, (&_iob[1]));}
-#412 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- size_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fread (void*, size_t, size_t, FILE*);
- size_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fwrite (const void*, size_t, size_t, FILE*);
-
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fseek (FILE*, long, int);
- long __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) ftell (FILE*);
- void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) rewind (FILE*);
-#455 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
-typedef long long fpos_t;
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fgetpos (FILE*, fpos_t*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fsetpos (FILE*, const fpos_t*);
-
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) feof (FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) ferror (FILE*);
-#480 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) clearerr (FILE*);
- void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) perror (const char*);
-
-
-
-
-
-
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _popen (const char*, const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _pclose (FILE*);
-
-
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) popen (const char*, const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) pclose (FILE*);
-
-
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _flushall (void);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fgetchar (void);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fputchar (int);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fdopen (int, const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fileno (FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fcloseall (void);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fsopen (const char*, const char*, int);
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _getmaxstdio (void);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _setmaxstdio (int);
-#522 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fgetchar (void);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fputchar (int);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fdopen (int, const char*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fileno (FILE*);
-#534 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
-#1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h" 1 3
-#21 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h" 3
-#1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stddef.h" 1 3 4
-#150 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stddef.h" 3 4
-typedef int ptrdiff_t;
-#22 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h" 2 3
-
-
-
-
-
-typedef long __time32_t;
-
-
-
-
-typedef long long __time64_t;
-#45 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h" 3
-typedef __time32_t time_t;
-
-
-
-
-
-
-typedef long _off_t;
-
-
-typedef _off_t off_t;
-
-
-
-
-
-
-
-typedef unsigned int _dev_t;
-
-
-
-
-
-typedef _dev_t dev_t;
-
-
-
-
-
-
-typedef short _ino_t;
-
-
-typedef _ino_t ino_t;
-
-
-
-
-
-
-typedef int _pid_t;
-
-
-typedef _pid_t pid_t;
-
-
-
-
-
-
-typedef unsigned short _mode_t;
-
-
-typedef _mode_t mode_t;
-
-
-
-
-
-
-typedef int _sigset_t;
-
-
-typedef _sigset_t sigset_t;
-
-
-
-
-
-typedef int _ssize_t;
-
-
-typedef _ssize_t ssize_t;
-
-
-
-
-
-typedef long long fpos64_t;
-
-
-
-
-typedef long long off64_t;
-
-
-
-typedef unsigned int useconds_t;
-#535 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 2 3
-extern __inline__ FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fopen64 (const char* filename, const char* mode)
-{
-  return fopen (filename, mode);
-}
-
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fseeko64 (FILE*, off64_t, int);
-
-
-
-
-
-
-extern __inline__ off64_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) ftello64 (FILE * stream)
-{
-  fpos_t pos;
-  if (fgetpos(stream, &pos))
-    return -1LL;
-  else
-   return ((off64_t) pos);
-}
-#563 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fwprintf (FILE*, const wchar_t*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) wprintf (const wchar_t*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _snwprintf (wchar_t*, size_t, const wchar_t*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vfwprintf (FILE*, const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vwprintf (const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _vsnwprintf (wchar_t*, size_t, const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _vscwprintf (const wchar_t*, __gnuc_va_list);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fwscanf (FILE*, const wchar_t*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) wscanf (const wchar_t*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) swscanf (const wchar_t*, const wchar_t*, ...);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fgetwc (FILE*);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fputwc (wchar_t, FILE*);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) ungetwc (wchar_t, FILE*);
-
-
-
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) swprintf (wchar_t*, const wchar_t*, ...);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vswprintf (wchar_t*, const wchar_t*, __gnuc_va_list);
-
-
-
- wchar_t* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fgetws (wchar_t*, int, FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fputws (const wchar_t*, FILE*);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) getwc (FILE*);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) getwchar (void);
- wchar_t* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _getws (wchar_t*);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) putwc (wint_t, FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _putws (const wchar_t*);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) putwchar (wint_t);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wfdopen(int, const wchar_t *);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wfopen (const wchar_t*, const wchar_t*);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wfreopen (const wchar_t*, const wchar_t*, FILE*);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wfsopen (const wchar_t*, const wchar_t*, int);
- wchar_t* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wtmpnam (wchar_t*);
- wchar_t* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wtempnam (const wchar_t*, const wchar_t*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wrename (const wchar_t*, const wchar_t*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wremove (const wchar_t*);
- void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wperror (const wchar_t*);
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _wpopen (const wchar_t*, const wchar_t*);
-
-
-
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) snwprintf (wchar_t* s, size_t n, const wchar_t* format, ...);
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vsnwprintf (wchar_t* s, size_t n, const wchar_t* format, __gnuc_va_list arg);
-
-
-
-
-
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vwscanf (const wchar_t * __restrict__, __gnuc_va_list);
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vfwscanf (FILE * __restrict__,
-         const wchar_t * __restrict__, __gnuc_va_list);
-int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vswscanf (const wchar_t * __restrict__,
-         const wchar_t * __restrict__, __gnuc_va_list);
-#625 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
- FILE* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) wpopen (const wchar_t*, const wchar_t*);
-
-
-
-
-
-
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fgetwchar (void);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fputwchar (wint_t);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _getw (FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _putw (int, FILE*);
-
-
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fgetwchar (void);
- wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fputwchar (wint_t);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) getw (FILE*);
- int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) putw (int, FILE*);
-#47 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c" 2
-#1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 1 3
-#16 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-
-#17 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-#134 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-struct _exception
-{
- int type;
- char *name;
- double arg1;
- double arg2;
- double retval;
+  int _pos;
+#178 "/usr/include/libio.h" 3 4
 };
 
- double __attribute__((__cdecl__)) sin (double);
- double __attribute__((__cdecl__)) cos (double);
- double __attribute__((__cdecl__)) tan (double);
- double __attribute__((__cdecl__)) sinh (double);
- double __attribute__((__cdecl__)) cosh (double);
- double __attribute__((__cdecl__)) tanh (double);
- double __attribute__((__cdecl__)) asin (double);
- double __attribute__((__cdecl__)) acos (double);
- double __attribute__((__cdecl__)) atan (double);
- double __attribute__((__cdecl__)) atan2 (double, double);
- double __attribute__((__cdecl__)) exp (double);
- double __attribute__((__cdecl__)) log (double);
- double __attribute__((__cdecl__)) log10 (double);
- double __attribute__((__cdecl__)) pow (double, double);
- double __attribute__((__cdecl__)) sqrt (double);
- double __attribute__((__cdecl__)) ceil (double);
- double __attribute__((__cdecl__)) floor (double);
- double __attribute__((__cdecl__)) fabs (double);
- double __attribute__((__cdecl__)) ldexp (double, int);
- double __attribute__((__cdecl__)) frexp (double, int*);
- double __attribute__((__cdecl__)) modf (double, double*);
- double __attribute__((__cdecl__)) fmod (double, double);
-#210 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-struct _complex
+
+enum __codecvt_result
 {
- double x;
- double y;
+  __codecvt_ok,
+  __codecvt_partial,
+  __codecvt_error,
+  __codecvt_noconv
+};
+#246 "/usr/include/libio.h" 3 4
+struct _IO_FILE {
+  int _flags;
+
+
+
+
+  char* _IO_read_ptr;
+  char* _IO_read_end;
+  char* _IO_read_base;
+  char* _IO_write_base;
+  char* _IO_write_ptr;
+  char* _IO_write_end;
+  char* _IO_buf_base;
+  char* _IO_buf_end;
+
+  char *_IO_save_base;
+  char *_IO_backup_base;
+  char *_IO_save_end;
+
+  struct _IO_marker *_markers;
+
+  struct _IO_FILE *_chain;
+
+  int _fileno;
+
+
+
+  int _flags2;
+
+  __off_t _old_offset;
+
+
+
+  unsigned short _cur_column;
+  signed char _vtable_offset;
+  char _shortbuf[1];
+
+
+
+  _IO_lock_t *_lock;
+#294 "/usr/include/libio.h" 3 4
+  __off64_t _offset;
+#303 "/usr/include/libio.h" 3 4
+  void *__pad1;
+  void *__pad2;
+  void *__pad3;
+  void *__pad4;
+  size_t __pad5;
+
+  int _mode;
+
+  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+
 };
 
- double __attribute__((__cdecl__)) _cabs (struct _complex);
 
- double __attribute__((__cdecl__)) _hypot (double, double);
- double __attribute__((__cdecl__)) _j0 (double);
- double __attribute__((__cdecl__)) _j1 (double);
- double __attribute__((__cdecl__)) _jn (int, double);
- double __attribute__((__cdecl__)) _y0 (double);
- double __attribute__((__cdecl__)) _y1 (double);
- double __attribute__((__cdecl__)) _yn (int, double);
- int __attribute__((__cdecl__)) _matherr (struct _exception *);
-#234 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
- double __attribute__((__cdecl__)) _chgsign (double);
- double __attribute__((__cdecl__)) _copysign (double, double);
- double __attribute__((__cdecl__)) _logb (double);
- double __attribute__((__cdecl__)) _nextafter (double, double);
- double __attribute__((__cdecl__)) _scalb (double, long);
+typedef struct _IO_FILE _IO_FILE;
 
- int __attribute__((__cdecl__)) _finite (double);
- int __attribute__((__cdecl__)) _fpclass (double);
- int __attribute__((__cdecl__)) _isnan (double);
-#254 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
- double __attribute__((__cdecl__)) j0 (double);
- double __attribute__((__cdecl__)) j1 (double);
- double __attribute__((__cdecl__)) jn (int, double);
- double __attribute__((__cdecl__)) y0 (double);
- double __attribute__((__cdecl__)) y1 (double);
- double __attribute__((__cdecl__)) yn (int, double);
 
- double __attribute__((__cdecl__)) chgsign (double);
-#270 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
- int __attribute__((__cdecl__)) finite (double);
- int __attribute__((__cdecl__)) fpclass (double);
-#324 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-typedef long double float_t;
-typedef long double double_t;
-#354 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-extern int __attribute__((__cdecl__)) __fpclassifyf (float);
-extern int __attribute__((__cdecl__)) __fpclassify (double);
-extern int __attribute__((__cdecl__)) __fpclassifyl (long double);
-#379 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-extern int __attribute__((__cdecl__)) __isnan (double);
-extern int __attribute__((__cdecl__)) __isnanf (float);
-extern int __attribute__((__cdecl__)) __isnanl (long double);
-#419 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-extern int __attribute__((__cdecl__)) __signbit (double);
-extern int __attribute__((__cdecl__)) __signbitf (float);
-extern int __attribute__((__cdecl__)) __signbitl (long double);
-#447 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-extern float __attribute__((__cdecl__)) sinf (float);
-extern long double __attribute__((__cdecl__)) sinl (long double);
+struct _IO_FILE_plus;
 
-extern float __attribute__((__cdecl__)) cosf (float);
-extern long double __attribute__((__cdecl__)) cosl (long double);
+extern struct _IO_FILE_plus _IO_2_1_stdin_;
+extern struct _IO_FILE_plus _IO_2_1_stdout_;
+extern struct _IO_FILE_plus _IO_2_1_stderr_;
+#339 "/usr/include/libio.h" 3 4
+typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
 
-extern float __attribute__((__cdecl__)) tanf (float);
-extern long double __attribute__((__cdecl__)) tanl (long double);
 
-extern float __attribute__((__cdecl__)) asinf (float);
-extern long double __attribute__((__cdecl__)) asinl (long double);
 
-extern float __attribute__((__cdecl__)) acosf (float);
-extern long double __attribute__((__cdecl__)) acosl (long double);
 
-extern float __attribute__((__cdecl__)) atanf (float);
-extern long double __attribute__((__cdecl__)) atanl (long double);
 
-extern float __attribute__((__cdecl__)) atan2f (float, float);
-extern long double __attribute__((__cdecl__)) atan2l (long double, long double);
 
 
-extern float __attribute__((__cdecl__)) sinhf (float);
+typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
+     size_t __n);
 
 
 
 
-extern long double __attribute__((__cdecl__)) sinhl (long double);
 
-extern float __attribute__((__cdecl__)) coshf (float);
 
 
+typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
 
 
-extern long double __attribute__((__cdecl__)) coshl (long double);
+typedef int __io_close_fn (void *__cookie);
+#391 "/usr/include/libio.h" 3 4
+extern int __underflow (_IO_FILE *);
+extern int __uflow (_IO_FILE *);
+extern int __overflow (_IO_FILE *, int);
+#435 "/usr/include/libio.h" 3 4
+extern int _IO_getc (_IO_FILE *__fp);
+extern int _IO_putc (int __c, _IO_FILE *__fp);
+extern int _IO_feof (_IO_FILE *__fp) __attribute__ ((__nothrow__ , __leaf__));
+extern int _IO_ferror (_IO_FILE *__fp) __attribute__ ((__nothrow__ , __leaf__));
 
-extern float __attribute__((__cdecl__)) tanhf (float);
+extern int _IO_peekc_locked (_IO_FILE *__fp);
 
 
 
 
-extern long double __attribute__((__cdecl__)) tanhl (long double);
 
+extern void _IO_flockfile (_IO_FILE *) __attribute__ ((__nothrow__ , __leaf__));
+extern void _IO_funlockfile (_IO_FILE *) __attribute__ ((__nothrow__ , __leaf__));
+extern int _IO_ftrylockfile (_IO_FILE *) __attribute__ ((__nothrow__ , __leaf__));
+#465 "/usr/include/libio.h" 3 4
+extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
+   __gnuc_va_list, int *__restrict);
+extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
+    __gnuc_va_list);
+extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
+extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
 
+extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
+extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
 
-extern double __attribute__((__cdecl__)) acosh (double);
-extern float __attribute__((__cdecl__)) acoshf (float);
-extern long double __attribute__((__cdecl__)) acoshl (long double);
+extern void _IO_free_backup_area (_IO_FILE *) __attribute__ ((__nothrow__ , __leaf__));
+#75 "/usr/include/stdio.h" 2 3 4
 
 
-extern double __attribute__((__cdecl__)) asinh (double);
-extern float __attribute__((__cdecl__)) asinhf (float);
-extern long double __attribute__((__cdecl__)) asinhl (long double);
 
 
-extern double __attribute__((__cdecl__)) atanh (double);
-extern float __attribute__((__cdecl__)) atanhf (float);
-extern long double __attribute__((__cdecl__)) atanhl (long double);
+typedef __gnuc_va_list va_list;
+#90 "/usr/include/stdio.h" 3 4
+typedef __off_t off_t;
+#102 "/usr/include/stdio.h" 3 4
+typedef __ssize_t ssize_t;
 
 
 
-extern float __attribute__((__cdecl__)) expf (float);
 
 
 
 
-extern long double __attribute__((__cdecl__)) expl (long double);
+typedef _G_fpos_t fpos_t;
 
 
-extern double __attribute__((__cdecl__)) exp2(double);
-extern float __attribute__((__cdecl__)) exp2f(float);
-extern long double __attribute__((__cdecl__)) exp2l(long double);
 
 
+#164 "/usr/include/stdio.h" 3 4
+#1 "/usr/include/bits/stdio_lim.h" 1 3 4
+#165 "/usr/include/stdio.h" 2 3 4
 
-extern double __attribute__((__cdecl__)) expm1(double);
-extern float __attribute__((__cdecl__)) expm1f(float);
-extern long double __attribute__((__cdecl__)) expm1l(long double);
 
 
-extern float __attribute__((__cdecl__)) frexpf (float, int*);
+extern struct _IO_FILE *stdin;
+extern struct _IO_FILE *stdout;
+extern struct _IO_FILE *stderr;
 
 
 
 
-extern long double __attribute__((__cdecl__)) frexpl (long double, int*);
 
 
 
+extern int remove (const char *__filename) __attribute__ ((__nothrow__ , __leaf__));
 
-extern int __attribute__((__cdecl__)) ilogb (double);
-extern int __attribute__((__cdecl__)) ilogbf (float);
-extern int __attribute__((__cdecl__)) ilogbl (long double);
+extern int rename (const char *__old, const char *__new) __attribute__ ((__nothrow__ , __leaf__));
 
 
-extern float __attribute__((__cdecl__)) ldexpf (float, int);
 
 
 
 
-extern long double __attribute__((__cdecl__)) ldexpl (long double, int);
 
 
-extern float __attribute__((__cdecl__)) logf (float);
-extern long double __attribute__((__cdecl__)) logl (long double);
 
 
-extern float __attribute__((__cdecl__)) log10f (float);
-extern long double __attribute__((__cdecl__)) log10l (long double);
 
 
-extern double __attribute__((__cdecl__)) log1p(double);
-extern float __attribute__((__cdecl__)) log1pf(float);
-extern long double __attribute__((__cdecl__)) log1pl(long double);
 
 
-extern double __attribute__((__cdecl__)) log2 (double);
-extern float __attribute__((__cdecl__)) log2f (float);
-extern long double __attribute__((__cdecl__)) log2l (long double);
+extern FILE *tmpfile (void) ;
+#209 "/usr/include/stdio.h" 3 4
+extern char *tmpnam (char *__s) __attribute__ ((__nothrow__ , __leaf__)) ;
 
 
-extern double __attribute__((__cdecl__)) logb (double);
-extern float __attribute__((__cdecl__)) logbf (float);
-extern long double __attribute__((__cdecl__)) logbl (long double);
-#603 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-extern float __attribute__((__cdecl__)) modff (float, float*);
-extern long double __attribute__((__cdecl__)) modfl (long double, long double*);
 
 
-extern double __attribute__((__cdecl__)) scalbn (double, int);
-extern float __attribute__((__cdecl__)) scalbnf (float, int);
-extern long double __attribute__((__cdecl__)) scalbnl (long double, int);
 
-extern double __attribute__((__cdecl__)) scalbln (double, long);
-extern float __attribute__((__cdecl__)) scalblnf (float, long);
-extern long double __attribute__((__cdecl__)) scalblnl (long double, long);
+extern char *tmpnam_r (char *__s) __attribute__ ((__nothrow__ , __leaf__)) ;
+#227 "/usr/include/stdio.h" 3 4
+extern char *tempnam (const char *__dir, const char *__pfx)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) ;
 
 
 
-extern double __attribute__((__cdecl__)) cbrt (double);
-extern float __attribute__((__cdecl__)) cbrtf (float);
-extern long double __attribute__((__cdecl__)) cbrtl (long double);
 
 
-extern float __attribute__((__cdecl__)) fabsf (float x);
-extern long double __attribute__((__cdecl__)) fabsl (long double x);
 
 
-extern double __attribute__((__cdecl__)) hypot (double, double);
-extern float __attribute__((__cdecl__)) hypotf (float, float);
 
+extern int fclose (FILE *__stream);
 
 
 
-extern long double __attribute__((__cdecl__)) hypotl (long double, long double);
 
+extern int fflush (FILE *__stream);
 
-extern float __attribute__((__cdecl__)) powf (float, float);
+#252 "/usr/include/stdio.h" 3 4
+extern int fflush_unlocked (FILE *__stream);
+#266 "/usr/include/stdio.h" 3 4
 
 
 
 
-extern long double __attribute__((__cdecl__)) powl (long double, long double);
 
 
-extern float __attribute__((__cdecl__)) sqrtf (float);
-extern long double __attribute__((__cdecl__)) sqrtl (long double);
+extern FILE *fopen (const char *__restrict __filename,
+      const char *__restrict __modes) ;
 
 
-extern double __attribute__((__cdecl__)) erf (double);
-extern float __attribute__((__cdecl__)) erff (float);
-extern long double __attribute__((__cdecl__)) erfl (long double);
 
 
-extern double __attribute__((__cdecl__)) erfc (double);
-extern float __attribute__((__cdecl__)) erfcf (float);
-extern long double __attribute__((__cdecl__)) erfcl (long double);
+extern FILE *freopen (const char *__restrict __filename,
+        const char *__restrict __modes,
+        FILE *__restrict __stream) ;
+#295 "/usr/include/stdio.h" 3 4
 
+#306 "/usr/include/stdio.h" 3 4
+extern FILE *fdopen (int __fd, const char *__modes) __attribute__ ((__nothrow__ , __leaf__)) ;
+#319 "/usr/include/stdio.h" 3 4
+extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+  __attribute__ ((__nothrow__ , __leaf__)) ;
 
-extern double __attribute__((__cdecl__)) lgamma (double);
-extern float __attribute__((__cdecl__)) lgammaf (float);
-extern long double __attribute__((__cdecl__)) lgammal (long double);
 
 
-extern double __attribute__((__cdecl__)) tgamma (double);
-extern float __attribute__((__cdecl__)) tgammaf (float);
-extern long double __attribute__((__cdecl__)) tgammal (long double);
 
+extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) __attribute__ ((__nothrow__ , __leaf__)) ;
 
-extern float __attribute__((__cdecl__)) ceilf (float);
-extern long double __attribute__((__cdecl__)) ceill (long double);
 
 
-extern float __attribute__((__cdecl__)) floorf (float);
-extern long double __attribute__((__cdecl__)) floorl (long double);
 
 
-extern double __attribute__((__cdecl__)) nearbyint ( double);
-extern float __attribute__((__cdecl__)) nearbyintf (float);
-extern long double __attribute__((__cdecl__)) nearbyintl (long double);
 
+extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__));
 
 
-extern double __attribute__((__cdecl__)) rint (double);
-extern float __attribute__((__cdecl__)) rintf (float);
-extern long double __attribute__((__cdecl__)) rintl (long double);
 
+extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
+      int __modes, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
 
-extern long __attribute__((__cdecl__)) lrint (double);
-extern long __attribute__((__cdecl__)) lrintf (float);
-extern long __attribute__((__cdecl__)) lrintl (long double);
 
-extern long long __attribute__((__cdecl__)) llrint (double);
-extern long long __attribute__((__cdecl__)) llrintf (float);
-extern long long __attribute__((__cdecl__)) llrintl (long double);
-#771 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-extern double __attribute__((__cdecl__)) round (double);
-extern float __attribute__((__cdecl__)) roundf (float);
-extern long double __attribute__((__cdecl__)) roundl (long double);
 
 
-extern long __attribute__((__cdecl__)) lround (double);
-extern long __attribute__((__cdecl__)) lroundf (float);
-extern long __attribute__((__cdecl__)) lroundl (long double);
 
-extern long long __attribute__((__cdecl__)) llround (double);
-extern long long __attribute__((__cdecl__)) llroundf (float);
-extern long long __attribute__((__cdecl__)) llroundl (long double);
+extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
+         size_t __size) __attribute__ ((__nothrow__ , __leaf__));
 
 
+extern void setlinebuf (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
 
-extern double __attribute__((__cdecl__)) trunc (double);
-extern float __attribute__((__cdecl__)) truncf (float);
-extern long double __attribute__((__cdecl__)) truncl (long double);
 
 
-extern float __attribute__((__cdecl__)) fmodf (float, float);
-extern long double __attribute__((__cdecl__)) fmodl (long double, long double);
 
 
-extern double __attribute__((__cdecl__)) remainder (double, double);
-extern float __attribute__((__cdecl__)) remainderf (float, float);
-extern long double __attribute__((__cdecl__)) remainderl (long double, long double);
 
 
-extern double __attribute__((__cdecl__)) remquo(double, double, int *);
-extern float __attribute__((__cdecl__)) remquof(float, float, int *);
-extern long double __attribute__((__cdecl__)) remquol(long double, long double, int *);
 
+extern int fprintf (FILE *__restrict __stream,
+      const char *__restrict __format, ...);
 
-extern double __attribute__((__cdecl__)) copysign (double, double);
-extern float __attribute__((__cdecl__)) copysignf (float, float);
-extern long double __attribute__((__cdecl__)) copysignl (long double, long double);
 
 
-extern double __attribute__((__cdecl__)) nan(const char *tagp);
-extern float __attribute__((__cdecl__)) nanf(const char *tagp);
-extern long double __attribute__((__cdecl__)) nanl(const char *tagp);
-#821 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
-extern double __attribute__((__cdecl__)) nextafter (double, double);
-extern float __attribute__((__cdecl__)) nextafterf (float, float);
-extern long double __attribute__((__cdecl__)) nextafterl (long double, long double);
 
+extern int printf (const char *__restrict __format, ...);
 
-extern double __attribute__((__cdecl__)) nexttoward (double, long double);
-extern float __attribute__((__cdecl__)) nexttowardf (float, long double);
-extern long double __attribute__((__cdecl__)) nexttowardl (long double, long double);
+extern int sprintf (char *__restrict __s,
+      const char *__restrict __format, ...) __attribute__ ((__nothrow__));
 
 
 
-extern double __attribute__((__cdecl__)) fdim (double x, double y);
-extern float __attribute__((__cdecl__)) fdimf (float x, float y);
-extern long double __attribute__((__cdecl__)) fdiml (long double x, long double y);
 
 
+extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg);
 
 
 
 
+extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
 
-extern double __attribute__((__cdecl__)) fmax (double, double);
-extern float __attribute__((__cdecl__)) fmaxf (float, float);
-extern long double __attribute__((__cdecl__)) fmaxl (long double, long double);
+extern int vsprintf (char *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg) __attribute__ ((__nothrow__));
 
 
-extern double __attribute__((__cdecl__)) fmin (double, double);
-extern float __attribute__((__cdecl__)) fminf (float, float);
-extern long double __attribute__((__cdecl__)) fminl (long double, long double);
 
 
 
-extern double __attribute__((__cdecl__)) fma (double, double, double);
-extern float __attribute__((__cdecl__)) fmaf (float, float, float);
-extern long double __attribute__((__cdecl__)) fmal (long double, long double, long double);
-#48 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c" 2
-#1 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir.h" 1
-#50 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir.h"
+extern int snprintf (char *__restrict __s, size_t __maxlen,
+       const char *__restrict __format, ...)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 3, 4)));
+
+extern int vsnprintf (char *__restrict __s, size_t __maxlen,
+        const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 3, 0)));
+
+#412 "/usr/include/stdio.h" 3 4
+extern int vdprintf (int __fd, const char *__restrict __fmt,
+       __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__printf__, 2, 0)));
+extern int dprintf (int __fd, const char *__restrict __fmt, ...)
+     __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+
+
+
+
+
+
+extern int fscanf (FILE *__restrict __stream,
+     const char *__restrict __format, ...) ;
+
+
+
+
+extern int scanf (const char *__restrict __format, ...) ;
+
+extern int sscanf (const char *__restrict __s,
+     const char *__restrict __format, ...) __attribute__ ((__nothrow__ , __leaf__));
+#463 "/usr/include/stdio.h" 3 4
+
+#526 "/usr/include/stdio.h" 3 4
+
+
+
+
+
+extern int fgetc (FILE *__stream);
+extern int getc (FILE *__stream);
+
+
+
+
+
+extern int getchar (void);
+
+#550 "/usr/include/stdio.h" 3 4
+extern int getc_unlocked (FILE *__stream);
+extern int getchar_unlocked (void);
+#561 "/usr/include/stdio.h" 3 4
+extern int fgetc_unlocked (FILE *__stream);
+
+
+
+
+
+
+
+
+
+
+
+extern int fputc (int __c, FILE *__stream);
+extern int putc (int __c, FILE *__stream);
+
+
+
+
+
+extern int putchar (int __c);
+
+#594 "/usr/include/stdio.h" 3 4
+extern int fputc_unlocked (int __c, FILE *__stream);
+
+
+
+
+
+
+
+extern int putc_unlocked (int __c, FILE *__stream);
+extern int putchar_unlocked (int __c);
+
+
+
+
+
+
+extern int getw (FILE *__stream);
+
+
+extern int putw (int __w, FILE *__stream);
+
+
+
+
+
+
+
+
+extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+     ;
+#638 "/usr/include/stdio.h" 3 4
+extern char *gets (char *__s) __attribute__ ((__deprecated__));
+
+
+#665 "/usr/include/stdio.h" 3 4
+extern __ssize_t __getdelim (char **__restrict __lineptr,
+          size_t *__restrict __n, int __delimiter,
+          FILE *__restrict __stream) ;
+extern __ssize_t getdelim (char **__restrict __lineptr,
+        size_t *__restrict __n, int __delimiter,
+        FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+extern __ssize_t getline (char **__restrict __lineptr,
+       size_t *__restrict __n,
+       FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+
+extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
+
+
+
+
+
+extern int puts (const char *__s);
+
+
+
+
+
+
+extern int ungetc (int __c, FILE *__stream);
+
+
+
+
+
+
+extern size_t fread (void *__restrict __ptr, size_t __size,
+       size_t __n, FILE *__restrict __stream) ;
+
+
+
+
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+        size_t __n, FILE *__restrict __s);
+
+#737 "/usr/include/stdio.h" 3 4
+extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
+         size_t __n, FILE *__restrict __stream) ;
+extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
+          size_t __n, FILE *__restrict __stream);
+
+
+
+
+
+
+
+
+extern int fseek (FILE *__stream, long int __off, int __whence);
+
+
+
+
+extern long int ftell (FILE *__stream) ;
+
+
+
+
+extern void rewind (FILE *__stream);
+
+#773 "/usr/include/stdio.h" 3 4
+extern int fseeko (FILE *__stream, __off_t __off, int __whence);
+
+
+
+
+extern __off_t ftello (FILE *__stream) ;
+#792 "/usr/include/stdio.h" 3 4
+
+
+
+
+
+
+extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
+
+
+
+
+extern int fsetpos (FILE *__stream, const fpos_t *__pos);
+#815 "/usr/include/stdio.h" 3 4
+
+#824 "/usr/include/stdio.h" 3 4
+
+
+extern void clearerr (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+
+extern int feof (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+extern int ferror (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern void clearerr_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+extern int feof_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+extern int ferror_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+
+
+extern void perror (const char *__s);
+
+
+
+
+
+
+#1 "/usr/include/bits/sys_errlist.h" 1 3 4
+#26 "/usr/include/bits/sys_errlist.h" 3 4
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+#854 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+extern int fileno (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int fileno_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+#873 "/usr/include/stdio.h" 3 4
+extern FILE *popen (const char *__command, const char *__modes) ;
+
+
+
+
+
+extern int pclose (FILE *__stream);
+
+
+
+
+
+extern char *ctermid (char *__s) __attribute__ ((__nothrow__ , __leaf__));
+#913 "/usr/include/stdio.h" 3 4
+extern void flockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int ftrylockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+#943 "/usr/include/stdio.h" 3 4
+
+#47 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c" 2
+#1 "/usr/include/math.h" 1 3 4
+#29 "/usr/include/math.h" 3 4
+
+
+
+
+#1 "/usr/include/bits/huge_val.h" 1 3 4
+#34 "/usr/include/math.h" 2 3 4
+#46 "/usr/include/math.h" 3 4
+#1 "/usr/include/bits/mathdef.h" 1 3 4
+#47 "/usr/include/math.h" 2 3 4
+#70 "/usr/include/math.h" 3 4
+#1 "/usr/include/bits/mathcalls.h" 1 3 4
+#52 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern double acos (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __acos (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double asin (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __asin (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double atan (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __atan (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double atan2 (double __y, double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __atan2 (double __y, double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double cos (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __cos (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double sin (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __sin (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double tan (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __tan (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern double cosh (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __cosh (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double sinh (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __sinh (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double tanh (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __tanh (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+#86 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern double acosh (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __acosh (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double asinh (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __asinh (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern double atanh (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __atanh (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern double exp (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __exp (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double frexp (double __x, int *__exponent) __attribute__ ((__nothrow__ , __leaf__)); extern double __frexp (double __x, int *__exponent) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double ldexp (double __x, int __exponent) __attribute__ ((__nothrow__ , __leaf__)); extern double __ldexp (double __x, int __exponent) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double log (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __log (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double log10 (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __log10 (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double modf (double __x, double *__iptr) __attribute__ ((__nothrow__ , __leaf__)); extern double __modf (double __x, double *__iptr) __attribute__ ((__nothrow__ , __leaf__))
+     __attribute__ ((__nonnull__ (2)));
+
+#127 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern double expm1 (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __expm1 (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double log1p (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __log1p (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double logb (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __logb (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+#152 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern double pow (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)); extern double __pow (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double sqrt (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __sqrt (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern double hypot (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)); extern double __hypot (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern double cbrt (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __cbrt (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+
+extern double ceil (double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern double __ceil (double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern double fabs (double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern double __fabs (double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern double floor (double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern double __floor (double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern double fmod (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)); extern double __fmod (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int __isinf (double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern int __finite (double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+extern int isinf (double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern int finite (double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern double drem (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)); extern double __drem (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern double significand (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __significand (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern double copysign (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern double __copysign (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+#231 "/usr/include/bits/mathcalls.h" 3 4
+extern int __isnan (double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+extern int isnan (double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern double j0 (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __j0 (double) __attribute__ ((__nothrow__ , __leaf__));
+extern double j1 (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __j1 (double) __attribute__ ((__nothrow__ , __leaf__));
+extern double jn (int, double) __attribute__ ((__nothrow__ , __leaf__)); extern double __jn (int, double) __attribute__ ((__nothrow__ , __leaf__));
+extern double y0 (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __y0 (double) __attribute__ ((__nothrow__ , __leaf__));
+extern double y1 (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __y1 (double) __attribute__ ((__nothrow__ , __leaf__));
+extern double yn (int, double) __attribute__ ((__nothrow__ , __leaf__)); extern double __yn (int, double) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern double erf (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __erf (double) __attribute__ ((__nothrow__ , __leaf__));
+extern double erfc (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __erfc (double) __attribute__ ((__nothrow__ , __leaf__));
+extern double lgamma (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __lgamma (double) __attribute__ ((__nothrow__ , __leaf__));
+
+#265 "/usr/include/bits/mathcalls.h" 3 4
+extern double gamma (double) __attribute__ ((__nothrow__ , __leaf__)); extern double __gamma (double) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern double lgamma_r (double, int *__signgamp) __attribute__ ((__nothrow__ , __leaf__)); extern double __lgamma_r (double, int *__signgamp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern double rint (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern double __rint (double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double nextafter (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern double __nextafter (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+extern double remainder (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__)); extern double __remainder (double __x, double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern double scalbn (double __x, int __n) __attribute__ ((__nothrow__ , __leaf__)); extern double __scalbn (double __x, int __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int ilogb (double __x) __attribute__ ((__nothrow__ , __leaf__)); extern int __ilogb (double __x) __attribute__ ((__nothrow__ , __leaf__));
+#359 "/usr/include/bits/mathcalls.h" 3 4
+
+
+
+
+
+extern double scalb (double __x, double __n) __attribute__ ((__nothrow__ , __leaf__)); extern double __scalb (double __x, double __n) __attribute__ ((__nothrow__ , __leaf__));
+#71 "/usr/include/math.h" 2 3 4
+#89 "/usr/include/math.h" 3 4
+#1 "/usr/include/bits/mathcalls.h" 1 3 4
+#52 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern float acosf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __acosf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float asinf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __asinf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float atanf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __atanf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float atan2f (float __y, float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __atan2f (float __y, float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float cosf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __cosf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float sinf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __sinf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float tanf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __tanf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern float coshf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __coshf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float sinhf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __sinhf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float tanhf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __tanhf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+#86 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern float acoshf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __acoshf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float asinhf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __asinhf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern float atanhf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __atanhf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern float expf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __expf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float frexpf (float __x, int *__exponent) __attribute__ ((__nothrow__ , __leaf__)); extern float __frexpf (float __x, int *__exponent) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float ldexpf (float __x, int __exponent) __attribute__ ((__nothrow__ , __leaf__)); extern float __ldexpf (float __x, int __exponent) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float logf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __logf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float log10f (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __log10f (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float modff (float __x, float *__iptr) __attribute__ ((__nothrow__ , __leaf__)); extern float __modff (float __x, float *__iptr) __attribute__ ((__nothrow__ , __leaf__))
+     __attribute__ ((__nonnull__ (2)));
+
+#127 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern float expm1f (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __expm1f (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float log1pf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __log1pf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float logbf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __logbf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+#152 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern float powf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)); extern float __powf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float sqrtf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __sqrtf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern float hypotf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)); extern float __hypotf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern float cbrtf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __cbrtf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+
+extern float ceilf (float __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern float __ceilf (float __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern float fabsf (float __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern float __fabsf (float __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern float floorf (float __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern float __floorf (float __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern float fmodf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)); extern float __fmodf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int __isinff (float __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern int __finitef (float __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+extern int isinff (float __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern int finitef (float __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern float dremf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)); extern float __dremf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern float significandf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __significandf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern float copysignf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern float __copysignf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+#231 "/usr/include/bits/mathcalls.h" 3 4
+extern int __isnanf (float __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+extern int isnanf (float __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern float j0f (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __j0f (float) __attribute__ ((__nothrow__ , __leaf__));
+extern float j1f (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __j1f (float) __attribute__ ((__nothrow__ , __leaf__));
+extern float jnf (int, float) __attribute__ ((__nothrow__ , __leaf__)); extern float __jnf (int, float) __attribute__ ((__nothrow__ , __leaf__));
+extern float y0f (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __y0f (float) __attribute__ ((__nothrow__ , __leaf__));
+extern float y1f (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __y1f (float) __attribute__ ((__nothrow__ , __leaf__));
+extern float ynf (int, float) __attribute__ ((__nothrow__ , __leaf__)); extern float __ynf (int, float) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern float erff (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __erff (float) __attribute__ ((__nothrow__ , __leaf__));
+extern float erfcf (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __erfcf (float) __attribute__ ((__nothrow__ , __leaf__));
+extern float lgammaf (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __lgammaf (float) __attribute__ ((__nothrow__ , __leaf__));
+
+#265 "/usr/include/bits/mathcalls.h" 3 4
+extern float gammaf (float) __attribute__ ((__nothrow__ , __leaf__)); extern float __gammaf (float) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern float lgammaf_r (float, int *__signgamp) __attribute__ ((__nothrow__ , __leaf__)); extern float __lgammaf_r (float, int *__signgamp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern float rintf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern float __rintf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern float nextafterf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern float __nextafterf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+extern float remainderf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__)); extern float __remainderf (float __x, float __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern float scalbnf (float __x, int __n) __attribute__ ((__nothrow__ , __leaf__)); extern float __scalbnf (float __x, int __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int ilogbf (float __x) __attribute__ ((__nothrow__ , __leaf__)); extern int __ilogbf (float __x) __attribute__ ((__nothrow__ , __leaf__));
+#359 "/usr/include/bits/mathcalls.h" 3 4
+
+
+
+
+
+extern float scalbf (float __x, float __n) __attribute__ ((__nothrow__ , __leaf__)); extern float __scalbf (float __x, float __n) __attribute__ ((__nothrow__ , __leaf__));
+#90 "/usr/include/math.h" 2 3 4
+#133 "/usr/include/math.h" 3 4
+#1 "/usr/include/bits/mathcalls.h" 1 3 4
+#52 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern long double acosl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __acosl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double asinl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __asinl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double atanl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __atanl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double atan2l (long double __y, long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __atan2l (long double __y, long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double cosl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __cosl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double sinl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __sinl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double tanl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __tanl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern long double coshl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __coshl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double sinhl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __sinhl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double tanhl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __tanhl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+#86 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern long double acoshl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __acoshl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double asinhl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __asinhl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+extern long double atanhl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __atanhl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern long double expl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __expl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double frexpl (long double __x, int *__exponent) __attribute__ ((__nothrow__ , __leaf__)); extern long double __frexpl (long double __x, int *__exponent) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double ldexpl (long double __x, int __exponent) __attribute__ ((__nothrow__ , __leaf__)); extern long double __ldexpl (long double __x, int __exponent) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double logl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __logl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double log10l (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __log10l (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double modfl (long double __x, long double *__iptr) __attribute__ ((__nothrow__ , __leaf__)); extern long double __modfl (long double __x, long double *__iptr) __attribute__ ((__nothrow__ , __leaf__))
+     __attribute__ ((__nonnull__ (2)));
+
+#127 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern long double expm1l (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __expm1l (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double log1pl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __log1pl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double logbl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __logbl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+#152 "/usr/include/bits/mathcalls.h" 3 4
+
+
+extern long double powl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)); extern long double __powl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double sqrtl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __sqrtl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern long double hypotl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)); extern long double __hypotl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern long double cbrtl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __cbrtl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+
+extern long double ceill (long double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern long double __ceill (long double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern long double fabsl (long double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern long double __fabsl (long double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern long double floorl (long double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern long double __floorl (long double __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern long double fmodl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)); extern long double __fmodl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int __isinfl (long double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern int __finitel (long double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+extern int isinfl (long double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern int finitel (long double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern long double dreml (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)); extern long double __dreml (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern long double significandl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __significandl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern long double copysignl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern long double __copysignl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+#231 "/usr/include/bits/mathcalls.h" 3 4
+extern int __isnanl (long double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+extern int isnanl (long double __value) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern long double j0l (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __j0l (long double) __attribute__ ((__nothrow__ , __leaf__));
+extern long double j1l (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __j1l (long double) __attribute__ ((__nothrow__ , __leaf__));
+extern long double jnl (int, long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __jnl (int, long double) __attribute__ ((__nothrow__ , __leaf__));
+extern long double y0l (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __y0l (long double) __attribute__ ((__nothrow__ , __leaf__));
+extern long double y1l (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __y1l (long double) __attribute__ ((__nothrow__ , __leaf__));
+extern long double ynl (int, long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __ynl (int, long double) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern long double erfl (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __erfl (long double) __attribute__ ((__nothrow__ , __leaf__));
+extern long double erfcl (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __erfcl (long double) __attribute__ ((__nothrow__ , __leaf__));
+extern long double lgammal (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __lgammal (long double) __attribute__ ((__nothrow__ , __leaf__));
+
+#265 "/usr/include/bits/mathcalls.h" 3 4
+extern long double gammal (long double) __attribute__ ((__nothrow__ , __leaf__)); extern long double __gammal (long double) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern long double lgammal_r (long double, int *__signgamp) __attribute__ ((__nothrow__ , __leaf__)); extern long double __lgammal_r (long double, int *__signgamp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern long double rintl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern long double __rintl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long double nextafterl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)); extern long double __nextafterl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+extern long double remainderl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__)); extern long double __remainderl (long double __x, long double __y) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern long double scalbnl (long double __x, int __n) __attribute__ ((__nothrow__ , __leaf__)); extern long double __scalbnl (long double __x, int __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int ilogbl (long double __x) __attribute__ ((__nothrow__ , __leaf__)); extern int __ilogbl (long double __x) __attribute__ ((__nothrow__ , __leaf__));
+#359 "/usr/include/bits/mathcalls.h" 3 4
+
+
+
+
+
+extern long double scalbl (long double __x, long double __n) __attribute__ ((__nothrow__ , __leaf__)); extern long double __scalbl (long double __x, long double __n) __attribute__ ((__nothrow__ , __leaf__));
+#134 "/usr/include/math.h" 2 3 4
+#149 "/usr/include/math.h" 3 4
+extern int signgam;
+#288 "/usr/include/math.h" 3 4
+typedef enum
+{
+  _IEEE_ = -1,
+  _SVID_,
+  _XOPEN_,
+  _POSIX_,
+  _ISOC_
+} _LIB_VERSION_TYPE;
+
+
+
+
+extern _LIB_VERSION_TYPE _LIB_VERSION;
+#313 "/usr/include/math.h" 3 4
+struct exception
+
+  {
+    int type;
+    char *name;
+    double arg1;
+    double arg2;
+    double retval;
+  };
+
+
+
+
+extern int matherr (struct exception *__exc);
+#475 "/usr/include/math.h" 3 4
+
+#48 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c" 2
+#1 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir.h" 1
+#50 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir.h"
 typedef int coef_t;
 typedef int data_t;
 typedef int acc_t;
@@ -836,17 +1479,17 @@ void fir (
   coef_t c[11 +1],
   data_t x
   );
-#49 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c" 2
+#49 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c" 2
 
 
 #ifndef HLS_FASTSIM
-#50 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#50 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
 
 #ifndef HLS_FASTSIM
 #include "apatb_fir.h"
 #endif
 
-#50 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#50 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
 int main () {
   const int SAMPLES=600;
   FILE *fp;
@@ -871,19 +1514,19 @@ int main () {
 #define fir AESL_WRAP_fir
 #endif
 
-#69 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#69 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
 
 #ifndef HLS_FASTSIM
 #define fir AESL_WRAP_fir
 #endif
 
-#69 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#69 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
 fir
 #undef fir
-#69 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#69 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
 
 #undef fir
-#69 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#69 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
 (&output,taps,signal);
 
     if ((ramp_up == 1) && (signal >= 75))
@@ -899,16 +1542,16 @@ fir
   printf ("Comparing against output data \n");
   if (system("diff -w out.dat out.gold.dat")) {
 
- fprintf((&_iob[1]), "*******************************************\n");
- fprintf((&_iob[1]), "FAIL: Output DOES NOT match the golden output\n");
- fprintf((&_iob[1]), "*******************************************\n");
+ fprintf(stdout, "*******************************************\n");
+ fprintf(stdout, "FAIL: Output DOES NOT match the golden output\n");
+ fprintf(stdout, "*******************************************\n");
      return 1;
   } else {
- fprintf((&_iob[1]), "*******************************************\n");
- fprintf((&_iob[1]), "PASS: The output matches the golden output!\n");
- fprintf((&_iob[1]), "*******************************************\n");
+ fprintf(stdout, "*******************************************\n");
+ fprintf(stdout, "PASS: The output matches the golden output!\n");
+ fprintf(stdout, "*******************************************\n");
      return 0;
   }
 }
 #endif
-#94 "C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
+#94 "/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_test.c"
