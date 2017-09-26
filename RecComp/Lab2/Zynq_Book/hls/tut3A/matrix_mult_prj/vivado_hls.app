@@ -12,7 +12,8 @@
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="inactive"/>
-        <solution name="solution2" status="active"/>
+        <solution name="solution2" status="inactive"/>
+        <solution name="solution3" status="active"/>
     </solutions>
 </project>
 
