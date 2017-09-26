@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2.1 (64-bit)
+# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Tue Sep 26 15:59:03 2017
+# Process ID: 24888
+# Current directory: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog/xsim.dir/fir/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog/webtalk.log
+# Journal file: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog/xsim.dir/fir/webtalk/xsim_webtalk.tcl -notrace
