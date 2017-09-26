@@ -1,0 +1,411 @@
+
+
+================================================================
+== Vivado HLS Report for 'matrix_mult'
+================================================================
+* Date:           Mon Sep 25 10:27:39 2017
+
+* Version:        2017.2 (Build 1909853 on Wed Aug 09 16:50:22 MDT 2017)
+* Project:        matrix_mult_prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      7.66|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  451|  451|  452|  452|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |            |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row_Col   |  450|  450|        18|          -|          -|    25|    no    |
+        | + Product  |   12|   12|         5|          2|          1|     5|    yes   |
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 11
+* Pipeline: 1
+  Pipeline-0: II = 2, D = 5, States = { 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	11  / (exitcond)
+	7  / (!exitcond)
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	6  / true
+11 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_12 (4)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([25 x i8]* %a) nounwind, !map !7
+
+ST_1: StgValue_13 (5)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([25 x i8]* %b) nounwind, !map !13
+
+ST_1: StgValue_14 (6)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([25 x i16]* %prod) nounwind, !map !17
+
+ST_1: StgValue_15 (7)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @matrix_mult_str) nounwind
+
+ST_1: StgValue_16 (8)  [1/1] 1.59ns  loc: matrix_mult.cpp:10
+:4  br label %1
+
+
+ <State 2>: 4.33ns
+ST_2: indvar_flatten (10)  [1/1] 0.00ns
+:0  %indvar_flatten = phi i5 [ 0, %0 ], [ %indvar_flatten_next, %3 ]
+
+ST_2: i (11)  [1/1] 0.00ns  loc: matrix_mult.cpp:10
+:1  %i = phi i3 [ 0, %0 ], [ %i_cast3_mid2_v, %3 ]
+
+ST_2: j (12)  [1/1] 0.00ns
+:2  %j = phi i3 [ 0, %0 ], [ %j_1, %3 ]
+
+ST_2: exitcond_flatten (13)  [1/1] 3.31ns
+:3  %exitcond_flatten = icmp eq i5 %indvar_flatten, -7
+
+ST_2: indvar_flatten_next (14)  [1/1] 2.33ns
+:4  %indvar_flatten_next = add i5 %indvar_flatten, 1
+
+ST_2: StgValue_22 (15)  [1/1] 0.00ns
+:5  br i1 %exitcond_flatten, label %4, label %.reset
+
+ST_2: i_1 (17)  [1/1] 2.26ns  loc: matrix_mult.cpp:10
+.reset:0  %i_1 = add i3 %i, 1
+
+ST_2: exitcond1 (20)  [1/1] 2.07ns  loc: matrix_mult.cpp:12
+.reset:3  %exitcond1 = icmp eq i3 %j, -3
+
+ST_2: j_mid2 (21)  [1/1] 2.07ns  loc: matrix_mult.cpp:12
+.reset:4  %j_mid2 = select i1 %exitcond1, i3 0, i3 %j
+
+ST_2: i_cast3_mid2_v (22)  [1/1] 2.07ns  loc: matrix_mult.cpp:10
+.reset:5  %i_cast3_mid2_v = select i1 %exitcond1, i3 %i_1, i3 %i
+
+ST_2: StgValue_27 (70)  [1/1] 0.00ns  loc: matrix_mult.cpp:21
+:0  ret void
+
+
+ <State 3>: 2.33ns
+ST_3: i_cast3_mid2_cast (23)  [1/1] 0.00ns  loc: matrix_mult.cpp:10
+.reset:6  %i_cast3_mid2_cast = zext i3 %i_cast3_mid2_v to i6
+
+ST_3: tmp_4 (24)  [1/1] 0.00ns  loc: matrix_mult.cpp:10
+.reset:7  %tmp_4 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %i_cast3_mid2_v, i2 0)
+
+ST_3: p_shl_cast (25)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+.reset:8  %p_shl_cast = zext i5 %tmp_4 to i6
+
+ST_3: tmp_7 (26)  [1/1] 2.33ns  loc: matrix_mult.cpp:16
+.reset:9  %tmp_7 = add i6 %i_cast3_mid2_cast, %p_shl_cast
+
+
+ <State 4>: 2.31ns
+ST_4: j_cast2_cast (27)  [1/1] 0.00ns  loc: matrix_mult.cpp:13
+.reset:10  %j_cast2_cast = zext i3 %j_mid2 to i6
+
+ST_4: tmp_8 (28)  [1/1] 2.31ns  loc: matrix_mult.cpp:13
+.reset:11  %tmp_8 = add i6 %tmp_7, %j_cast2_cast
+
+ST_4: tmp_8_cast (29)  [1/1] 0.00ns  loc: matrix_mult.cpp:13
+.reset:12  %tmp_8_cast = zext i6 %tmp_8 to i32
+
+ST_4: prod_addr (30)  [1/1] 0.00ns  loc: matrix_mult.cpp:13
+.reset:13  %prod_addr = getelementptr [25 x i16]* %prod, i32 0, i32 %tmp_8_cast
+
+
+ <State 5>: 2.32ns
+ST_5: StgValue_36 (18)  [1/1] 0.00ns
+.reset:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @Row_Col_str)
+
+ST_5: empty_4 (19)  [1/1] 0.00ns
+.reset:2  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 25, i64 25, i64 25) nounwind
+
+ST_5: StgValue_38 (31)  [1/1] 0.00ns  loc: matrix_mult.cpp:12
+.reset:14  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str1) nounwind
+
+ST_5: tmp_5 (32)  [1/1] 0.00ns  loc: matrix_mult.cpp:12
+.reset:15  %tmp_5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str1) nounwind
+
+ST_5: StgValue_40 (33)  [1/1] 2.32ns  loc: matrix_mult.cpp:13
+.reset:16  store i16 0, i16* %prod_addr, align 2
+
+ST_5: StgValue_41 (34)  [1/1] 1.59ns  loc: matrix_mult.cpp:15
+.reset:17  br label %2
+
+
+ <State 6>: 3.49ns
+ST_6: k (36)  [1/1] 0.00ns
+:0  %k = phi i3 [ 0, %.reset ], [ %k_1, %ifBlock ]
+
+ST_6: exitcond (37)  [1/1] 2.07ns  loc: matrix_mult.cpp:15
+:1  %exitcond = icmp eq i3 %k, -3
+
+ST_6: k_1 (38)  [1/1] 2.26ns  loc: matrix_mult.cpp:15
+:2  %k_1 = add i3 %k, 1
+
+ST_6: StgValue_45 (39)  [1/1] 0.00ns  loc: matrix_mult.cpp:15
+:3  br i1 %exitcond, label %3, label %ifBlock
+
+ST_6: k_cast1_cast (41)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:0  %k_cast1_cast = zext i3 %k to i6
+
+ST_6: tmp_9 (42)  [1/1] 2.31ns  loc: matrix_mult.cpp:16
+ifBlock:1  %tmp_9 = add i6 %tmp_7, %k_cast1_cast
+
+ST_6: tmp_s (45)  [1/1] 0.00ns  loc: matrix_mult.cpp:15
+ifBlock:4  %tmp_s = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %k, i2 0)
+
+ST_6: p_shl1_cast (46)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:5  %p_shl1_cast = zext i5 %tmp_s to i6
+
+ST_6: tmp_10 (47)  [1/1] 1.75ns  loc: matrix_mult.cpp:16
+ifBlock:6  %tmp_10 = add i6 %k_cast1_cast, %p_shl1_cast
+
+ST_6: tmp_11 (48)  [1/1] 1.75ns  loc: matrix_mult.cpp:16
+ifBlock:7  %tmp_11 = add i6 %tmp_10, %j_cast2_cast
+
+
+ <State 7>: 2.32ns
+ST_7: tmp_9_cast (43)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:2  %tmp_9_cast = zext i6 %tmp_9 to i32
+
+ST_7: a_addr (44)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:3  %a_addr = getelementptr [25 x i8]* %a, i32 0, i32 %tmp_9_cast
+
+ST_7: tmp_12_cast (49)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:8  %tmp_12_cast = zext i6 %tmp_11 to i32
+
+ST_7: b_addr (50)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:9  %b_addr = getelementptr [25 x i8]* %b, i32 0, i32 %tmp_12_cast
+
+ST_7: a_load (55)  [2/2] 2.32ns  loc: matrix_mult.cpp:16
+ifBlock:14  %a_load = load i8* %a_addr, align 1
+
+ST_7: b_load (57)  [2/2] 2.32ns  loc: matrix_mult.cpp:16
+ifBlock:16  %b_load = load i8* %b_addr, align 1
+
+
+ <State 8>: 3.37ns
+ST_8: a_load (55)  [1/2] 2.32ns  loc: matrix_mult.cpp:16
+ifBlock:14  %a_load = load i8* %a_addr, align 1
+
+ST_8: tmp (56)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:15  %tmp = sext i8 %a_load to i16
+
+ST_8: b_load (57)  [1/2] 2.32ns  loc: matrix_mult.cpp:16
+ifBlock:16  %b_load = load i8* %b_addr, align 1
+
+ST_8: tmp_1 (58)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:17  %tmp_1 = sext i8 %b_load to i16
+
+ST_8: tmp_2 (59)  [3/3] 1.05ns  loc: matrix_mult.cpp:16
+ifBlock:18  %tmp_2 = mul i16 %tmp, %tmp_1
+
+
+ <State 9>: 2.32ns
+ST_9: tmp_2 (59)  [2/3] 1.05ns  loc: matrix_mult.cpp:16
+ifBlock:18  %tmp_2 = mul i16 %tmp, %tmp_1
+
+ST_9: prod_load (60)  [2/2] 2.32ns  loc: matrix_mult.cpp:16
+ifBlock:19  %prod_load = load i16* %prod_addr, align 2
+
+
+ <State 10>: 7.66ns
+ST_10: empty (51)  [1/1] 0.00ns
+ifBlock:10  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_10: StgValue_66 (52)  [1/1] 0.00ns  loc: matrix_mult.cpp:15
+ifBlock:11  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str2) nounwind
+
+ST_10: tmp_6 (53)  [1/1] 0.00ns  loc: matrix_mult.cpp:15
+ifBlock:12  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str2) nounwind
+
+ST_10: StgValue_68 (54)  [1/1] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:13  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
+
+ST_10: tmp_2 (59)  [1/3] 0.00ns  loc: matrix_mult.cpp:16
+ifBlock:18  %tmp_2 = mul i16 %tmp, %tmp_1
+
+ST_10: prod_load (60)  [1/2] 2.32ns  loc: matrix_mult.cpp:16
+ifBlock:19  %prod_load = load i16* %prod_addr, align 2
+
+ST_10: tmp_3 (61)  [1/1] 3.02ns  loc: matrix_mult.cpp:16
+ifBlock:20  %tmp_3 = add i16 %tmp_2, %prod_load
+
+ST_10: StgValue_72 (62)  [1/1] 2.32ns  loc: matrix_mult.cpp:16
+ifBlock:21  store i16 %tmp_3, i16* %prod_addr, align 2
+
+ST_10: empty_2 (63)  [1/1] 0.00ns  loc: matrix_mult.cpp:17
+ifBlock:22  %empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str2, i32 %tmp_6) nounwind
+
+ST_10: StgValue_74 (64)  [1/1] 0.00ns
+ifBlock:23  br label %2
+
+
+ <State 11>: 2.26ns
+ST_11: empty_3 (66)  [1/1] 0.00ns  loc: matrix_mult.cpp:18
+:0  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str1, i32 %tmp_5) nounwind
+
+ST_11: j_1 (67)  [1/1] 2.26ns  loc: matrix_mult.cpp:12
+:1  %j_1 = add i3 %j_mid2, 1
+
+ST_11: StgValue_77 (68)  [1/1] 0.00ns  loc: matrix_mult.cpp:12
+:2  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [10]  (1.59 ns)
+
+ <State 2>: 4.33ns
+The critical path consists of the following:
+	'phi' operation ('i', matrix_mult.cpp:10) with incoming values : ('i_cast3_mid2_v', matrix_mult.cpp:10) [11]  (0 ns)
+	'add' operation ('i', matrix_mult.cpp:10) [17]  (2.26 ns)
+	'select' operation ('i_cast3_mid2_v', matrix_mult.cpp:10) [22]  (2.07 ns)
+
+ <State 3>: 2.33ns
+The critical path consists of the following:
+	'add' operation ('tmp_7', matrix_mult.cpp:16) [26]  (2.33 ns)
+
+ <State 4>: 2.31ns
+The critical path consists of the following:
+	'add' operation ('tmp_8', matrix_mult.cpp:13) [28]  (2.31 ns)
+
+ <State 5>: 2.32ns
+The critical path consists of the following:
+	'store' operation (matrix_mult.cpp:13) of constant 0 on array 'prod' [33]  (2.32 ns)
+
+ <State 6>: 3.49ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', matrix_mult.cpp:15) [36]  (0 ns)
+	'add' operation ('tmp_10', matrix_mult.cpp:16) [47]  (1.75 ns)
+	'add' operation ('tmp_11', matrix_mult.cpp:16) [48]  (1.75 ns)
+
+ <State 7>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('a_addr', matrix_mult.cpp:16) [44]  (0 ns)
+	'load' operation ('a_load', matrix_mult.cpp:16) on array 'a' [55]  (2.32 ns)
+
+ <State 8>: 3.37ns
+The critical path consists of the following:
+	'load' operation ('a_load', matrix_mult.cpp:16) on array 'a' [55]  (2.32 ns)
+	'mul' operation ('tmp_2', matrix_mult.cpp:16) [59]  (1.05 ns)
+
+ <State 9>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('prod_load', matrix_mult.cpp:16) on array 'prod' [60]  (2.32 ns)
+
+ <State 10>: 7.66ns
+The critical path consists of the following:
+	'load' operation ('prod_load', matrix_mult.cpp:16) on array 'prod' [60]  (2.32 ns)
+	'add' operation ('tmp_3', matrix_mult.cpp:16) [61]  (3.02 ns)
+	'store' operation (matrix_mult.cpp:16) of variable 'tmp_3', matrix_mult.cpp:16 on array 'prod' [62]  (2.32 ns)
+
+ <State 11>: 2.26ns
+The critical path consists of the following:
+	'add' operation ('j', matrix_mult.cpp:12) [67]  (2.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

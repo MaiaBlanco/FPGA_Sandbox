@@ -1,0 +1,19 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'markb' on host 'effulgenttome' (Windows NT_amd64 version 6.2) on Tue Sep 26 16:01:26 -0400 2017
+INFO: [HLS 200-10] In directory 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1'
+INFO: [HLS 200-10] Opening project 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160tfbg484-2'
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2017.2.1 (64-bit)
+  **** SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+  **** IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 26 16:01:37 2017...

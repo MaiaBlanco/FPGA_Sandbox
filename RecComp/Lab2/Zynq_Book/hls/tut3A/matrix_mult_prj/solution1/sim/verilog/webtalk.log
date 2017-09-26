@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2.1 (64-bit)
+# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Mon Sep 25 10:15:39 2017
+# Process ID: 1700
+# Current directory: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A/matrix_mult_prj/solution1/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A/matrix_mult_prj/solution1/sim/verilog/xsim.dir/matrix_mult/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A/matrix_mult_prj/solution1/sim/verilog/webtalk.log
+# Journal file: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A/matrix_mult_prj/solution1/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A/matrix_mult_prj/solution1/sim/verilog/xsim.dir/matrix_mult/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 25 10:15:39 2017...

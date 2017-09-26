@@ -1,0 +1,66 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'markb' on host 'effulgenttome' (Windows NT_amd64 version 6.2) on Mon Sep 25 12:35:21 -0400 2017
+INFO: [HLS 200-10] In directory 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A'
+INFO: [HLS 200-10] Opening project 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A/matrix_mult_prj'.
+INFO: [HLS 200-10] Adding design file 'matrix_mult.h' to the project
+INFO: [HLS 200-10] Adding design file 'matrix_mult.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'matrix_mult_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/Zynq_Book/hls/tut3A/matrix_mult_prj/solution3'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-10] Analyzing design file 'matrix_mult.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 98.789 ; gain = 46.246
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 98.809 ; gain = 46.266
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 100.293 ; gain = 47.750
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 100.508 ; gain = 47.965
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col' (matrix_mult.cpp:12) in function 'matrix_mult' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Product' (matrix_mult.cpp:15) in function 'matrix_mult' completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_mult' (matrix_mult.cpp:5)...4 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 121.477 ; gain = 68.934
+INFO: [XFORM 203-541] Flattening a loop nest 'Row' (matrix_mult.cpp:10:37) in function 'matrix_mult'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 121.477 ; gain = 68.934
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_mult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated delay (5.41ns) of 'mul' operation ('tmp_2_1', matrix_mult.cpp:16) exceeds the target cycle time (target cycle time: 5ns, clock uncertainty: 0.625ns, effective cycle time: 4.38ns).
+INFO: [SCHED 204-61] Pipelining loop 'Row_Col'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b_load_3', matrix_mult.cpp:16) on array 'b' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 3, Depth: 15.
+WARNING: [SCHED 204-21] Estimated clock period (5.42ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.38ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'mul' operation ('tmp_2_4', matrix_mult.cpp:16) (5.42 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.117 seconds; current allocated memory: 73.736 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 74.120 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult/prod' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_mult' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_mult_mul_8s_8s_16_5' to 'matrix_mult_mul_8bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_mult_mac_muladd_8s_8s_16ns_16_3' to 'matrix_mult_mac_mcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrix_mult_mac_muladd_8s_8s_16s_16_3' to 'matrix_mult_mac_mdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_mult_mac_mcud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_mult_mac_mdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrix_mult_mul_8bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult'.
+INFO: [HLS 200-111]  Elapsed time: 0.225 seconds; current allocated memory: 74.873 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'matrix_mult_mul_8bkb_Mul5S_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 121.477 ; gain = 68.934
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_mult.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_mult.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_mult.
+INFO: [HLS 200-112] Total elapsed time: 12.836 seconds; peak allocated memory: 74.873 MB.
