@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
-# xsim v2017.2.1 (64-bit)
-# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
-# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
-# Start of session at: Tue Sep 26 15:58:57 2017
-# Process ID: 24880
-# Current directory: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog
-# Command line: xsim.exe -mode tcl -source {xsim.dir/fir/xsim_script.tcl}
-# Log file: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog/xsim.log
-# Journal file: C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog\xsim.jou
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 26 16:29:33 2017
+# Process ID: 14332
+# Current directory: /afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/fir/xsim_script.tcl}
+# Log file: /afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog/xsim.log
+# Journal file: /afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/sim/verilog/xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/fir/xsim_script.tcl
 source fir.tcl

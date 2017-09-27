@@ -71,8 +71,8 @@ ALL TIMES.
 //typedef int16_t		in_data_t;
 //typedef int32_t		out_data_t;
 #include "ap_cint.h"
-typedef int16		in_data_t;
-typedef int32		out_data_t;
+typedef int15		in_data_t;
+typedef int31		out_data_t;
 
 void hamming_window(out_data_t outdata[], in_data_t indata[]);
 

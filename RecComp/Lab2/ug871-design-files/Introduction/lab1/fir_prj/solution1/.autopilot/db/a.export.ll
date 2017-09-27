@@ -1,14 +1,14 @@
-; ModuleID = 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/a.o.2.bc'
-target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
-target triple = "i686-pc-mingw32"
+; ModuleID = '/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/a.o.2.bc'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
 
-@shift_reg = internal unnamed_addr global [11 x i32] zeroinitializer, align 4
+@shift_reg = internal unnamed_addr global [11 x i32] zeroinitializer, align 16
 @fir_str = internal unnamed_addr constant [4 x i8] c"fir\00"
 @p_str = private unnamed_addr constant [17 x i8] c"Shift_Accum_Loop\00", align 1
 
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
-define void @fir(i32* %y, [11 x i32]* %c, i32 %x) nounwind {
+define void @fir(i32* %y, [11 x i32]* %c, i32 %x) nounwind uwtable {
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %y) nounwind, !map !7
   call void (...)* @_ssdm_op_SpecBitsMap([11 x i32]* %c) nounwind, !map !13
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %x) nounwind, !map !19
@@ -30,24 +30,26 @@ define void @fir(i32* %y, [11 x i32]* %c, i32 %x) nounwind {
   br i1 %tmp_1, label %3, label %4
 
 ; <label>:3                                       ; preds = %2
-  store i32 %x_read, i32* getelementptr inbounds ([11 x i32]* @shift_reg, i32 0, i32 0), align 4
+  store i32 %x_read, i32* getelementptr inbounds ([11 x i32]* @shift_reg, i64 0, i64 0), align 16
   br label %5
 
 ; <label>:4                                       ; preds = %2
   %tmp_2 = add i5 %i, -1
-  %tmp_2_cast = zext i5 %tmp_2 to i32
-  %shift_reg_addr = getelementptr inbounds [11 x i32]* @shift_reg, i32 0, i32 %tmp_2_cast
+  %tmp_3 = zext i5 %tmp_2 to i64
+  %shift_reg_addr = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %tmp_3
   %data = load i32* %shift_reg_addr, align 4
-  %shift_reg_addr_1 = getelementptr inbounds [11 x i32]* @shift_reg, i32 0, i32 %i_cast
+  %tmp_4 = zext i32 %i_cast to i64
+  %shift_reg_addr_1 = getelementptr inbounds [11 x i32]* @shift_reg, i64 0, i64 %tmp_4
   store i32 %data, i32* %shift_reg_addr_1, align 4
   br label %5
 
 ; <label>:5                                       ; preds = %4, %3
   %data1 = phi i32 [ %x_read, %3 ], [ %data, %4 ]
-  %c_addr = getelementptr [11 x i32]* %c, i32 0, i32 %i_cast
+  %tmp_5 = zext i32 %i_cast to i64
+  %c_addr = getelementptr [11 x i32]* %c, i64 0, i64 %tmp_5
   %c_load = load i32* %c_addr, align 4
-  %tmp_3 = mul nsw i32 %c_load, %data1
-  %acc_1 = add nsw i32 %tmp_3, %acc
+  %tmp_6 = mul nsw i32 %c_load, %data1
+  %acc_1 = add nsw i32 %tmp_6, %acc
   %i_1 = add i5 %i, -1
   br label %1
 

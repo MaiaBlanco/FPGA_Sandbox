@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'fir'" level="0">
-<item name = "Date">Tue Sep 26 14:39:41 2017
+<item name = "Date">Tue Sep 26 16:28:55 2017
 </item>
-<item name = "Version">2017.2 (Build 1909853 on Wed Aug 09 16:50:22 MDT 2017)</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">fir_prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
@@ -77,33 +77,33 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="tmp_3_fu_151_p2">*, 4, 0, 48, 32, 32</column>
-<column name="acc_1_fu_157_p2">+, 0, 101, 37, 32, 32</column>
-<column name="grp_fu_121_p2">+, 0, 20, 10, 5, 2</column>
-<column name="tmp_1_fu_140_p2">icmp, 0, 0, 2, 5, 1</column>
+<column name="tmp_6_fu_161_p2">*, 4, 0, 48, 32, 32</column>
+<column name="acc_1_fu_167_p2">+, 0, 101, 37, 32, 32</column>
+<column name="grp_fu_123_p2">+, 0, 20, 10, 5, 2</column>
+<column name="tmp_1_fu_142_p2">icmp, 0, 0, 2, 5, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="acc_reg_87">9, 2, 32, 64</column>
+<column name="acc_reg_89">9, 2, 32, 64</column>
 <column name="ap_NS_fsm">41, 6, 1, 6</column>
-<column name="data1_reg_112">9, 2, 32, 64</column>
-<column name="grp_fu_121_p0">13, 3, 5, 15</column>
-<column name="i_reg_100">9, 2, 5, 10</column>
+<column name="data1_reg_114">9, 2, 32, 64</column>
+<column name="grp_fu_123_p0">13, 3, 5, 15</column>
+<column name="i_reg_102">9, 2, 5, 10</column>
 <column name="shift_reg_address0">17, 4, 4, 16</column>
 <column name="shift_reg_d0">13, 3, 32, 96</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="acc_reg_87">32, 0, 32, 0</column>
+<column name="acc_reg_89">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">5, 0, 5, 0</column>
-<column name="data1_reg_112">32, 0, 32, 0</column>
-<column name="i_1_reg_196">5, 0, 5, 0</column>
-<column name="i_cast_reg_168">32, 0, 32, 0</column>
-<column name="i_reg_100">5, 0, 5, 0</column>
-<column name="tmp_1_reg_177">1, 0, 1, 0</column>
-<column name="tmp_3_reg_201">32, 0, 32, 0</column>
+<column name="data1_reg_114">32, 0, 32, 0</column>
+<column name="i_1_reg_206">5, 0, 5, 0</column>
+<column name="i_cast_reg_178">32, 0, 32, 0</column>
+<column name="i_reg_102">5, 0, 5, 0</column>
+<column name="tmp_1_reg_187">1, 0, 1, 0</column>
+<column name="tmp_6_reg_211">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -134,7 +134,7 @@
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
 <column name="'c_load', fir.c:68">load, 1.15, 1.15, -, -, -, -, -, -, &apos;c&apos;, -, -, -, -</column>
-<column name="'tmp_3', fir.c:68">mul, 6.57, 7.71, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_6', fir.c:68">mul, 6.57, 7.71, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>
 </section>

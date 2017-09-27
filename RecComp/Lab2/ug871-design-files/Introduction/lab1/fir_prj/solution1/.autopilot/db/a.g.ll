@@ -1,26 +1,26 @@
-; ModuleID = 'C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/a.g.bc'
-target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
-target triple = "i686-pc-mingw32"
+; ModuleID = '/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/a.g.bc'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
 
-@fir.shift_reg = internal global [11 x i32] zeroinitializer, align 4 ; [#uses=4 type=[11 x i32]*]
+@fir.shift_reg = internal global [11 x i32] zeroinitializer, align 16 ; [#uses=4 type=[11 x i32]*]
 @.str = private unnamed_addr constant [17 x i8] c"Shift_Accum_Loop\00", align 1 ; [#uses=1 type=[17 x i8]*]
 
 ; [#uses=0]
-define void @fir(i32* %y, i32* %c, i32 %x) nounwind {
-  %1 = alloca i32*, align 4                       ; [#uses=2 type=i32**]
-  %2 = alloca i32*, align 4                       ; [#uses=3 type=i32**]
+define void @fir(i32* %y, i32* %c, i32 %x) nounwind uwtable {
+  %1 = alloca i32*, align 8                       ; [#uses=2 type=i32**]
+  %2 = alloca i32*, align 8                       ; [#uses=3 type=i32**]
   %3 = alloca i32, align 4                        ; [#uses=3 type=i32*]
   %acc = alloca i32, align 4                      ; [#uses=4 type=i32*]
   %data = alloca i32, align 4                     ; [#uses=3 type=i32*]
   %i = alloca i32, align 4                        ; [#uses=9 type=i32*]
-  store i32* %y, i32** %1, align 4
+  store i32* %y, i32** %1, align 8
   call void @llvm.dbg.declare(metadata !{i32** %1}, metadata !29), !dbg !30 ; [debug line = 49:11] [debug variable = y]
-  store i32* %c, i32** %2, align 4
+  store i32* %c, i32** %2, align 8
   call void @llvm.dbg.declare(metadata !{i32** %2}, metadata !31), !dbg !32 ; [debug line = 50:10] [debug variable = c]
   store i32 %x, i32* %3, align 4
   call void @llvm.dbg.declare(metadata !{i32* %3}, metadata !33), !dbg !34 ; [debug line = 51:10] [debug variable = x]
-  %4 = load i32** %2, align 4, !dbg !35           ; [#uses=1 type=i32*] [debug line = 52:6]
-  call void bitcast (void (...)* @_ssdm_SpecArrayDimSize to void (i32*, i32)*)(i32* %4, i32 11) nounwind, !dbg !35 ; [debug line = 52:6]
+  %4 = load i32** %2, align 8, !dbg !35           ; [#uses=1 type=i32*] [debug line = 52:6]
+  call void (...)* @_ssdm_SpecArrayDimSize(i32* %4, i32 11) nounwind, !dbg !35 ; [debug line = 52:6]
   call void @llvm.dbg.declare(metadata !{i32* %acc}, metadata !37), !dbg !39 ; [debug line = 55:9] [debug variable = acc]
   call void @llvm.dbg.declare(metadata !{i32* %data}, metadata !40), !dbg !41 ; [debug line = 56:10] [debug variable = data]
   call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !42), !dbg !43 ; [debug line = 57:7] [debug variable = i]
@@ -31,62 +31,66 @@ define void @fir(i32* %y, i32* %c, i32 %x) nounwind {
   store i32 10, i32* %i, align 4, !dbg !45        ; [debug line = 60:26]
   br label %6, !dbg !45                           ; [debug line = 60:26]
 
-; <label>:6                                       ; preds = %34, %5
+; <label>:6                                       ; preds = %38, %5
   %7 = load i32* %i, align 4, !dbg !45            ; [#uses=1 type=i32] [debug line = 60:26]
   %8 = icmp sge i32 %7, 0, !dbg !45               ; [#uses=1 type=i1] [debug line = 60:26]
-  br i1 %8, label %9, label %37, !dbg !45         ; [debug line = 60:26]
+  br i1 %8, label %9, label %41, !dbg !45         ; [debug line = 60:26]
 
 ; <label>:9                                       ; preds = %6
-  call void bitcast (void (...)* @_ssdm_op_SpecLoopName to void (i8*)*)(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !47 ; [debug line = 60:45]
-  call void bitcast (void (...)* @_ssdm_RegionBegin to void (i8*)*)(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !47 ; [debug line = 60:45]
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !47 ; [debug line = 60:45]
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !47 ; [debug line = 60:45]
   %10 = load i32* %i, align 4, !dbg !49           ; [#uses=1 type=i32] [debug line = 61:2]
   %11 = icmp eq i32 %10, 0, !dbg !49              ; [#uses=1 type=i1] [debug line = 61:2]
   br i1 %11, label %12, label %15, !dbg !49       ; [debug line = 61:2]
 
 ; <label>:12                                      ; preds = %9
   %13 = load i32* %3, align 4, !dbg !50           ; [#uses=1 type=i32] [debug line = 62:4]
-  store i32 %13, i32* getelementptr inbounds ([11 x i32]* @fir.shift_reg, i32 0, i32 0), align 4, !dbg !50 ; [debug line = 62:4]
+  store i32 %13, i32* getelementptr inbounds ([11 x i32]* @fir.shift_reg, i32 0, i64 0), align 4, !dbg !50 ; [debug line = 62:4]
   %14 = load i32* %3, align 4, !dbg !52           ; [#uses=1 type=i32] [debug line = 63:7]
   store i32 %14, i32* %data, align 4, !dbg !52    ; [debug line = 63:7]
-  br label %25, !dbg !53                          ; [debug line = 64:5]
+  br label %28, !dbg !53                          ; [debug line = 64:5]
 
 ; <label>:15                                      ; preds = %9
   %16 = load i32* %i, align 4, !dbg !54           ; [#uses=1 type=i32] [debug line = 65:4]
   %17 = sub nsw i32 %16, 1, !dbg !54              ; [#uses=1 type=i32] [debug line = 65:4]
-  %18 = getelementptr inbounds [11 x i32]* @fir.shift_reg, i32 0, i32 %17, !dbg !54 ; [#uses=1 type=i32*] [debug line = 65:4]
-  %19 = load i32* %18, align 4, !dbg !54          ; [#uses=1 type=i32] [debug line = 65:4]
-  %20 = load i32* %i, align 4, !dbg !54           ; [#uses=1 type=i32] [debug line = 65:4]
-  %21 = getelementptr inbounds [11 x i32]* @fir.shift_reg, i32 0, i32 %20, !dbg !54 ; [#uses=1 type=i32*] [debug line = 65:4]
-  store i32 %19, i32* %21, align 4, !dbg !54      ; [debug line = 65:4]
-  %22 = load i32* %i, align 4, !dbg !56           ; [#uses=1 type=i32] [debug line = 66:4]
-  %23 = getelementptr inbounds [11 x i32]* @fir.shift_reg, i32 0, i32 %22, !dbg !56 ; [#uses=1 type=i32*] [debug line = 66:4]
-  %24 = load i32* %23, align 4, !dbg !56          ; [#uses=1 type=i32] [debug line = 66:4]
-  store i32 %24, i32* %data, align 4, !dbg !56    ; [debug line = 66:4]
-  br label %25
+  %18 = sext i32 %17 to i64, !dbg !54             ; [#uses=1 type=i64] [debug line = 65:4]
+  %19 = getelementptr inbounds [11 x i32]* @fir.shift_reg, i32 0, i64 %18, !dbg !54 ; [#uses=1 type=i32*] [debug line = 65:4]
+  %20 = load i32* %19, align 4, !dbg !54          ; [#uses=1 type=i32] [debug line = 65:4]
+  %21 = load i32* %i, align 4, !dbg !54           ; [#uses=1 type=i32] [debug line = 65:4]
+  %22 = sext i32 %21 to i64, !dbg !54             ; [#uses=1 type=i64] [debug line = 65:4]
+  %23 = getelementptr inbounds [11 x i32]* @fir.shift_reg, i32 0, i64 %22, !dbg !54 ; [#uses=1 type=i32*] [debug line = 65:4]
+  store i32 %20, i32* %23, align 4, !dbg !54      ; [debug line = 65:4]
+  %24 = load i32* %i, align 4, !dbg !56           ; [#uses=1 type=i32] [debug line = 66:4]
+  %25 = sext i32 %24 to i64, !dbg !56             ; [#uses=1 type=i64] [debug line = 66:4]
+  %26 = getelementptr inbounds [11 x i32]* @fir.shift_reg, i32 0, i64 %25, !dbg !56 ; [#uses=1 type=i32*] [debug line = 66:4]
+  %27 = load i32* %26, align 4, !dbg !56          ; [#uses=1 type=i32] [debug line = 66:4]
+  store i32 %27, i32* %data, align 4, !dbg !56    ; [debug line = 66:4]
+  br label %28
 
-; <label>:25                                      ; preds = %15, %12
-  %26 = load i32* %data, align 4, !dbg !57        ; [#uses=1 type=i32] [debug line = 68:5]
-  %27 = load i32* %i, align 4, !dbg !57           ; [#uses=1 type=i32] [debug line = 68:5]
-  %28 = load i32** %2, align 4, !dbg !57          ; [#uses=1 type=i32*] [debug line = 68:5]
-  %29 = getelementptr inbounds i32* %28, i32 %27, !dbg !57 ; [#uses=1 type=i32*] [debug line = 68:5]
-  %30 = load i32* %29, align 4, !dbg !57          ; [#uses=1 type=i32] [debug line = 68:5]
-  %31 = mul nsw i32 %26, %30, !dbg !57            ; [#uses=1 type=i32] [debug line = 68:5]
-  %32 = load i32* %acc, align 4, !dbg !57         ; [#uses=1 type=i32] [debug line = 68:5]
-  %33 = add nsw i32 %32, %31, !dbg !57            ; [#uses=1 type=i32] [debug line = 68:5]
-  store i32 %33, i32* %acc, align 4, !dbg !57     ; [debug line = 68:5]
-  call void bitcast (void (...)* @_ssdm_RegionEnd to void (i8*)*)(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !58 ; [debug line = 69:3]
-  br label %34, !dbg !58                          ; [debug line = 69:3]
+; <label>:28                                      ; preds = %15, %12
+  %29 = load i32* %data, align 4, !dbg !57        ; [#uses=1 type=i32] [debug line = 68:5]
+  %30 = load i32* %i, align 4, !dbg !57           ; [#uses=1 type=i32] [debug line = 68:5]
+  %31 = sext i32 %30 to i64, !dbg !57             ; [#uses=1 type=i64] [debug line = 68:5]
+  %32 = load i32** %2, align 8, !dbg !57          ; [#uses=1 type=i32*] [debug line = 68:5]
+  %33 = getelementptr inbounds i32* %32, i64 %31, !dbg !57 ; [#uses=1 type=i32*] [debug line = 68:5]
+  %34 = load i32* %33, align 4, !dbg !57          ; [#uses=1 type=i32] [debug line = 68:5]
+  %35 = mul nsw i32 %29, %34, !dbg !57            ; [#uses=1 type=i32] [debug line = 68:5]
+  %36 = load i32* %acc, align 4, !dbg !57         ; [#uses=1 type=i32] [debug line = 68:5]
+  %37 = add nsw i32 %36, %35, !dbg !57            ; [#uses=1 type=i32] [debug line = 68:5]
+  store i32 %37, i32* %acc, align 4, !dbg !57     ; [debug line = 68:5]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([17 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !58 ; [debug line = 69:3]
+  br label %38, !dbg !58                          ; [debug line = 69:3]
 
-; <label>:34                                      ; preds = %25
-  %35 = load i32* %i, align 4, !dbg !59           ; [#uses=1 type=i32] [debug line = 60:39]
-  %36 = add nsw i32 %35, -1, !dbg !59             ; [#uses=1 type=i32] [debug line = 60:39]
-  store i32 %36, i32* %i, align 4, !dbg !59       ; [debug line = 60:39]
+; <label>:38                                      ; preds = %28
+  %39 = load i32* %i, align 4, !dbg !59           ; [#uses=1 type=i32] [debug line = 60:39]
+  %40 = add nsw i32 %39, -1, !dbg !59             ; [#uses=1 type=i32] [debug line = 60:39]
+  store i32 %40, i32* %i, align 4, !dbg !59       ; [debug line = 60:39]
   br label %6, !dbg !59                           ; [debug line = 60:39]
 
-; <label>:37                                      ; preds = %6
-  %38 = load i32* %acc, align 4, !dbg !60         ; [#uses=1 type=i32] [debug line = 70:3]
-  %39 = load i32** %1, align 4, !dbg !60          ; [#uses=1 type=i32*] [debug line = 70:3]
-  store i32 %38, i32* %39, align 4, !dbg !60      ; [debug line = 70:3]
+; <label>:41                                      ; preds = %6
+  %42 = load i32* %acc, align 4, !dbg !60         ; [#uses=1 type=i32] [debug line = 70:3]
+  %43 = load i32** %1, align 8, !dbg !60          ; [#uses=1 type=i32*] [debug line = 70:3]
+  store i32 %42, i32* %43, align 4, !dbg !60      ; [debug line = 70:3]
   ret void, !dbg !61                              ; [debug line = 71:1]
 }
 
@@ -109,19 +113,19 @@ declare void @_ssdm_RegionEnd(...) nounwind
 !opencl.kernels = !{!22}
 !hls.encrypted.func = !{}
 
-!0 = metadata !{i32 786449, i32 0, i32 1, metadata !"C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/fir.pragma.2.c", metadata !"C:\5CUsers\5Cmarkb\5CSource\5CRepos\5CFPGA_Sandbox\5CRecComp\5CLab2\5Cug871-design-files\5CIntroduction\5Clab1", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !16} ; [ DW_TAG_compile_unit ]
+!0 = metadata !{i32 786449, i32 0, i32 1, metadata !"/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1/fir_prj/solution1/.autopilot/db/fir.pragma.2.c", metadata !"/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !16} ; [ DW_TAG_compile_unit ]
 !1 = metadata !{metadata !2}
 !2 = metadata !{i32 0}
 !3 = metadata !{metadata !4}
 !4 = metadata !{metadata !5}
 !5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"fir", metadata !"fir", metadata !"", metadata !6, i32 48, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i32*, i32)* @fir, null, null, metadata !14, i32 52} ; [ DW_TAG_subprogram ]
-!6 = metadata !{i32 786473, metadata !"fir.c", metadata !"C:\5CUsers\5Cmarkb\5CSource\5CRepos\5CFPGA_Sandbox\5CRecComp\5CLab2\5Cug871-design-files\5CIntroduction\5Clab1", null} ; [ DW_TAG_file_type ]
+!6 = metadata !{i32 786473, metadata !"fir.c", metadata !"/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/ug871-design-files/Introduction/lab1", null} ; [ DW_TAG_file_type ]
 !7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !8 = metadata !{null, metadata !9, metadata !12, metadata !10}
-!9 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !10} ; [ DW_TAG_pointer_type ]
+!9 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !10} ; [ DW_TAG_pointer_type ]
 !10 = metadata !{i32 786454, null, metadata !"data_t", metadata !6, i32 51, i64 0, i64 0, i64 0, i32 0, metadata !11} ; [ DW_TAG_typedef ]
 !11 = metadata !{i32 786468, null, metadata !"int", null, i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ]
-!12 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !13} ; [ DW_TAG_pointer_type ]
+!12 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !13} ; [ DW_TAG_pointer_type ]
 !13 = metadata !{i32 786454, null, metadata !"coef_t", metadata !6, i32 50, i64 0, i64 0, i64 0, i32 0, metadata !11} ; [ DW_TAG_typedef ]
 !14 = metadata !{metadata !15}
 !15 = metadata !{i32 786468}                      ; [ DW_TAG_base_type ]

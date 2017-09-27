@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'fir'" level="0">
-<item name = "Date">Tue Sep 26 14:39:41 2017
+<item name = "Date">Tue Sep 26 16:28:55 2017
 </item>
-<item name = "Version">2017.2 (Build 1909853 on Wed Aug 09 16:50:22 MDT 2017)</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">fir_prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">kintex7</item>
