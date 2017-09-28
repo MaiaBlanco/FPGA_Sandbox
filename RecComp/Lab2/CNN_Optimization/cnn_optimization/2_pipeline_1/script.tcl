@@ -4,16 +4,17 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project cnn_optimization
-set_top main
-add_files convolve.cpp
-add_files data.cpp
+set_top convolve_kernel
 add_files kernel.cpp
-add_files main.cpp
-open_solution "solution1"
-set_part {xc7z020clg484-1} -tool vivado
+add_files kernel.h
+add_files -tb convolve.cpp
+add_files -tb data.cpp
+add_files -tb main.cpp
+open_solution "2_pipeline_1"
+set_part {xc7z020clg484-1}
 create_clock -period 10 -name default
-#source "./cnn_optimization/solution1/directives.tcl"
-#csim_design
+source "./cnn_optimization/2_pipeline_1/directives.tcl"
+csim_design -compiler gcc
 csynth_design
-#cosim_design
+cosim_design
 export_design -format ip_catalog

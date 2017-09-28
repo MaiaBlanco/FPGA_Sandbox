@@ -1,0 +1,16 @@
+Default sythesized implementation has latency of 25351 and interval of 25352, clock target 10 ns.
+With the other settings for kernel size (11x11) and iteration bounds (Tm = Tr = Tc = Tn = 3)
+the expected FLOPs for this is:
+2 * 3^4 * K^2 / (25351 / 100MHz) = 0.077 GFLOPs. Far cry from the results in the paper (~62 GFLOPs).
+
+Yifei noticed in the kernel that the outer loops were iterating over the inside of each output feature element, and then over the output features and input features. It would make more sense for pipelineing to iterate over the output features and then input features, to move data sharing dependencies to outer loops that don't change as often.
+
+Optimization idea:
+unroll the outer loop that iterates over the kernel (KxK).
+Results in reduction of latency to 24877.
+
+unrolling both dimensions of the kernel weight traversal loops results in latency of 10783.
+
+
+
+

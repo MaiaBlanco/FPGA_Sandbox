@@ -45,6 +45,8 @@
 
 #include "instance.h"
 #include "convolve.h"
+#include "ap_int.h"
+#include "ap_fixed.h"
 
 /*
  * Blocking parameters
@@ -53,6 +55,8 @@
 #define Tc 3 // output column
 #define Tm 3 // output depth
 #define Tn 3 // input depth 
+
+#define loop_ctr ap_uint<2>
 
 void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],

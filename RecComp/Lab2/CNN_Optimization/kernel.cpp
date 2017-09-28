@@ -53,6 +53,10 @@
  * flexibility
  */
 
+
+// Yifei pointed out that the loop order could be improved to allow for unrolling or pipelining.
+// This modified version takes what were the inner two loops (outside of kernel mask traversal)
+// and makes them the outer loops, making the code more "cache friendly" (even if no cache, still benefits.
 void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],
 		      DATA_T bufo[Tm][Tr][Tc]) {
@@ -60,8 +64,40 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 #pragma HLS INTERFACE bram port=bufi
 #pragma HLS INTERFACE bram port=bufo
 
-  unsigned long to_b, ti_b, row_b, col_b;  
-  
+	unsigned long to_b, ti_b, row_b, col_b;
+
+	// Iterate over each output feature map
+	for(to_b=0;to_b<Tm;to_b++){
+		// Iterate over input feature maps
+		for(ti_b=0;ti_b<Tn;ti_b++){
+			// Iterate within output feature map dimensions
+				for(row_b=0;row_b<Tr;row_b++){
+					for(col_b=0;col_b<Tc;col_b++){
+						unsigned long i, j;
+						// Iterate through KxK kernel:
+						convolve_kernel_traversal_outer:for(i=0;i<K_wts;i++){
+							convolve_kernel_traversal_inner: for(j=0;j<K_wts;j++){
+							bufo[to_b][row_b][col_b]+=
+							bufw[to_b][ti_b][i][j]*
+							bufi[ti_b][S_wts*row_b+i][S_wts*col_b+j];
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+void convolve_kernel_original (DATA_T bufw[Tm][Tn][K_wts][K_wts],
+		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],
+		      DATA_T bufo[Tm][Tr][Tc]) {
+#pragma HLS INTERFACE bram port=bufw
+#pragma HLS INTERFACE bram port=bufi
+#pragma HLS INTERFACE bram port=bufo
+
+  unsigned long to_b, ti_b, row_b, col_b;
+
   for(row_b=0;row_b<Tr;row_b++){
     for(col_b=0;col_b<Tc;col_b++){
       for(to_b=0;to_b<Tm;to_b++){
@@ -79,3 +115,4 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
     }
   }
 }
+*/
