@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="convolve.cpp" path="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/convolve.cpp"/>
+    <originFiles name="data.cpp" path="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/data.cpp"/>
+    <originFiles name="kernel.cpp" path="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/kernel.cpp"/>
+    <originFiles name="main.cpp" path="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/main.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
