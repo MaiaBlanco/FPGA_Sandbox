@@ -4,6 +4,7 @@ https://github.com/kanto-player/kanto/blob/master/.gitignore
 *.bak
 db/
 simulation/
+sim/
 incremental_db/
 *.sof
 *.rpt
