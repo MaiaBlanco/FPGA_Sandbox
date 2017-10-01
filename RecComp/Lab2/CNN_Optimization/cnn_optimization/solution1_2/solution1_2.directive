@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile>
+    <directive functionName="convolve_kernel" label="" functionLabel="">
+      <pragma name="ARRAY_PARTITION">
+        <option name="variable" value="bufi" positionalBoolean="4"/>
+        <option name="complete" value="" positionalBoolean="type"/>
+        <option name="dim" value="3"/>
+      </pragma>
+    </directive>
+    <directive functionName="convolve_kernel" label="" functionLabel="">
+      <pragma name="ARRAY_PARTITION">
+        <option name="variable" value="bufw" positionalBoolean="4"/>
+        <option name="complete" value="" positionalBoolean="type"/>
+        <option name="dim" value="3"/>
+      </pragma>
+    </directive>
+    <directive functionName="convolve_kernel" label="convolve_kernel_traversal_outer" functionLabel="">
+      <pragma name="PIPELINE"/>
+    </directive>
+  </sourceFile>
+  <sourceFile name="kernel.cpp">
+    <directive functionName="convolve_kernel" label=" " functionLabel=" ">
+      <pragma name="INTERFACE">
+        <option name="bram" value=" " positionalBoolean="mode"/>
+        <option name="port" value="bufi" positionalBoolean="4"/>
+      </pragma>
+      <pragma name="INTERFACE">
+        <option name="bram" value=" " positionalBoolean="mode"/>
+        <option name="port" value="bufw" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>
