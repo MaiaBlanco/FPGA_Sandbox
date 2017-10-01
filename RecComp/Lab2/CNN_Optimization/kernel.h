@@ -56,7 +56,9 @@
 #define Tm 3 // output depth
 #define Tn 3 // input depth 
 
+// Define arbitrary precision uints for loop counters to reduce area, and tighten timings.
 #define loop_ctr ap_uint<2>
+#define kernel_ctr ap_uint<3>
 
 void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],

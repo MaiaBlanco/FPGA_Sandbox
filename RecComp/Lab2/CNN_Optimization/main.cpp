@@ -126,7 +126,7 @@ int main() {
 	    ARRAY(fp_input,0,ti,row,col,0,N_ifm,R_ifm,C_ifm)=((((ti*INDENT)+row)*INDENT)+col);
 	    break;
 	  default:
-	    ARRAY(fp_input,0,ti,row,col,0,N_ifm,R_ifm,C_ifm)=(((float)(random()%RANGE))/RANGE);
+	    ARRAY(fp_input,0,ti,row,col,0,N_ifm,R_ifm,C_ifm)=(((float)(rand()%RANGE))/RANGE);
 	  }
 	  ARRAY(dt_input,0,ti,row,col,0,N_ifm,R_ifm,C_ifm)=(DATA_T)ARRAY(fp_input,0,ti,row,col,0,N_ifm,R_ifm,C_ifm);
 	}
@@ -142,7 +142,7 @@ int main() {
 	      ARRAY(fp_weights,to,ti,row,col,M_ofm,N_ifm,K_wts,K_wts)=(1.0/(K_wts*K_wts*N_ifm));
 	      break;
 	    default:
-	      ARRAY(fp_weights,to,ti,row,col,M_ofm,N_ifm,K_wts,K_wts)=(((float)(random()%RANGE))/RANGE);
+	      ARRAY(fp_weights,to,ti,row,col,M_ofm,N_ifm,K_wts,K_wts)=(((float)(rand()%RANGE))/RANGE);
 	    }
 	    ARRAY(dt_weights,to,ti,row,col,M_ofm,N_ifm,K_wts,K_wts)=(DATA_T)ARRAY(fp_weights,to,ti,row,col,M_ofm,N_ifm,K_wts,K_wts);
 	  }

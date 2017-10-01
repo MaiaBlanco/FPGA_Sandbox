@@ -29,107 +29,167 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/.apc/.src</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/.apc/.tb</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/.apc/.tb</location>
 		</link>
 		<link>
 			<name>.reference/instance.h</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/instance.h</location>
-		</link>
-		<link>
-			<name>.reference/kernel.h</name>
-			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/kernel.h</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/instance.h</location>
 		</link>
 		<link>
 			<name>0_default_implementation/constraints</name>
 			<type>2</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/.tcls</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/.tcls</location>
 		</link>
 		<link>
 			<name>1_unroll_kernel_traversal/constraints</name>
 			<type>2</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/1_unroll_kernel_traversal/.tcls</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/1_unroll_kernel_traversal/.tcls</location>
 		</link>
 		<link>
 			<name>2_pipeline_1/constraints</name>
 			<type>2</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/.tcls</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/.tcls</location>
+		</link>
+		<link>
+			<name>solution1_1/constraints</name>
+			<type>2</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_1/.tcls</location>
+		</link>
+		<link>
+			<name>solution1_2/constraints</name>
+			<type>2</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_2/.tcls</location>
+		</link>
+		<link>
+			<name>solution1_3/constraints</name>
+			<type>2</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_3/.tcls</location>
+		</link>
+		<link>
+			<name>solution1_4/constraints</name>
+			<type>2</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_4/.tcls</location>
 		</link>
 		<link>
 			<name>source/kernel.cpp</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/kernel.cpp</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/kernel.cpp</location>
 		</link>
 		<link>
 			<name>source/kernel.h</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/kernel.h</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/kernel.h</location>
 		</link>
 		<link>
 			<name>testbench/convolve.cpp</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/convolve.cpp</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/convolve.cpp</location>
 		</link>
 		<link>
 			<name>testbench/data.cpp</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/data.cpp</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/data.cpp</location>
 		</link>
 		<link>
 			<name>testbench/main.cpp</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/main.cpp</location>
-		</link>
-		<link>
-			<name>0_default_implementation/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/0_default_implementation.directive</location>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/main.cpp</location>
 		</link>
 		<link>
 			<name>0_default_implementation/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/directives.tcl</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/directives.tcl</location>
 		</link>
 		<link>
 			<name>0_default_implementation/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/script.tcl</location>
-		</link>
-		<link>
-			<name>1_unroll_kernel_traversal/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/1_unroll_kernel_traversal/1_unroll_kernel_traversal.directive</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/script.tcl</location>
 		</link>
 		<link>
 			<name>1_unroll_kernel_traversal/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/1_unroll_kernel_traversal/directives.tcl</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/1_unroll_kernel_traversal/directives.tcl</location>
 		</link>
 		<link>
 			<name>1_unroll_kernel_traversal/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/1_unroll_kernel_traversal/script.tcl</location>
-		</link>
-		<link>
-			<name>2_pipeline_1/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/2_pipeline_1.directive</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/1_unroll_kernel_traversal/script.tcl</location>
 		</link>
 		<link>
 			<name>2_pipeline_1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/directives.tcl</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/directives.tcl</location>
 		</link>
 		<link>
 			<name>2_pipeline_1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/script.tcl</location>
+			<location>C:/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/script.tcl</location>
+		</link>
+		<link>
+			<name>solution1_1/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_1/solution1_1.directive</location>
+		</link>
+		<link>
+			<name>solution1_1/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_1/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution1_1/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_1/script.tcl</location>
+		</link>
+		<link>
+			<name>solution1_2/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_2/solution1_2.directive</location>
+		</link>
+		<link>
+			<name>solution1_2/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_2/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution1_2/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_2/script.tcl</location>
+		</link>
+		<link>
+			<name>solution1_3/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_3/solution1_3.directive</location>
+		</link>
+		<link>
+			<name>solution1_3/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_3/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution1_3/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_3/script.tcl</location>
+		</link>
+		<link>
+			<name>solution1_4/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_4/solution1_4.directive</location>
+		</link>
+		<link>
+			<name>solution1_4/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_4/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution1_4/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_4/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
