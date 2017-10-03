@@ -10,7 +10,6 @@
             <pragma name="ARRAY_PARTITION">
                 <option name="variable" value="bufi" positionalBoolean="4"/>
                 <option name="complete" value="" positionalBoolean="type"/>
-                <option name="factor" value="5"/>
                 <option name="dim" value="3"/>
             </pragma>
         </directive>
@@ -21,9 +20,6 @@
                 <option name="dim" value="3"/>
             </pragma>
         </directive>
-        <directive functionName="convolve_kernel" label="row_loop" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
         <directive functionName="convolve_kernel" label="" functionLabel="">
             <pragma name="INTERFACE">
                 <option name="bram" value="" positionalBoolean="mode"/>
@@ -31,10 +27,10 @@
             </pragma>
         </directive>
         <directive functionName="convolve_kernel" label="" functionLabel="">
-            <pragma name="ARRAY_PARTITION">
+            <pragma name="ARRAY_RESHAPE">
                 <option name="variable" value="bufw" positionalBoolean="4"/>
                 <option name="complete" value="" positionalBoolean="type"/>
-                <option name="dim" value="3"/>
+                <option name="dim" value="4"/>
             </pragma>
         </directive>
         <directive functionName="convolve_kernel" label="" functionLabel="">
@@ -42,6 +38,21 @@
                 <option name="variable" value="bufw" positionalBoolean="4"/>
                 <option name="complete" value="" positionalBoolean="type"/>
                 <option name="dim" value="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve_kernel" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="bufo" positionalBoolean="4"/>
+                <option name="core" value="RAM_T2P_BRAM"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve_kernel" label="input_loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="convolve_kernel" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="bufw" positionalBoolean="4"/>
+                <option name="core" value="ROM_2P_BRAM"/>
             </pragma>
         </directive>
     </sourceFile>

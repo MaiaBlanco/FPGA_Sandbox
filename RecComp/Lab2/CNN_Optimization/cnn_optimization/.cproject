@@ -83,7 +83,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="0_default_implementation|1_unroll_kernel_traversal|2_pipeline_1|solution1_1|solution1_2|solution1_3|solution1_4|solution1_5|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="0_default_implementation|1_unroll_kernel_traversal|2_pipeline_1|7GFLOPs|solution1_1|solution1_2|solution1_3|solution1_4|solution1_6|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -161,7 +161,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="0_default_implementation|1_unroll_kernel_traversal|2_pipeline_1|solution1_1|solution1_2|solution1_3|solution1_4|solution1_5|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="0_default_implementation|1_unroll_kernel_traversal|2_pipeline_1|7GFLOPs|solution1_1|solution1_2|solution1_3|solution1_4|solution1_6|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

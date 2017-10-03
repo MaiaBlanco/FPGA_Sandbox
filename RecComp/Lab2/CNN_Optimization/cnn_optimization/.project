@@ -37,6 +37,11 @@
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/instance.h</name>
+			<type>1</type>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/instance.h</location>
+		</link>
+		<link>
 			<name>0_default_implementation/constraints</name>
 			<type>2</type>
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/0_default_implementation/.tcls</location>
@@ -50,6 +55,11 @@
 			<name>2_pipeline_1/constraints</name>
 			<type>2</type>
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/.tcls</location>
+		</link>
+		<link>
+			<name>7GFLOPs/constraints</name>
+			<type>2</type>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/7GFLOPs/.tcls</location>
 		</link>
 		<link>
 			<name>solution1_1/constraints</name>
@@ -72,9 +82,9 @@
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_4/.tcls</location>
 		</link>
 		<link>
-			<name>solution1_5/constraints</name>
+			<name>solution1_6/constraints</name>
 			<type>2</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_5/.tcls</location>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/.tcls</location>
 		</link>
 		<link>
 			<name>source/kernel.cpp</name>
@@ -147,6 +157,21 @@
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/2_pipeline_1/script.tcl</location>
 		</link>
 		<link>
+			<name>7GFLOPs/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/7GFLOPs/7GFLOPs.directive</location>
+		</link>
+		<link>
+			<name>7GFLOPs/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/7GFLOPs/directives.tcl</location>
+		</link>
+		<link>
+			<name>7GFLOPs/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/7GFLOPs/script.tcl</location>
+		</link>
+		<link>
 			<name>solution1_1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_1/solution1_1.directive</location>
@@ -207,19 +232,19 @@
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_4/script.tcl</location>
 		</link>
 		<link>
-			<name>solution1_5/constraints/.xml.directive</name>
+			<name>solution1_6/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_5/solution1_5.directive</location>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/solution1_6.directive</location>
 		</link>
 		<link>
-			<name>solution1_5/constraints/directives.tcl</name>
+			<name>solution1_6/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_5/directives.tcl</location>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/directives.tcl</location>
 		</link>
 		<link>
-			<name>solution1_5/constraints/script.tcl</name>
+			<name>solution1_6/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_5/script.tcl</location>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
