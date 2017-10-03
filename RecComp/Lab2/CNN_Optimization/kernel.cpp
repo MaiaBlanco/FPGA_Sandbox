@@ -54,8 +54,6 @@
  */
 
 
-// Took another look at the paper and restructured the loops to match their order for
-// better loop unrolling
 void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],
 		      DATA_T bufo[Tm][Tr][Tc]) {
@@ -65,10 +63,10 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 	kernel_ctr i, j;
 	DATA_T temp, temp2;
 	unsigned short t1, t2;
-	// Iterate over each output feature map
-	output_loop: for(to_b=0;to_b<Tm;to_b++){
+		// Iterate over each output feature map
+		output_loop: for(to_b=0;to_b<Tm;to_b++){
 		// Iterate over input feature maps
-		input_loop: for(ti_b=0;ti_b<Tn;ti_b++){
+			input_loop: for(ti_b=0;ti_b<Tn;ti_b++){
 			// Iterate within output feature map dimensions
 			row_loop: for(row_b=0;row_b<Tr;row_b++){
 				col_loop: for(col_b=0;col_b<Tc;col_b++){
@@ -91,6 +89,48 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		}
 	}
 }
+
+
+/*
+// Took another look at the paper and restructured the loops to match their order for
+// better loop unrolling
+// With the directives in 63GFLOPs and Tr=Tc = 3, Tn =1, Tm=64, this hits 7GFLOPs
+void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
+		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],
+		      DATA_T bufo[Tm][Tr][Tc]) {
+#pragma HLS INTERFACE bram port=bufo
+
+	loop_ctr to_b, ti_b, row_b, col_b;
+	kernel_ctr i, j;
+	DATA_T temp, temp2;
+	unsigned short t1, t2;
+		// Iterate over each output feature map
+		output_loop: for(to_b=0;to_b<Tm;to_b++){
+		// Iterate over input feature maps
+			input_loop: for(ti_b=0;ti_b<Tn;ti_b++){
+			// Iterate within output feature map dimensions
+			row_loop: for(row_b=0;row_b<Tr;row_b++){
+				col_loop: for(col_b=0;col_b<Tc;col_b++){
+					temp = bufo[to_b][row_b][col_b];
+					temp2 = 0;
+					t1 = S_wts*row_b;
+					t2 = S_wts*col_b;
+					// Iterate through KxK kernel:
+					convolve_kernel_traversal_outer:for(i=0;i<K_wts;i++){
+						convolve_kernel_traversal_inner: for(j=0;j<K_wts;j++){
+							temp2+=
+							bufw[to_b][ti_b][i][j]*
+							bufi[ti_b][t1+i][t2+j];
+						}
+					}
+					temp += temp2;
+					bufo[to_b][row_b][col_b] = temp;
+				}
+			}
+		}
+	}
+}
+*/
 
 // Code used for up to solution on line 60 of notes.
 /*

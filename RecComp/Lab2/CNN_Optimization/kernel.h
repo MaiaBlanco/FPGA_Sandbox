@@ -52,9 +52,9 @@
  * Blocking parameters
  */
 #define Tr 3 // output row
-#define Tc 3 // output column
+#define Tc 9 // output column
 #define Tm 64 // output depth
-#define Tn 1 // input depth
+#define Tn 2 // input depth
 
 // Define arbitrary precision uints for loop counters to reduce area, and tighten timings.
 #define loop_ctr ap_uint<7>

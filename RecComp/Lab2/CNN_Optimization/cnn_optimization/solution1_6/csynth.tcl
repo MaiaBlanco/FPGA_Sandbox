@@ -10,11 +10,8 @@ add_files kernel.cpp
 add_files -tb main.cpp
 add_files -tb data.cpp
 add_files -tb convolve.cpp
-open_solution "solution1_2"
+open_solution "solution1_6"
 set_part {xc7z020clg484-1} -tool vivado
 create_clock -period 5 -name default
-source "./cnn_optimization/solution1_2/directives.tcl"
-csim_design -compiler gcc
+source "./cnn_optimization/solution1_6/directives.tcl"
 csynth_design
-cosim_design
-export_design -format ip_catalog
