@@ -10,7 +10,7 @@
 
 module convolve_kernel_fbkb
 #(parameter
-    ID         = 1,
+    ID         = 5,
     NUM_STAGE  = 9,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity convolve_kernel_fcud is
     generic (
-        ID         : integer := 64;
+        ID         : integer := 6;
         NUM_STAGE  : integer := 5;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;

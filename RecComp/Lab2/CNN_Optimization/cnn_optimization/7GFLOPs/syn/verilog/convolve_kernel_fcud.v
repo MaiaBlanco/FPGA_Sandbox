@@ -10,7 +10,7 @@
 
 module convolve_kernel_fcud
 #(parameter
-    ID         = 27,
+    ID         = 26,
     NUM_STAGE  = 5,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

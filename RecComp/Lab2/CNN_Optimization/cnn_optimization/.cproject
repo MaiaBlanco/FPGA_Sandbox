@@ -26,12 +26,11 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.322403431" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1905781256" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization"/>
+									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/etc"/>
-									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.546278542" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -45,12 +44,11 @@
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.403289148" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.529772712" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization"/>
+									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/etc"/>
-									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.103502708" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -114,12 +112,11 @@
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.2045446227" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.514673143" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization"/>
+									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/etc"/>
-									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1473512259" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -128,12 +125,11 @@
 								<option id="gnu.c.compiler.exe.release.option.debugging.level.1919325549" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1026950400" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/auto_cc/include"/>
-									<listOptionValue builtIn="false" value="/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization"/>
+									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/afs/ece/support/xilinx/xilinx.release/Vivado-2017.2/Vivado_HLS/2017.2/include/etc"/>
-									<listOptionValue builtIn="false" value="C:/Users/markb/Source/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.853351836" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

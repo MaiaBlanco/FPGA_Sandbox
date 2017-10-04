@@ -37,6 +37,11 @@
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/data.h</name>
+			<type>1</type>
+			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/data.h</location>
+		</link>
+		<link>
 			<name>.reference/instance.h</name>
 			<type>1</type>
 			<location>/afs/ece.cmu.edu/usr/markb1/Documents/fpga_sandbox/RecComp/Lab2/CNN_Optimization/instance.h</location>

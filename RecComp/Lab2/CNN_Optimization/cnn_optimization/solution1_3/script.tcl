@@ -5,11 +5,11 @@
 ############################################################
 open_project cnn_optimization
 set_top convolve_kernel
-add_files kernel.h
 add_files kernel.cpp
-add_files -tb main.cpp
-add_files -tb data.cpp
+add_files kernel.h
 add_files -tb convolve.cpp
+add_files -tb data.cpp
+add_files -tb main.cpp
 open_solution "solution1_3"
 set_part {xc7z020clg484-1}
 create_clock -period 5 -name default
