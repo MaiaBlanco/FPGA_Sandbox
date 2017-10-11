@@ -26,7 +26,7 @@ SC_MODULE(convolve_kernel_fcud) {
 
 
 
-    ACMP_fmul<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fmul_U;
+    ACMP_fmul<ID, 8, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fmul_U;
 
     SC_CTOR(convolve_kernel_fcud):  ACMP_fmul_U ("ACMP_fmul_U") {
         ACMP_fmul_U.clk(clk);

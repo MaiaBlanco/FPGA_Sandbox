@@ -10,8 +10,8 @@ use ieee.std_logic_1164.all;
 
 entity convolve_kernel_fcud is
     generic (
-        ID         : integer := 6;
-        NUM_STAGE  : integer := 5;
+        ID         : integer := 39;
+        NUM_STAGE  : integer := 8;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;
         dout_WIDTH : integer := 32
@@ -28,7 +28,7 @@ end entity;
 
 architecture arch of convolve_kernel_fcud is
     --------------------- Component ---------------------
-    component convolve_kernel_ap_fmul_3_max_dsp_32 is
+    component convolve_kernel_ap_fmul_6_max_dsp_32 is
         port (
             aclk                 : in  std_logic;
             aclken               : in  std_logic;
@@ -53,7 +53,7 @@ architecture arch of convolve_kernel_fcud is
     signal din1_buf1 : std_logic_vector(din1_WIDTH-1 downto 0);
 begin
     --------------------- Instantiation -----------------
-    convolve_kernel_ap_fmul_3_max_dsp_32_u : component convolve_kernel_ap_fmul_3_max_dsp_32
+    convolve_kernel_ap_fmul_6_max_dsp_32_u : component convolve_kernel_ap_fmul_6_max_dsp_32
     port map (
         aclk                 => aclk,
         aclken               => aclken,

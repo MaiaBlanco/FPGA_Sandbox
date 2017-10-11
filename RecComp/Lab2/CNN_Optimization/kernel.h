@@ -45,37 +45,21 @@
 
 #include "instance.h"
 #include "convolve.h"
-#include "ap_int.h"
-#include "ap_fixed.h"
-#include <math.h>
 
 /*
  * Blocking parameters
  */
-#define Tr 3 // output row
-#define Tc 3 // output column
-#define Tm 64 // output depth
-#define Tn 1 // input depth
-
-// Define arbitrary precision uints for loop counters to reduce area, and tighten timings.
-#define loop_ctr ap_uint<7>
-#define kernel_ctr ap_uint<3>
+#define Tr 27// output row
+#define Tc 8// output column
+#define Tm 13// output depth
+#define Tn 3// input depth
 
 void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],
 		      DATA_T bufo[Tm][Tr][Tc]);
 
 #endif
-/* FOR REFERENCE. DO NOT UNCOMMENT
- * output feature map paramters
-
-#define R_ofm (27) // height
-#define C_ofm (27) // width
-#define M_ofm (128) // depth
-
- * input feature map paramters
-
-#define N_ifm (48) // depth
-#define R_ifm (R_ofm*S_wts+K_wts-1) // derived height
-#define C_ifm (C_ofm*S_wts+K_wts-1) // derived width
-*/
+//#define R_ofm (27) // height
+//#define C_ofm (27) // width
+//#define M_ofm (128) // depth
+//#define N_ifm (48) // depth

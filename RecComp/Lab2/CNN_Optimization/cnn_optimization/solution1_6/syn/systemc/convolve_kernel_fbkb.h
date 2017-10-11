@@ -26,7 +26,7 @@ SC_MODULE(convolve_kernel_fbkb) {
 
 
 
-    ACMP_fadd<ID, 9, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fadd_U;
+    ACMP_fadd<ID, 14, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fadd_U;
 
     SC_CTOR(convolve_kernel_fbkb):  ACMP_fadd_U ("ACMP_fadd_U") {
         ACMP_fadd_U.clk(clk);

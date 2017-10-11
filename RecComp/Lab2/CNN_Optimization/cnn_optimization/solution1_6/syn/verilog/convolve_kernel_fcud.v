@@ -10,8 +10,8 @@
 
 module convolve_kernel_fcud
 #(parameter
-    ID         = 6,
-    NUM_STAGE  = 5,
+    ID         = 39,
+    NUM_STAGE  = 8,
     din0_WIDTH = 32,
     din1_WIDTH = 32,
     dout_WIDTH = 32
@@ -35,7 +35,7 @@ wire [31:0]           r_tdata;
 reg  [din0_WIDTH-1:0] din0_buf1;
 reg  [din1_WIDTH-1:0] din1_buf1;
 //------------------------Instantiation------------------
-convolve_kernel_ap_fmul_3_max_dsp_32 convolve_kernel_ap_fmul_3_max_dsp_32_u (
+convolve_kernel_ap_fmul_6_max_dsp_32 convolve_kernel_ap_fmul_6_max_dsp_32_u (
     .aclk                 ( aclk ),
     .aclken               ( aclken ),
     .s_axis_a_tvalid      ( a_tvalid ),
