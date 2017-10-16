@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Oct  4 12:25:04 2017
+# Process ID: 28756
+# Current directory: C:/Users/Pranav/Desktop/CarnegieMellon/18643-F17/H04-lab3/RELEASE/lab3-hls/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/Users/Pranav/Desktop/CarnegieMellon/18643-F17/H04-lab3/RELEASE/lab3-hls/solution1/impl/ip/vivado.log
+# Journal file: C:/Users/Pranav/Desktop/CarnegieMellon/18643-F17/H04-lab3/RELEASE/lab3-hls/solution1/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
