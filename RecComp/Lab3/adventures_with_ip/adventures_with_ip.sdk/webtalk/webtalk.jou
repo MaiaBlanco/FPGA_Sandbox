@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# 
+# Start of session at: Wed Oct 18 16:21:46 2017
+# Process ID: 8671
+# Current directory: /home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab3/adventures_with_ip/adventures_with_ip.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab3/adventures_with_ip/adventures_with_ip.sdk/webtalk/webtalk.log
+# Journal file: /home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab3/adventures_with_ip/adventures_with_ip.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
