@@ -1,0 +1,25 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port S_AXI_LITE -pg 1 -y 40 -defaultsOSRD
+preplace port s_axi_lite_aresetn -pg 1 -y 300 -defaultsOSRD
+preplace port ARESETN -pg 1 -y 160 -defaultsOSRD
+preplace port s_axi_lite_aclk -pg 1 -y 280 -defaultsOSRD
+preplace port M00_AXI -pg 1 -y 130 -defaultsOSRD
+preplace port BRAM_PORTB -pg 1 -y 260 -defaultsOSRD
+preplace inst axi_cdma_0 -pg 1 -lvl 2 -y 70 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -y 340 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 3 -y 140 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace netloc axi_mem_intercon_M01_AXI 1 0 4 190 280 NJ 280 NJ 280 980
+preplace netloc axi_cdma_0_M_AXI 1 2 1 N
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 0 2 NJ 40 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 430
+preplace netloc axi_mem_intercon_M00_AXI 1 3 1 N
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 0 3 180 270 450 170 720
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 170 250 440 150 710
+preplace netloc matrix_mult_0_a_PORTA 1 0 2 NJ 260 NJ
+levelinfo -pg 1 150 310 580 850 1000
+",
+}

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Wed Oct  4 14:48:09 2017
+# Process ID: 20884
+# Current directory: C:/Users/Pranav/Desktop/CarnegieMellon/18643-F17/H04-lab3/lab3-vivado/project_1.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Pranav/Desktop/CarnegieMellon/18643-F17/H04-lab3/lab3-vivado/project_1.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Pranav/Desktop/CarnegieMellon/18643-F17/H04-lab3/lab3-vivado/project_1.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

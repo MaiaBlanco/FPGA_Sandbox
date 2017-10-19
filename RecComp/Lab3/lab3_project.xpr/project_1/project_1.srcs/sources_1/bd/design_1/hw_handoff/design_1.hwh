@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct  9 23:46:36 2017" VIVADOVERSION="2017.2.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 18 20:30:31 2017" VIVADOVERSION="2017.3">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="design_1" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -75,7 +75,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE FULLNAME="/convolve_kernel_1" HWVERSION="1.0" INSTANCE="convolve_kernel_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="convolve_kernel" VLNV="xilinx.com:hls:convolve_kernel:1.0">
+    <MODULE FULLNAME="/convolve_kernel_0" HWVERSION="0.5" INSTANCE="convolve_kernel_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="convolve_kernel" VLNV="RecComp:cnn_lab:convolve_kernel:0.5">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_control" NAME="Reg" RANGE="65536" USAGE="register">
@@ -276,98 +276,98 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CONTROL_ADDR_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_convolve_kernel_0_0"/>
-        <PARAMETER NAME="clk_period" VALUE="10.000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_convolve_kernel_0_1"/>
+        <PARAMETER NAME="clk_period" VALUE="5.000000"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="25351"/>
+        <PARAMETER NAME="latency" VALUE="37942"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_BASEADDR" VALUE="0x43C00000"/>
         <PARAMETER NAME="C_S_AXI_CONTROL_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_control_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_AWADDR">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_control_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_control_AWVALID" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_AWVALID">
+        <PORT DIR="I" NAME="s_axi_control_AWVALID" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_AWVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_control_AWREADY" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_AWREADY">
+        <PORT DIR="O" NAME="s_axi_control_AWREADY" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_control_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WDATA">
+        <PORT DIR="I" LEFT="31" NAME="s_axi_control_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_control_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WSTRB">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_control_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_control_WVALID" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WVALID">
+        <PORT DIR="I" NAME="s_axi_control_WVALID" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_control_WREADY" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WREADY">
+        <PORT DIR="O" NAME="s_axi_control_WREADY" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_control_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_BRESP">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_control_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_BRESP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_control_BVALID" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_BVALID">
+        <PORT DIR="O" NAME="s_axi_control_BVALID" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_control_BREADY" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_BREADY">
+        <PORT DIR="I" NAME="s_axi_control_BREADY" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_BREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_control_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_ARADDR">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_control_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_control_ARVALID" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_ARVALID">
+        <PORT DIR="I" NAME="s_axi_control_ARVALID" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_control_ARREADY" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_ARREADY">
+        <PORT DIR="O" NAME="s_axi_control_ARREADY" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="s_axi_control_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RDATA">
+        <PORT DIR="O" LEFT="31" NAME="s_axi_control_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_control_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RRESP">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_control_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RRESP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_control_RVALID" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RVALID">
+        <PORT DIR="O" NAME="s_axi_control_RVALID" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_control_RREADY" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RREADY">
+        <PORT DIR="I" NAME="s_axi_control_RREADY" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_AXI_rready"/>
           </CONNECTIONS>
@@ -377,113 +377,113 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
-        <PORT DIR="O" NAME="bufw_Clk_A" SIGIS="clk" SIGNAME="convolve_kernel_1_bufw_Clk_A">
+        <PORT DIR="O" NAME="bufw_Clk_A" SIGIS="clk" SIGNAME="convolve_kernel_0_bufw_Clk_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_1_blk_mem_gen_0" PORT="clkb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufw_Rst_A" SIGIS="rst" SIGNAME="convolve_kernel_1_bufw_Rst_A">
+        <PORT DIR="O" NAME="bufw_Rst_A" SIGIS="rst" SIGNAME="convolve_kernel_0_bufw_Rst_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_1_blk_mem_gen_0" PORT="rstb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufw_EN_A" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_EN_A">
+        <PORT DIR="O" NAME="bufw_EN_A" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_EN_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_1_blk_mem_gen_0" PORT="enb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="bufw_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_WEN_A">
+        <PORT DIR="O" LEFT="3" NAME="bufw_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_WEN_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_1_blk_mem_gen_0" PORT="web"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="bufw_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_Addr_A">
+        <PORT DIR="O" LEFT="31" NAME="bufw_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_Addr_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_1_blk_mem_gen_0" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="bufw_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_Din_A">
+        <PORT DIR="O" LEFT="31" NAME="bufw_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_Din_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_1_blk_mem_gen_0" PORT="dinb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="bufw_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_Dout_A">
+        <PORT DIR="I" LEFT="31" NAME="bufw_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_Dout_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_1_blk_mem_gen_0" PORT="doutb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufi_Clk_A" SIGIS="clk" SIGNAME="convolve_kernel_1_bufi_Clk_A">
+        <PORT DIR="O" NAME="bufi_Clk_A" SIGIS="clk" SIGNAME="convolve_kernel_0_bufi_Clk_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_blk_mem_gen_0" PORT="clkb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufi_Rst_A" SIGIS="rst" SIGNAME="convolve_kernel_1_bufi_Rst_A">
+        <PORT DIR="O" NAME="bufi_Rst_A" SIGIS="rst" SIGNAME="convolve_kernel_0_bufi_Rst_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_blk_mem_gen_0" PORT="rstb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufi_EN_A" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_EN_A">
+        <PORT DIR="O" NAME="bufi_EN_A" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_EN_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_blk_mem_gen_0" PORT="enb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="bufi_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_WEN_A">
+        <PORT DIR="O" LEFT="3" NAME="bufi_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_WEN_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_blk_mem_gen_0" PORT="web"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="bufi_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_Addr_A">
+        <PORT DIR="O" LEFT="31" NAME="bufi_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_Addr_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_blk_mem_gen_0" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="bufi_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_Din_A">
+        <PORT DIR="O" LEFT="31" NAME="bufi_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_Din_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_blk_mem_gen_0" PORT="dinb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="bufi_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_Dout_A">
+        <PORT DIR="I" LEFT="31" NAME="bufi_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_Dout_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_blk_mem_gen_0" PORT="doutb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufo_Clk_A" SIGIS="clk" SIGNAME="convolve_kernel_1_bufo_Clk_A">
+        <PORT DIR="O" NAME="bufo_Clk_A" SIGIS="clk" SIGNAME="convolve_kernel_0_bufo_Clk_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_blk_mem_gen_0" PORT="clkb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufo_Rst_A" SIGIS="rst" SIGNAME="convolve_kernel_1_bufo_Rst_A">
+        <PORT DIR="O" NAME="bufo_Rst_A" SIGIS="rst" SIGNAME="convolve_kernel_0_bufo_Rst_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_blk_mem_gen_0" PORT="rstb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bufo_EN_A" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_EN_A">
+        <PORT DIR="O" NAME="bufo_EN_A" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_EN_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_blk_mem_gen_0" PORT="enb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="bufo_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_WEN_A">
+        <PORT DIR="O" LEFT="3" NAME="bufo_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_WEN_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_blk_mem_gen_0" PORT="web"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="bufo_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_Addr_A">
+        <PORT DIR="O" LEFT="31" NAME="bufo_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_Addr_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_blk_mem_gen_0" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="bufo_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_Din_A">
+        <PORT DIR="O" LEFT="31" NAME="bufo_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_Din_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_blk_mem_gen_0" PORT="dinb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="bufo_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_Dout_A">
+        <PORT DIR="I" LEFT="31" NAME="bufo_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_Dout_A">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_blk_mem_gen_0" PORT="doutb"/>
           </CONNECTIONS>
@@ -542,7 +542,7 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_control_RREADY"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="convolve_kernel_1_bufw_PORTA" NAME="bufw_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="convolve_kernel_0_bufw_PORTA" NAME="bufw_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_SIZE" VALUE="900"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
@@ -559,9 +559,9 @@
             <PORTMAP LOGICAL="DOUT" PHYSICAL="bufw_Dout_A"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="convolve_kernel_1_bufi_PORTA" NAME="bufi_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="convolve_kernel_0_bufi_PORTA" NAME="bufi_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="MEM_SIZE" VALUE="1200"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="588"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {EN {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ADDR {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} WE {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 4} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} DIN {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}} DOUT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
@@ -576,7 +576,7 @@
             <PORTMAP LOGICAL="DOUT" PHYSICAL="bufi_Dout_A"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="convolve_kernel_1_bufo_PORTA" NAME="bufo_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="convolve_kernel_0_bufo_PORTA" NAME="bufo_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_SIZE" VALUE="108"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
@@ -2029,8 +2029,8 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_processing_system7_0_0_FCLK_CLK0"/>
@@ -3034,9 +3034,9 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/hier_bram_0/blk_mem_gen_0" HWVERSION="8.3" INSTANCE="hier_bram_0_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.3">
+    <MODULE FULLNAME="/hier_bram_0/blk_mem_gen_0" HWVERSION="8.4" INSTANCE="hier_bram_0_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_3;d=pg058-blk-mem-gen.pdf"/>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_4;d=pg058-blk-mem-gen.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
@@ -3220,39 +3220,39 @@
             <CONNECTION INSTANCE="hier_bram_0_axi_bram_ctrl_0" PORT="bram_rddata_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="convolve_kernel_1_bufi_Clk_A">
+        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="convolve_kernel_0_bufi_Clk_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufi_Clk_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufi_Clk_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="convolve_kernel_1_bufi_Rst_A">
+        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="convolve_kernel_0_bufi_Rst_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufi_Rst_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufi_Rst_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_EN_A">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_EN_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufi_EN_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufi_EN_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_WEN_A">
+        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_WEN_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufi_WEN_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufi_WEN_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_Addr_A">
+        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_Addr_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufi_Addr_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufi_Addr_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_Din_A">
+        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_Din_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufi_Din_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufi_Din_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufi_Dout_A">
+        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufi_Dout_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufi_Dout_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufi_Dout_A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3273,8 +3273,8 @@
             <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="convolve_kernel_1_bufi_PORTA" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
-          <PARAMETER NAME="MEM_SIZE" VALUE="1200"/>
+        <BUSINTERFACE BUSNAME="convolve_kernel_0_bufi_PORTA" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="588"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
@@ -4725,8 +4725,8 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_processing_system7_0_0_FCLK_CLK0"/>
@@ -5730,9 +5730,9 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/hier_bram_1/blk_mem_gen_0" HWVERSION="8.3" INSTANCE="hier_bram_1_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.3">
+    <MODULE FULLNAME="/hier_bram_1/blk_mem_gen_0" HWVERSION="8.4" INSTANCE="hier_bram_1_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_3;d=pg058-blk-mem-gen.pdf"/>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_4;d=pg058-blk-mem-gen.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
@@ -5916,39 +5916,39 @@
             <CONNECTION INSTANCE="hier_bram_1_axi_bram_ctrl_0" PORT="bram_rddata_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="convolve_kernel_1_bufw_Clk_A">
+        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="convolve_kernel_0_bufw_Clk_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufw_Clk_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufw_Clk_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="convolve_kernel_1_bufw_Rst_A">
+        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="convolve_kernel_0_bufw_Rst_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufw_Rst_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufw_Rst_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_EN_A">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_EN_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufw_EN_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufw_EN_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_WEN_A">
+        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_WEN_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufw_WEN_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufw_WEN_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_Addr_A">
+        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_Addr_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufw_Addr_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufw_Addr_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_Din_A">
+        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_Din_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufw_Din_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufw_Din_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufw_Dout_A">
+        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufw_Dout_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufw_Dout_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufw_Dout_A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5969,7 +5969,7 @@
             <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="convolve_kernel_1_bufw_PORTA" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="convolve_kernel_0_bufw_PORTA" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_SIZE" VALUE="900"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
@@ -7421,8 +7421,8 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_processing_system7_0_0_FCLK_CLK0"/>
@@ -8426,9 +8426,9 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/hier_bram_2/blk_mem_gen_0" HWVERSION="8.3" INSTANCE="hier_bram_2_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.3">
+    <MODULE FULLNAME="/hier_bram_2/blk_mem_gen_0" HWVERSION="8.4" INSTANCE="hier_bram_2_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_3;d=pg058-blk-mem-gen.pdf"/>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_4;d=pg058-blk-mem-gen.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
@@ -8612,39 +8612,39 @@
             <CONNECTION INSTANCE="hier_bram_2_axi_bram_ctrl_0" PORT="bram_rddata_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="convolve_kernel_1_bufo_Clk_A">
+        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="convolve_kernel_0_bufo_Clk_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufo_Clk_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufo_Clk_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="convolve_kernel_1_bufo_Rst_A">
+        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="convolve_kernel_0_bufo_Rst_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufo_Rst_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufo_Rst_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_EN_A">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_EN_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufo_EN_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufo_EN_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_WEN_A">
+        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_WEN_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufo_WEN_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufo_WEN_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_Addr_A">
+        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_Addr_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufo_Addr_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufo_Addr_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_Din_A">
+        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_Din_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufo_Din_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufo_Din_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_bufo_Dout_A">
+        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_bufo_Dout_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="bufo_Dout_A"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="bufo_Dout_A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8665,7 +8665,7 @@
             <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="convolve_kernel_1_bufo_PORTA" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="convolve_kernel_0_bufo_PORTA" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MEM_SIZE" VALUE="108"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
@@ -8739,6 +8739,7 @@
         <PARAMETER NAME="C_USE_M_AXI_GP0" VALUE="1"/>
         <PARAMETER NAME="C_USE_M_AXI_GP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_GP0" VALUE="0"/>
+        <PARAMETER NAME="C_USE_S_AXI_GP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_HP0" VALUE="1"/>
         <PARAMETER NAME="C_USE_S_AXI_HP1" VALUE="1"/>
         <PARAMETER NAME="C_USE_S_AXI_HP2" VALUE="1"/>
@@ -9208,6 +9209,9 @@
         <PARAMETER NAME="PCW_QSPI_GRP_SINGLE_SS_IO" VALUE="MIO 1 .. 6"/>
         <PARAMETER NAME="PCW_QSPI_GRP_SS1_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_QSPI_GRP_SS1_IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_SINGLE_QSPI_DATA_MODE" VALUE="x4"/>
+        <PARAMETER NAME="PCW_DUAL_STACK_QSPI_DATA_MODE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_DUAL_PARALLEL_QSPI_DATA_MODE" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_QSPI_GRP_IO1_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_QSPI_GRP_IO1_IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_QSPI_GRP_FBCLK_ENABLE" VALUE="0"/>
@@ -9576,7 +9580,7 @@
         <PARAMETER NAME="preset" VALUE="ZedBoard"/>
         <PARAMETER NAME="PCW_UIPARAM_GENERATE_SUMMARY" VALUE="NA"/>
         <PARAMETER NAME="PCW_MIO_TREE_PERIPHERALS" VALUE="GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#UART 1#UART 1#GPIO#GPIO#Enet 0#Enet 0"/>
-        <PARAMETER NAME="PCW_MIO_TREE_SIGNALS" VALUE="gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]#qspi0_sclk#gpio[7]#gpio[8]#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#wp#cd#tx#rx#gpio[50]#gpio[51]#mdc#mdio"/>
+        <PARAMETER NAME="PCW_MIO_TREE_SIGNALS" VALUE="gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#gpio[8]#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#wp#cd#tx#rx#gpio[50]#gpio[51]#mdc#mdio"/>
         <PARAMETER NAME="PCW_PS7_SI_REV" VALUE="PRODUCTION"/>
         <PARAMETER NAME="PCW_FPGA_FCLK0_ENABLE" VALUE="1"/>
         <PARAMETER NAME="PCW_FPGA_FCLK1_ENABLE" VALUE="0"/>
@@ -10453,7 +10457,6 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP1_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP2_ACLK"/>
             <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="ap_clk"/>
             <CONNECTION INSTANCE="hier_bram_0_axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="hier_bram_0_axi_cdma_0" PORT="m_axi_aclk"/>
             <CONNECTION INSTANCE="hier_bram_0_axi_cdma_0" PORT="s_axi_lite_aclk"/>
@@ -10481,6 +10484,7 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M02_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M03_ACLK"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -10896,13 +10900,13 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_S_AXI_CONTROL_BASEADDR" BASEVALUE="0x43C00000" HIGHNAME="C_S_AXI_CONTROL_HIGHADDR" HIGHVALUE="0x43C0FFFF" INSTANCE="convolve_kernel_1" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_control"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_S_AXI_CONTROL_BASEADDR" BASEVALUE="0x43C00000" HIGHNAME="C_S_AXI_CONTROL_HIGHADDR" HIGHVALUE="0x43C0FFFF" INSTANCE="convolve_kernel_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_control"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x7E200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7E20FFFF" INSTANCE="hier_bram_0_axi_cdma_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LITE"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x7E210000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7E21FFFF" INSTANCE="hier_bram_1_axi_cdma_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LITE"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x7E220000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7E22FFFF" INSTANCE="hier_bram_2_axi_cdma_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LITE"/>
       </MEMORYMAP>
       <PERIPHERALS>
-        <PERIPHERAL INSTANCE="convolve_kernel_1"/>
+        <PERIPHERAL INSTANCE="convolve_kernel_0"/>
         <PERIPHERAL INSTANCE="hier_bram_0_axi_cdma_0"/>
         <PERIPHERAL INSTANCE="hier_bram_1_axi_cdma_0"/>
         <PERIPHERAL INSTANCE="hier_bram_2_axi_cdma_0"/>
@@ -11481,91 +11485,6 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_AWADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_AWVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_AWREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_WREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_BRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_BVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_BREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_ARADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_ARVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_ARREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="convolve_kernel_1_s_axi_control_RREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="s_axi_control_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hier_bram_2_axi_cdma_0_s_axi_lite_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_2_axi_cdma_0" PORT="s_axi_lite_awaddr"/>
@@ -11732,6 +11651,93 @@
             <CONNECTION INSTANCE="hier_bram_1_axi_cdma_0" PORT="s_axi_lite_rready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_AWADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_AWVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_AWREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_WREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_BRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_BVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_BREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_ARADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_ARVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_ARREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="convolve_kernel_0_s_axi_control_RREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="s_axi_control_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hier_bram_0_axi_cdma_0_s_axi_lite_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hier_bram_0_axi_cdma_0" PORT="s_axi_lite_awaddr"/>
@@ -11885,6 +11891,7 @@
         <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M01_AXI" DATAWIDTH="32" NAME="M01_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M01_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M01_AXI_awprot"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M01_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M01_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M01_AXI_wdata"/>
@@ -11895,6 +11902,7 @@
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M01_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M01_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M01_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M01_AXI_arprot"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M01_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M01_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M01_AXI_rdata"/>
@@ -11993,11 +12001,11 @@
             <CONNECTION INSTANCE="hier_bram_1_axi_mem_intercon" PORT="ARESETN"/>
             <CONNECTION INSTANCE="hier_bram_2_axi_mem_intercon" PORT="ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ARESETN"/>
+            <CONNECTION INSTANCE="convolve_kernel_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="convolve_kernel_1" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="hier_bram_0_axi_bram_ctrl_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="hier_bram_0_axi_cdma_0" PORT="s_axi_lite_aresetn"/>
             <CONNECTION INSTANCE="hier_bram_0_axi_mem_intercon" PORT="S00_ARESETN"/>

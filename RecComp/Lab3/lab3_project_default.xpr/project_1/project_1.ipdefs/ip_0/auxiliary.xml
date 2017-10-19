@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="convolve_kernel" xd:componentRef="convolve_kernel" xd:initiationInterval="25352" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="bufw[][][][]" xd:originalName="bufw" xd:direction="in" xd:interfaceRef="bufw_PORTA" xd:busTypeRef="bram" xd:arraySize="225" xd:dataWidth="32"/>
+  <xd:arg xd:name="bufi[][][]" xd:originalName="bufi" xd:direction="in" xd:interfaceRef="bufi_PORTA" xd:busTypeRef="bram" xd:arraySize="300" xd:dataWidth="32"/>
+  <xd:arg xd:name="bufo[][][]" xd:originalName="bufo" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:arraySize="27" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="25351" xd:worst-case="25351" xd:average-case="25351"/>
+  <xd:resourceEstimates xd:LUT="1185" xd:FF="1218" xd:BRAM="0" xd:DSP="5"/>
+</xd:acceleratorMap>
