@@ -53,7 +53,7 @@
  * The local buffer dimensions are hard coded to give HLS more
  * flexibility
  */
-void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
+/*void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		     DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],
 		     DATA_T bufo[Tm][Tr][Tc]) {
 	// Reshape the output buffer to increase the width of memory accesses and
@@ -66,6 +66,7 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 	#pragma HLS INTERFACE bram port=bufw
 	#pragma HLS INTERFACE bram port=bufi
 	#pragma HLS INTERFACE bram port=bufo
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 
 	// Use smaller unsigned integer types to improve timing and
 	// reduce resource usage
@@ -76,7 +77,7 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		l5:for(j=0;j<K_wts;j++){
 			l0:for(row_b=0;row_b<Tr;row_b++){
 				#pragma HLS PIPELINE
-				#pragma HLS LOOP_FLATTEN
+//				#pragma HLS LOOP_FLATTEN
 				// Let Vivado know that bufo is not reused across iterations of
 				// the row loop, and therefore independent within the pipeline.
 				#pragma HLS dependence variable=bufo inter false
@@ -92,4 +93,35 @@ void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 			}
 		}
 	}
+}*/
+
+
+
+
+void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
+		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],
+		      DATA_T bufo[Tm][Tr][Tc]) {
+#pragma HLS INTERFACE bram port=bufw
+#pragma HLS INTERFACE bram port=bufi
+#pragma HLS INTERFACE bram port=bufo
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+
+  unsigned long to_b, ti_b, row_b, col_b;
+
+  for(row_b=0;row_b<Tr;row_b++){
+    for(col_b=0;col_b<Tc;col_b++){
+      for(to_b=0;to_b<Tm;to_b++){
+	for(ti_b=0;ti_b<Tn;ti_b++){
+	  unsigned long i, j;
+	  for(i=0;i<K_wts;i++){
+	    for(j=0;j<K_wts;j++){
+	      bufo[to_b][row_b][col_b]+=
+		bufw[to_b][ti_b][i][j]*
+		bufi[ti_b][S_wts*row_b+i][S_wts*col_b+j];
+	    }
+	  }
+	}
+      }
+    }
+  }
 }

@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
-  <sourceFile name="kernel.cpp">
-    <directive functionName="convolve_kernel" label=" " functionLabel=" ">
-      <pragma name="INTERFACE">
-        <option name="bram" value=" " positionalBoolean="mode"/>
-        <option name="port" value="bufw" positionalBoolean="4"/>
-      </pragma>
-      <pragma name="INTERFACE">
-        <option name="bram" value=" " positionalBoolean="mode"/>
-        <option name="port" value="bufi" positionalBoolean="4"/>
-      </pragma>
-    </directive>
-  </sourceFile>
+    <sourceFile name="">
+        <directive functionName="convolve_kernel" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="bram" value="" positionalBoolean="mode"/>
+                <option name="port" value="bufw" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve_kernel" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="bram" value="" positionalBoolean="mode"/>
+                <option name="port" value="bufi" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
 </AutoPilot:ProjectResources>
+
