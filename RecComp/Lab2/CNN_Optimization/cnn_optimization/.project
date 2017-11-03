@@ -82,6 +82,11 @@
 			<location>/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/.tcls</location>
 		</link>
 		<link>
+			<name>solution_OH/constraints</name>
+			<type>2</type>
+			<location>/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution_OH/.tcls</location>
+		</link>
+		<link>
 			<name>source/kernel.cpp</name>
 			<type>1</type>
 			<location>/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/kernel.cpp</location>
@@ -240,6 +245,21 @@
 			<name>solution1_6/constraints/script.tcl</name>
 			<type>1</type>
 			<location>/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/script.tcl</location>
+		</link>
+		<link>
+			<name>solution_OH/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution_OH/solution_OH.directive</location>
+		</link>
+		<link>
+			<name>solution_OH/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution_OH/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution_OH/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution_OH/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

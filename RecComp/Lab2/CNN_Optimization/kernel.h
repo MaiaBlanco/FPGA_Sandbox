@@ -53,10 +53,14 @@
 //#define Tc 8// output column
 //#define Tm 13// output depth
 //#define Tn 3// input depth
-#define Tr 3// output row
-#define Tc 3// output column
-#define Tm 3// output depth
-#define Tn 3// input depth
+//#define Tr 3// output row
+//#define Tc 3// output column
+//#define Tm 3// output depth
+//#define Tn 3// input depth
+#define Tr 16// output row
+#define Tc 16// output column
+#define Tm 16// output depth
+#define Tn 16// input depth
 
 void convolve_kernel (DATA_T bufw[Tm][Tn][K_wts][K_wts],
 		      DATA_T bufi[Tn][Tr*S_wts+K_wts-1][Tc*S_wts+K_wts-1],

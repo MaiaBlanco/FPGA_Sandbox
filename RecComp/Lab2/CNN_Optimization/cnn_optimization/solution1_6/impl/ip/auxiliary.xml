@@ -1,64 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="convolve_kernel" xd:componentRef="convolve_kernel" xd:initiationInterval="5468" xd:clockPeriod="3.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="convolve_kernel" xd:componentRef="convolve_kernel" xd:initiationInterval="1638633" xd:clockPeriod="3.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
-  <xd:arg xd:name="bufw[0][][][]" xd:originalName="bufw0" xd:direction="in" xd:interfaceRef="bufw_0_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[0][][][]" xd:originalName="bufw0" xd:direction="in" xd:interfaceRef="bufw_0_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[1][][][]" xd:originalName="bufw1" xd:direction="in" xd:interfaceRef="bufw_1_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[1][][][]" xd:originalName="bufw1" xd:direction="in" xd:interfaceRef="bufw_1_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[2][][][]" xd:originalName="bufw2" xd:direction="in" xd:interfaceRef="bufw_2_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[2][][][]" xd:originalName="bufw2" xd:direction="in" xd:interfaceRef="bufw_2_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[3][][][]" xd:originalName="bufw3" xd:direction="in" xd:interfaceRef="bufw_3_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[3][][][]" xd:originalName="bufw3" xd:direction="in" xd:interfaceRef="bufw_3_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[4][][][]" xd:originalName="bufw4" xd:direction="in" xd:interfaceRef="bufw_4_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[4][][][]" xd:originalName="bufw4" xd:direction="in" xd:interfaceRef="bufw_4_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[5][][][]" xd:originalName="bufw5" xd:direction="in" xd:interfaceRef="bufw_5_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[5][][][]" xd:originalName="bufw5" xd:direction="in" xd:interfaceRef="bufw_5_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[6][][][]" xd:originalName="bufw6" xd:direction="in" xd:interfaceRef="bufw_6_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[6][][][]" xd:originalName="bufw6" xd:direction="in" xd:interfaceRef="bufw_6_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[7][][][]" xd:originalName="bufw7" xd:direction="in" xd:interfaceRef="bufw_7_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[7][][][]" xd:originalName="bufw7" xd:direction="in" xd:interfaceRef="bufw_7_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[8][][][]" xd:originalName="bufw8" xd:direction="in" xd:interfaceRef="bufw_8_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[8][][][]" xd:originalName="bufw8" xd:direction="in" xd:interfaceRef="bufw_8_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[9][][][]" xd:originalName="bufw9" xd:direction="in" xd:interfaceRef="bufw_9_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[9][][][]" xd:originalName="bufw9" xd:direction="in" xd:interfaceRef="bufw_9_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[10][][][]" xd:originalName="bufw10" xd:direction="in" xd:interfaceRef="bufw_10_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[10][][][]" xd:originalName="bufw10" xd:direction="in" xd:interfaceRef="bufw_10_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[11][][][]" xd:originalName="bufw11" xd:direction="in" xd:interfaceRef="bufw_11_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[11][][][]" xd:originalName="bufw11" xd:direction="in" xd:interfaceRef="bufw_11_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[12][][][]" xd:originalName="bufw12" xd:direction="in" xd:interfaceRef="bufw_12_PORTA" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufw[12][][][]" xd:originalName="bufw12" xd:direction="in" xd:interfaceRef="bufw_12_PORTB" xd:busTypeRef="bram" xd:arraySize="75" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufi[0][][]" xd:originalName="bufi0" xd:direction="in" xd:interfaceRef="bufi_0_PORTA" xd:busTypeRef="bram" xd:arraySize="372" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufi[0][][]" xd:originalName="bufi0" xd:direction="in" xd:interfaceRef="bufi_0_PORTB" xd:busTypeRef="bram" xd:arraySize="372" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufi[1][][]" xd:originalName="bufi1" xd:direction="in" xd:interfaceRef="bufi_1_PORTA" xd:busTypeRef="bram" xd:arraySize="372" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufi[1][][]" xd:originalName="bufi1" xd:direction="in" xd:interfaceRef="bufi_1_PORTB" xd:busTypeRef="bram" xd:arraySize="372" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufi[2][][]" xd:originalName="bufi2" xd:direction="in" xd:interfaceRef="bufi_2_PORTA" xd:busTypeRef="bram" xd:arraySize="372" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufi[2][][]" xd:originalName="bufi2" xd:direction="in" xd:interfaceRef="bufi_2_PORTB" xd:busTypeRef="bram" xd:arraySize="372" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[0][][]" xd:originalName="bufo0" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[1][][]" xd:originalName="bufo1" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[2][][]" xd:originalName="bufo2" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="95:64" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[3][][]" xd:originalName="bufo3" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="127:96" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[4][][]" xd:originalName="bufo4" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="159:128" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[5][][]" xd:originalName="bufo5" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="191:160" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[6][][]" xd:originalName="bufo6" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="223:192" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[7][][]" xd:originalName="bufo7" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="255:224" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[8][][]" xd:originalName="bufo8" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="287:256" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[9][][]" xd:originalName="bufo9" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="319:288" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[10][][]" xd:originalName="bufo10" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="351:320" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[11][][]" xd:originalName="bufo11" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="383:352" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[12][][]" xd:originalName="bufo12" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="415:384" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[0][][]" xd:originalName="bufo0" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[1][][]" xd:originalName="bufo1" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[2][][]" xd:originalName="bufo2" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="95:64" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[3][][]" xd:originalName="bufo3" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="127:96" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[4][][]" xd:originalName="bufo4" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="159:128" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[5][][]" xd:originalName="bufo5" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="191:160" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[6][][]" xd:originalName="bufo6" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="223:192" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[7][][]" xd:originalName="bufo7" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="255:224" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[8][][]" xd:originalName="bufo8" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="287:256" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[9][][]" xd:originalName="bufo9" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="319:288" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[10][][]" xd:originalName="bufo10" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="351:320" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[11][][]" xd:originalName="bufo11" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="383:352" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:arg xd:name="bufo[12][][]" xd:originalName="bufo12" xd:direction="inout" xd:interfaceRef="bufo_PORTB" xd:busTypeRef="bram" xd:dataPack="true" xd:bitMapping="415:384" xd:arraySize="216" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="5467" xd:worst-case="5467" xd:average-case="5467"/>
-  <xd:resourceEstimates xd:LUT="50295" xd:FF="72137" xd:BRAM="0" xd:DSP="117"/>
+  <xd:arg xd:name="bufw[][][][]" xd:originalName="bufw" xd:direction="in" xd:interfaceRef="bufw_PORTA" xd:busTypeRef="bram" xd:arraySize="6400" xd:dataWidth="32"/>
+  <xd:arg xd:name="bufi[][][]" xd:originalName="bufi" xd:direction="in" xd:interfaceRef="bufi_PORTA" xd:busTypeRef="bram" xd:arraySize="20736" xd:dataWidth="32"/>
+  <xd:arg xd:name="bufo[][][]" xd:originalName="bufo" xd:direction="inout" xd:interfaceRef="bufo_PORTA" xd:busTypeRef="bram" xd:arraySize="4096" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="1638632" xd:worst-case="1638632" xd:average-case="1638632"/>
+  <xd:resourceEstimates xd:LUT="6142" xd:FF="21535" xd:BRAM="0" xd:DSP="3"/>
 </xd:acceleratorMap>

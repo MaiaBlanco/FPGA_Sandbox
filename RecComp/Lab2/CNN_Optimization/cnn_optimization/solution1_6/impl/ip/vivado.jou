@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2017.3 (64-bit)
-# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
-# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Oct 18 19:11:55 2017
-# Process ID: 14504
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Oct 31 19:39:42 2017
+# Process ID: 7724
 # Current directory: /home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/cnn_optimization/solution1_6/impl/ip/vivado.log

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="kernel.cpp" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/kernel.cpp"/>
     <originFiles name="kernel.h" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/kernel.h"/>
+    <originFiles name="kernel.cpp" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/kernel.cpp"/>
   </source>
   <testbench>
-    <originFiles name="convolve.cpp" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/convolve.cpp"/>
-    <originFiles name="data.cpp" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/data.cpp"/>
     <originFiles name="main.cpp" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/main.cpp"/>
+    <originFiles name="data.cpp" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/data.cpp"/>
+    <originFiles name="convolve.cpp" path="/home/mark/Documents/Repos/FPGA_Sandbox/RecComp/Lab2/CNN_Optimization/convolve.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

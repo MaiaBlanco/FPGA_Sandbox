@@ -36,7 +36,7 @@
 /*
  * CMU 18643 Fall 2017 Lab Exercise
  *
- * The paramters in this file sets the problem sizes
+ * The parameters in this file sets the problem sizes
  *
  */
 
@@ -48,19 +48,28 @@
  */
 #define K_wts (5) // weight width and height (square)
                   // same depth as output
-#define S_wts (1) // sliding stride
+#define S_wts (2) // sliding stride
+
+//#define S_wts (1) // sliding stride
 
 /* 
  * output feature map paramters
  */
-#define R_ofm (27) // height
-#define C_ofm (27) // width
-#define M_ofm (128) // depth
+//#define R_ofm (27) // height
+//#define C_ofm (27) // width
+//#define M_ofm (128) // depth
+//#define R_ofm (121) // height
+//#define C_ofm (55) // width
+//#define M_ofm (128) // depth
+#define R_ofm (16) // height
+#define C_ofm (16) // width
+#define M_ofm (16) // depth
 
 /*
  * input feature map paramters
  */
-#define N_ifm (48) // depth 
+//#define N_ifm (48) // depth
+#define N_ifm (96) // depth
 #define R_ifm (R_ofm*S_wts+K_wts-1) // derived height
 #define C_ifm (C_ofm*S_wts+K_wts-1) // derived width
 
